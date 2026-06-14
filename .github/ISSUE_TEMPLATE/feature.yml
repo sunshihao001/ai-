@@ -1,0 +1,32 @@
+name: Feature / Work Slice
+description: A vertical slice ready for an AI coding agent or human engineer.
+title: "[Feature]: "
+labels: ["feature", "needs-spec"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / user story
+      description: Who needs what, and why?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Objective checks that prove this is done.
+    validations:
+      required: true
+  - type: textarea
+    id: non-goals
+    attributes:
+      label: Non-goals / out of scope
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification plan
+      description: Tests, Playwright, a11y, security, manual QA.
+    validations:
+      required: true
