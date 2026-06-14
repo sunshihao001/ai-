@@ -15,6 +15,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Curated portable skills: `.agents/skills/*`
 - Codex project skills: `.codex/skills/*`
 - Method wheel: `.ai/methods/ai-method-wheel.md`
+- Maintainer orchestrator mapping: `.ai/methods/maintainer-orchestrator-mapping.md`
 - Codex handoff template: `.ai/templates/codex-issue-handoff.md`
 - Project onboarding template: `.ai/templates/project-onboarding.md`
 - Loop run template: `.ai/templates/loop-run.md`
@@ -105,6 +106,26 @@ Ask the owner only with a decision-ready brief.
 ```
 
 Use `.ai/templates/owner-decision-brief.md` before asking for product/security/access/land-delete decisions.
+
+## Maintainer Orchestrator
+
+The upstream OpenClaw/Peter Steinberger `maintainer-orchestrator` skill is installed as a reference and mapped into this method wheel.
+
+Files:
+
+- `.agents/skills/maintainer-orchestrator/SKILL.md`
+- `.agents/skills/maintainer-orchestrator/openai.yaml`
+- `.codex/skills/maintainer-orchestrator/SKILL.md`
+- `.ai/external/steipete-agent-scripts/maintainer-orchestrator/`
+- `.ai/methods/maintainer-orchestrator-mapping.md`
+
+Use it when coordinating repository queues, multiple worker threads, PR readiness, CI repair, releases, or owner decision briefs. It turns the loop-orchestrator layer into a maintainer-grade control plane:
+
+```text
+inspect → classify → delegate → monitor → decision-ready brief → report/release
+```
+
+Key rule: do not ask the owner from a rough issue or half-finished PR. First prepare the work to the decision-ready boundary, then ask for the exact remaining decision/access/waiver/land/delete action.
 
 ## Codex Handoff
 
