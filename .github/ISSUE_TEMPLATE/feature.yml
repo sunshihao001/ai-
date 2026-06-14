@@ -1,0 +1,43 @@
+name: Feature / User Story
+about: A vertical slice suitable for AI-assisted implementation
+labels: [feature]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user or business problem are we solving?
+    validations:
+      required: true
+  - type: textarea
+    id: story
+    attributes:
+      label: User Story
+      description: As a ..., I want ..., so that ...
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Testable criteria. The agent should not start coding until these are clear.
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: Test / QA Plan
+      value: |
+        - Unit:
+        - Integration:
+        - Playwright/E2E:
+        - Accessibility:
+        - Security:
+  - type: textarea
+    id: links
+    attributes:
+      label: Spec / ADR Links
+      description: Link specs/<feature>/spec.md or docs/adr entries.
