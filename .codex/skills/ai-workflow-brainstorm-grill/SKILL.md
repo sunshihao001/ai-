@@ -2,8 +2,7 @@
 name: ai-workflow-brainstorm-grill
 description: "Use when a request is vague, risky, product-facing, or needs routing into an agent loop. Combine brainstorming, requirement grilling, repo-doc grilling, spec clarification, owner authority, and verification lenses into one Demand Grilling Brief."
 version: 1.1.0
-author: Curated from superpowers, spec-kit, mattpocock/skills, dbs-good-question, and maintainer-orchestrator patterns
-license: MIT
+when_to_use: "Before spec writing, GitHub issue creation, Codex handoff, or maintainer-orchestrator delegation when the ask is ambiguous, risky, product-facing, or needs maker/checker loop routing."
 ---
 
 # AI Workflow: Demand Grilling Control Gate
@@ -20,17 +19,6 @@ Prevent the agent from implementing the wrong thing and prevent loop agents from
 - review/verification gate thinking.
 
 The output is not a giant questionnaire. The output is one **Demand Grilling Brief** that makes the ask agent-usable, criticizable, verifiable, and routable.
-
-## When to Use
-
-Use this before spec writing, GitHub issue creation, Codex handoff, or maintainer-orchestrator delegation when:
-
-- the user request is vague or half-clarified,
-- the work touches product behavior,
-- the implementation route is unclear,
-- authority/permission is unclear,
-- the task may involve multiple agents or maker/checker loops,
-- done requires tests, CI, Playwright, security, accessibility, live proof, or human judgment.
 
 ## Process
 

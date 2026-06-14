@@ -11,6 +11,7 @@ REQUIRED_FILES = [
     'AGENTS.md',
     'CONTEXT.md',
     '.ai/methods/ai-method-wheel.md',
+    '.ai/methods/demand-grilling-control-gate.md',
     '.ai/methods/maintainer-orchestrator-mapping.md',
     '.github/PULL_REQUEST_TEMPLATE.md',
     '.github/ISSUE_TEMPLATE/feature.yml',
@@ -49,6 +50,8 @@ REQUIRED_SKILLS = [
 REQUIRED_MARKERS = {
     'AGENTS.md': ['GitHub', 'Codex', 'test'],
     '.ai/methods/ai-method-wheel.md': ['grill', 'spec', 'Codex', 'review'],
+    '.ai/methods/demand-grilling-control-gate.md': ['Demand Grilling Brief', 'maker', 'checker', 'authority', 'stop'],
+    '.ai/templates/good-question-brief.md': ['Agent Execution Classification', 'Loop Stop Conditions', 'Authority'],
     'docs/handoffs/issue-to-codex.md': ['AGENTS.md', 'CONTEXT.md', 'GitHub issue', 'verification'],
 }
 

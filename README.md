@@ -15,6 +15,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Curated portable skills: `.agents/skills/*`
 - Codex project skills: `.codex/skills/*`
 - Method wheel: `.ai/methods/ai-method-wheel.md`
+- Demand grilling control gate: `.ai/methods/demand-grilling-control-gate.md`
 - Maintainer orchestrator mapping: `.ai/methods/maintainer-orchestrator-mapping.md`
 - Codex handoff template: `.ai/templates/codex-issue-handoff.md`
 - Project onboarding template: `.ai/templates/project-onboarding.md`
@@ -43,7 +44,7 @@ The repository remains the durable source of truth. Local installs are convenien
 
 ```text
 Loop / orchestration design
-→ brainstorm / grill requirements
+→ demand-grilling control gate / Demand Grilling Brief
 → specify / plan / tasks
 → GitHub issues
 → Codex implementation as maker
@@ -64,6 +65,18 @@ Do not treat chat history as durable project memory. Put long-lived context into
 - Agent rules: `AGENTS.md`
 - Work items: GitHub Issues
 - Execution record: Pull Requests and CI logs
+
+## Demand Grilling Control Gate
+
+Use `.ai/methods/demand-grilling-control-gate.md` and `.ai/templates/good-question-brief.md` when a request is vague, risky, product-facing, or needs agent-loop routing.
+
+The gate combines brainstorming, requirement grilling, repo-doc grilling, Spec Kit clarification, DBS Good Question, maintainer-orchestrator classification, and verification/review thinking into one **Demand Grilling Brief**. It decides:
+
+```text
+intent → context → scope → assumptions/risks → acceptance criteria → verification → autonomous/needs-owner classification → maker/checker → authority boundary → stop conditions → next stage
+```
+
+Do not run every upstream skill as a giant questionnaire. Ask only the 1-3 highest-value questions that change scope, safety, routing, authority, or verification.
 
 ## Project Onboarding
 
