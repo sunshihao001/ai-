@@ -11,6 +11,7 @@ REQUIRED_FILES = [
     'AGENTS.md',
     'CONTEXT.md',
     '.ai/methods/ai-method-wheel.md',
+    '.ai/methods/maintainer-orchestrator-mapping.md',
     '.github/PULL_REQUEST_TEMPLATE.md',
     '.github/ISSUE_TEMPLATE/feature.yml',
     'docs/adr/README.md',
@@ -39,6 +40,7 @@ REQUIRED_SKILLS = [
     'ai-workflow-review-qa',
     'ai-workflow-project-onboarding',
     'ai-workflow-loop-orchestrator',
+    'maintainer-orchestrator',
 ]
 
 REQUIRED_MARKERS = {
