@@ -6,13 +6,19 @@ Curated AI software engineering workflow built from the core ideas of:
 - GitHub Spec Kit
 - Matt Pocock Skills
 
+This repo intentionally extracts the core behaviors instead of installing every upstream skill.
+
 ## What This Repo Provides
 
 - Project-level AI instructions: `AGENTS.md`
-- Shared language file: `CONTEXT.md`
-- Curated skills: `.agents/skills/*`
+- Shared project language: `CONTEXT.md`
+- Curated portable skills: `.agents/skills/*`
+- Codex project skills: `.codex/skills/*`
 - Method wheel: `.ai/methods/ai-method-wheel.md`
+- Codex handoff template: `.ai/templates/codex-issue-handoff.md`
 - GitHub issue and PR templates
+- QA gate: `docs/qa/checklist.md`
+- Lightweight GitHub Actions validation
 - Installer script for local agent skill directories
 
 ## Install Skills Locally
@@ -26,34 +32,52 @@ By default this copies skills into:
 - `~/.codex/skills`
 - `~/.claude/skills`
 
+The repository remains the durable source of truth. Local installs are convenience copies.
+
 ## Recommended Workflow
 
 ```text
-Brainstorm / grill
+Brainstorm / grill requirements
 → specify / plan / tasks
 → GitHub issues
 → Codex implementation
-→ TDD / QA / review
-→ PR / CI / merge
+→ TDD / debugging
+→ Playwright / accessibility / security QA
+→ PR / CI / human review / merge
 ```
 
-Do not treat chat history as durable project memory. Put long-lived context into GitHub files.
+## GitHub as Project Memory
 
+Do not treat chat history as durable project memory. Put long-lived context into GitHub files:
 
-## Automation and QA
+- Decisions: `docs/adr/*`
+- Product specs: `specs/*`
+- Shared language: `CONTEXT.md`
+- Agent rules: `AGENTS.md`
+- Work items: GitHub Issues
+- Execution record: Pull Requests and CI logs
 
-This repo includes a lightweight CI workflow that validates the AI method-wheel scaffolding on every PR.
+## Codex Handoff
 
-Useful files:
+Use `.ai/templates/codex-issue-handoff.md` when giving Codex one bounded issue to implement.
 
-- `docs/handoffs/issue-to-codex.md` — hand off one bounded issue/spec to Codex.
-- `docs/qa/playwright-qa-template.md` — product-facing QA evidence template.
-- `docs/qa/accessibility-checklist.md` — accessibility review gate.
-- `docs/qa/security-checklist.md` — security review gate.
-- `scripts/validate-ai-method-wheel.py` — CI validation for required workflow files.
+The expected handoff pattern is:
 
-Install local skills:
-
-```bash
-python scripts/install-ai-workflow-skills.py --overwrite
+```text
+Read AGENTS.md, CONTEXT.md, the linked spec, the linked issue, and Codex skill docs.
+Implement exactly one issue.
+Run verification.
+Return files changed, commands run, results, and risks.
 ```
+
+## QA Gate
+
+Use `docs/qa/checklist.md` before merging AI-generated or AI-assisted work. It covers:
+
+- Spec alignment
+- Test quality
+- Playwright/E2E
+- Accessibility
+- Security
+- Operations
+- Human review
