@@ -21,6 +21,9 @@ REQUIRED_FILES = [
     'docs/handoffs/issue-to-codex.md',
     '.ai/templates/project-onboarding.md',
     '.ai/templates/codex-issue-handoff.md',
+    '.ai/templates/loop-run.md',
+    '.ai/templates/owner-decision-brief.md',
+    '.ai/research/latest-ai-methodology-sources.md',
     'specs/_template/spec.md',
     'specs/_template/plan.md',
     'specs/_template/tasks.md',
@@ -35,6 +38,7 @@ REQUIRED_SKILLS = [
     'ai-workflow-debug',
     'ai-workflow-review-qa',
     'ai-workflow-project-onboarding',
+    'ai-workflow-loop-orchestrator',
 ]
 
 REQUIRED_MARKERS = {
