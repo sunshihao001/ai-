@@ -1,14 +1,14 @@
 # Architecture Decision Records
 
-Use ADRs to capture decisions that affect architecture, security, data, deployment, or long-term maintenance.
+Use ADRs to capture decisions made during brainstorming and grilling.
 
-## Template
+Template:
 
 ```md
-# ADR-0001: Title
+# ADR-0001: <Decision>
 
 ## Status
-Proposed | Accepted | Superseded
+Proposed / Accepted / Superseded
 
 ## Context
 
@@ -16,5 +16,5 @@ Proposed | Accepted | Superseded
 
 ## Consequences
 
-## Alternatives considered
+## Alternatives Considered
 ```

@@ -1,12 +1,13 @@
-# Specs
+# specs/
 
-Create one folder per feature or operational change:
+Feature specs live here. Use one directory per feature:
 
 ```text
-specs/<feature>/spec.md
-specs/<feature>/plan.md
-specs/<feature>/tasks.md
-specs/<feature>/checklist.md
+specs/<feature-slug>/
+  spec.md
+  plan.md
+  tasks.md
+  checklist.md
 ```
 
-Specs are written for both humans and coding agents. They must be sufficient for Codex to implement one bounded GitHub issue without relying on chat history.
+Generate these from the requirement interrogation loop before handing work to Codex.

@@ -1,35 +1,54 @@
 # AGENTS.md — AI Method Wheel Project Instructions
 
-This repository uses a curated AI software-engineering workflow distilled from Superpowers, GitHub Spec Kit, and Matt Pocock Skills.
+This repository is configured for an AI-assisted software engineering workflow. Agents should treat GitHub files as the project source of truth and chats as temporary working context.
 
-## Core principle
-Do not treat coding agents as the hard part. The hard part is engineering judgment: asking the right questions, validating answers, recognizing brittle/unsafe/over-complex code, and knowing what is actually done.
+## Core Principle
+Do not jump from vague request to code. Use this loop:
 
-## Source of truth
-- GitHub issues/specs/PRs are durable project memory.
-- Chat sessions are temporary thinking surfaces.
-- Coding agents execute one bounded issue/spec at a time.
+1. Interrogate the idea.
+2. Convert decisions into production documents.
+3. Split into user stories / issues.
+4. Implement with Codex or a coding agent.
+5. Verify with tests, Playwright, accessibility, security, and human review.
+6. Record decisions in GitHub: specs, ADRs, issues, PRs.
 
-## Required workflow
-1. Clarify and grill requirements before implementation.
-2. Convert decisions into repo documents: `CONTEXT.md`, `specs/<feature>/spec.md`, ADRs, and GitHub issues.
-3. Hand Codex one issue/spec at a time.
-4. Prefer TDD where practical: failing test -> implementation -> green -> refactor.
-5. Verify with lint/typecheck/tests/Playwright/a11y/security checks as applicable.
-6. Open PRs with verification evidence and human-review notes.
+## Required Reading Order for Agents
+Before editing code, read:
 
-## Codex execution rules
-When using Codex, make it read:
-- `AGENTS.md`
-- `CONTEXT.md`
-- `.ai/methods/ai-method-wheel.md`
-- relevant `.agents/skills/*/SKILL.md`
-- relevant `specs/<feature>/*.md`
-- the GitHub issue body
+1. `AGENTS.md`
+2. `.ai/methods/ai-method-wheel.md`
+3. Relevant `specs/<feature>/spec.md`, `plan.md`, `tasks.md`, `checklist.md`
+4. Relevant GitHub issue
+5. Existing tests and CI configuration
 
-Codex must not expand scope beyond the current issue. It must summarize changed files and real verification output.
+## Work Rules
+- Ask clarifying questions when the goal, acceptance criteria, or risk is unclear.
+- Prefer vertical slices over technical-layer tasks.
+- Do not expand scope beyond the issue/spec.
+- For implementation tasks, use TDD when practical: failing test → minimal code → passing test → refactor.
+- Run available checks before claiming completion.
+- Do not mark work complete unless there is objective verification.
+- Never commit secrets, tokens, `.env` files, credentials, or private keys.
 
-## Safety
-- Never commit secrets, tokens, `.env` files, credentials, or generated logs containing secrets.
-- Do not modify production deployment config without an explicit spec, rollback plan, and review.
-- Do not claim completion without objective verification.
+## Recommended Verification
+Use what exists in the project. Typical commands may include:
+
+```bash
+npm test
+npm run lint
+npm run typecheck
+npx playwright test
+```
+
+If a command does not exist, report that honestly and propose the closest available check.
+
+## GitHub as Source of Truth
+Long-lived project state belongs in:
+
+- `CONTEXT.md` — shared project language and domain concepts
+- `specs/` — feature specs, plans, tasks, checklists
+- `docs/adr/` — architecture decisions
+- GitHub Issues — user stories / vertical slices
+- Pull Requests — implementation record and verification results
+
+Chat logs are not the project memory.

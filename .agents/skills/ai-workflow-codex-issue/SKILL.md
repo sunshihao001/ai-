@@ -1,31 +1,43 @@
 ---
 name: ai-workflow-codex-issue
-description: Use when handing one bounded GitHub issue/spec to Codex for implementation with verification evidence.
+description: "Use when handing a narrow GitHub issue or task to Codex for implementation. Forces Codex to read project docs, stay in scope, test, and report verification."
+version: 1.0.0
+author: Curated for Codex execution
+license: MIT
 ---
 
 # AI Workflow: Codex Issue Execution
 
-Derived from Superpowers `executing-plans`, `using-git-worktrees`, `subagent-driven-development`, Spec Kit `implement`, and Codex `AGENTS.md` usage.
+## Purpose
+Connect the planning/grilling side to the coding side. Codex should execute from GitHub artifacts, not from vague chat.
 
-## Goal
-Make Codex a disciplined executor, not a vague chat participant.
+## Prompt Template for Codex
+```text
+Read first:
+- AGENTS.md
+- CONTEXT.md
+- .ai/methods/ai-method-wheel.md
+- specs/<feature>/spec.md
+- specs/<feature>/plan.md
+- specs/<feature>/tasks.md
+- GitHub issue #<id>
 
-## Prompt template
-Ask Codex to read:
-- `AGENTS.md`
-- `CONTEXT.md`
-- `.ai/methods/ai-method-wheel.md`
-- relevant `.agents/skills/*/SKILL.md`
-- relevant `specs/<feature>/*.md`
-- GitHub issue body
+Task:
+Implement only issue #<id>.
 
-Then instruct:
-1. Implement only this issue.
-2. Do not expand scope.
-3. Add/update tests where appropriate.
-4. Run required verification commands.
-5. Summarize changed files and real command output.
-6. If blocked, report blocker and smallest next question.
+Rules:
+- Do not expand scope.
+- Prefer TDD: add/update failing test first where practical.
+- Keep the change as a vertical slice.
+- Run relevant lint/typecheck/tests.
+- If a command is missing or fails for environment reasons, report it honestly.
+- Summarize changed files, verification commands, results, and remaining risks.
+```
 
-## Worktree recommendation
-For parallel work, use one branch/worktree per issue.
+## Completion Report Template
+```md
+## Summary
+## Files Changed
+## Verification
+## Risks / Follow-ups
+```

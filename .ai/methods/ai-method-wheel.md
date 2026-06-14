@@ -1,48 +1,104 @@
 # AI Method Wheel — Curated Workflow
 
-This workflow combines selected core behaviors from:
-- Superpowers
-- GitHub Spec Kit
-- Matt Pocock Skills
+This project uses a curated subset of three external skill systems:
 
-It intentionally does not install every upstream skill. It extracts only the useful core behaviors and connects them through GitHub artifacts.
+- `obra/superpowers` — execution discipline, planning, worktrees, verification.
+- `github/spec-kit` — spec-driven development: specify → plan → tasks → checklist → implement.
+- `mattpocock/skills` — requirement grilling, shared language, TDD, diagnosis, review.
 
-## Pyramid
+The goal is not to install every skill. The goal is to compose the core behaviors into one project workflow.
 
-### Top: Human engineering judgment
-Humans decide what matters, what is safe, and what is good enough to ship.
+## Pyramid View
 
-### Middle: Loop engineering
-Design loops that repeatedly clarify, specify, implement, verify, review, and record.
+### 1. Top Layer: Engineering Judgment
+AI agents are tools. The hard part is knowing what to ask, which assumptions are risky, and whether the output is correct, secure, maintainable, accessible, and simple enough.
 
-### Bottom: Coding agents and tools
-Codex, Claude, Hermes, CI, Playwright, linters, tests, security scanners.
+### 2. Loop Layer: Feedback System
+Every serious AI coding task should run through a loop:
 
-## Standard loop
-1. Requirement interrogation
-2. Production spec
-3. User-story / issue slicing
-4. Codex implementation
-5. TDD / tests / Playwright QA
-6. Accessibility and security audit
-7. Human review
-8. PR / commit / durable record
+```text
+Idea
+→ Brainstorm
+→ Grill / clarify
+→ ADR / PRD / spec
+→ Plan / tasks / user stories
+→ Codex implementation
+→ TDD / tests
+→ Playwright QA
+→ accessibility + security audit
+→ human review
+→ PR / merge
+```
 
-## Core composite skills
-- `ai-workflow-brainstorm-grill`: clarify/grill requirements.
-- `ai-workflow-specify`: turn decisions into specs, plans, tasks, checklists, issues.
-- `ai-workflow-codex-issue`: hand a bounded issue/spec to Codex.
-- `ai-workflow-tdd`: enforce red/green/refactor when appropriate.
-- `ai-workflow-debug`: evidence-first debugging.
-- `ai-workflow-review-qa`: review, QA, a11y, security, PR readiness.
+### 3. Skill Layer: Curated Skills
+Use only the skills needed for the current phase.
 
-## GitHub as the connector
-Hermes/Claude/chat should produce durable repo artifacts, not be the long-term source of truth.
+## Phase 1 — Requirement Interrogation
+Use `ai-workflow-brainstorm-grill`.
 
-Use:
-- `AGENTS.md` for agent operating rules.
-- `CONTEXT.md` for shared project language.
-- `specs/<feature>/` for feature specs/plans/tasks/checklists.
-- `docs/adr/` for decisions.
-- GitHub Issues for work slices.
-- Pull Requests for verified delivery evidence.
+Sources:
+- Superpowers: `brainstorming`
+- Matt Pocock: `grill-me`, `grill-with-docs`
+- Spec Kit: `clarify`
+
+Purpose:
+- Challenge vague ideas before code changes.
+- Find hidden assumptions, constraints, edge cases, failure modes, and security/accessibility implications.
+- Update `CONTEXT.md` when new shared language appears.
+
+Exit criteria:
+- Questions start repeating.
+- Tradeoffs are explicit.
+- Non-goals are documented.
+- Acceptance criteria are testable.
+
+## Phase 2 — Production Documentation
+Use `ai-workflow-specify`.
+
+Sources:
+- Spec Kit: `specify`, `plan`, `tasks`, `checklist`
+- Matt Pocock: `to-prd`, `to-issues`
+- Superpowers: `writing-plans`
+
+Outputs:
+- `specs/<feature>/spec.md`
+- `specs/<feature>/plan.md`
+- `specs/<feature>/tasks.md`
+- `specs/<feature>/checklist.md`
+- GitHub issues
+- ADRs when architecture decisions are made
+
+## Phase 3 — Codex Execution
+Use `ai-workflow-codex-issue` and `ai-workflow-tdd`.
+
+Sources:
+- Superpowers: `executing-plans`, `using-git-worktrees`, `subagent-driven-development`
+- Matt Pocock: `tdd`, `diagnose`
+- Spec Kit: `implement`
+
+Purpose:
+- Give Codex a narrow issue/spec, not a vague chat transcript.
+- Prefer one issue per branch/worktree.
+- Ask Codex to write or update tests first where practical.
+
+## Phase 4 — QA / Review / Completion
+Use `ai-workflow-review-qa` and `ai-workflow-debug`.
+
+Sources:
+- Superpowers: `verification-before-completion`, `requesting-code-review`, `systematic-debugging`
+- Matt Pocock: `review`, `diagnose`, `improve-codebase-architecture`
+- Spec Kit: `analyze`, `checklist`
+
+Quality gate:
+- Tests pass or failures are explained.
+- Playwright / E2E passes for user-facing changes.
+- Accessibility has been checked for UI changes.
+- Security risks have been reviewed for auth, permissions, input handling, secrets, dependencies.
+- Human reads the diff before merge.
+
+## GitHub-Centered Record
+Use GitHub as the durable record:
+- Specs and ADRs live in the repo.
+- Issues describe vertical slices.
+- PRs contain verification evidence.
+- CI enforces objective gates.
