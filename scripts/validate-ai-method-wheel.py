@@ -19,6 +19,12 @@ REQUIRED_FILES = [
     'docs/qa/accessibility-checklist.md',
     'docs/qa/security-checklist.md',
     'docs/handoffs/issue-to-codex.md',
+    '.ai/templates/project-onboarding.md',
+    '.ai/templates/codex-issue-handoff.md',
+    'specs/_template/spec.md',
+    'specs/_template/plan.md',
+    'specs/_template/tasks.md',
+    'specs/_template/checklist.md',
 ]
 
 REQUIRED_SKILLS = [
@@ -28,6 +34,7 @@ REQUIRED_SKILLS = [
     'ai-workflow-tdd',
     'ai-workflow-debug',
     'ai-workflow-review-qa',
+    'ai-workflow-project-onboarding',
 ]
 
 REQUIRED_MARKERS = {
