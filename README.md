@@ -16,6 +16,8 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Codex project skills: `.codex/skills/*`
 - Method wheel: `.ai/methods/ai-method-wheel.md`
 - Codex handoff template: `.ai/templates/codex-issue-handoff.md`
+- Project onboarding template: `.ai/templates/project-onboarding.md`
+- First feature spec template: `specs/_template/*`
 - GitHub issue and PR templates
 - QA gate: `docs/qa/checklist.md`
 - Lightweight GitHub Actions validation
@@ -56,6 +58,27 @@ Do not treat chat history as durable project memory. Put long-lived context into
 - Agent rules: `AGENTS.md`
 - Work items: GitHub Issues
 - Execution record: Pull Requests and CI logs
+
+## Project Onboarding
+
+Use `.ai/templates/project-onboarding.md` when connecting a real repository to this method wheel.
+
+Recommended sequence:
+
+```text
+Read-only repo scan
+→ AGENTS.md / CONTEXT.md / QA checklist
+→ command contract
+→ risk map
+→ first spec from specs/_template
+→ GitHub issue
+→ Codex handoff
+```
+
+The onboarding skill is available in:
+
+- `.agents/skills/ai-workflow-project-onboarding/SKILL.md`
+- `.codex/skills/ai-workflow-project-onboarding/SKILL.md`
 
 ## Codex Handoff
 
