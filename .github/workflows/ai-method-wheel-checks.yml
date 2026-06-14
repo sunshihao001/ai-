@@ -1,0 +1,59 @@
+name: AI Method Wheel Checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  docs-and-templates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify required project memory files
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            AGENTS.md
+            CONTEXT.md
+            .ai/methods/ai-method-wheel.md
+            .github/PULL_REQUEST_TEMPLATE.md
+            .github/ISSUE_TEMPLATE/feature.yml
+            docs/qa/checklist.md
+            .ai/templates/codex-issue-handoff.md
+          )
+          for f in "${required[@]}"; do
+            test -f "$f" || { echo "Missing required file: $f"; exit 1; }
+          done
+
+      - name: Validate skill frontmatter markers
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s globstar nullglob
+          files=(.agents/skills/**/SKILL.md .codex/skills/**/SKILL.md)
+          test "${#files[@]}" -gt 0 || { echo "No skill files found"; exit 1; }
+          for f in "${files[@]}"; do
+            head -1 "$f" | grep -q '^---$' || { echo "Missing YAML frontmatter start: $f"; exit 1; }
+            grep -q '^name:' "$f" || { echo "Missing name field: $f"; exit 1; }
+            grep -q '^description:' "$f" || { echo "Missing description field: $f"; exit 1; }
+          done
+
+      - name: Check for accidentally committed obvious secret markers
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RInE 'github_pat_[A-Za-z0-9_]+|ghp_[A-Za-z0-9_]+|OPENAI_API_KEY[=][A-Za-z0-9_./+-]+' . \
+              --exclude-dir=.git \
+              --exclude='*.png' \
+              --exclude='*.jpg' \
+              --exclude='*.jpeg'; then
+            echo "Potential secret found. Remove it before merging."
+            exit 1
+          fi
