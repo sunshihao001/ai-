@@ -17,6 +17,8 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Method wheel: `.ai/methods/ai-method-wheel.md`
 - Codex handoff template: `.ai/templates/codex-issue-handoff.md`
 - Project onboarding template: `.ai/templates/project-onboarding.md`
+- Loop run template: `.ai/templates/loop-run.md`
+- Owner decision brief template: `.ai/templates/owner-decision-brief.md`
 - First feature spec template: `specs/_template/*`
 - GitHub issue and PR templates
 - QA gate: `docs/qa/checklist.md`
@@ -39,13 +41,16 @@ The repository remains the durable source of truth. Local installs are convenien
 ## Recommended Workflow
 
 ```text
-Brainstorm / grill requirements
+Loop / orchestration design
+→ brainstorm / grill requirements
 → specify / plan / tasks
 → GitHub issues
-→ Codex implementation
+→ Codex implementation as maker
+→ separate checker review
 → TDD / debugging
 → Playwright / accessibility / security QA
 → PR / CI / human review / merge
+→ regression or method update
 ```
 
 ## GitHub as Project Memory
@@ -79,6 +84,27 @@ The onboarding skill is available in:
 
 - `.agents/skills/ai-workflow-project-onboarding/SKILL.md`
 - `.codex/skills/ai-workflow-project-onboarding/SKILL.md`
+
+## Loop Orchestration
+
+Use `.ai/templates/loop-run.md` when a task may require repeated maker/checker iterations.
+
+The loop-orchestrator skill is available in:
+
+- `.agents/skills/ai-workflow-loop-orchestrator/SKILL.md`
+- `.codex/skills/ai-workflow-loop-orchestrator/SKILL.md`
+
+Loop rules:
+
+```text
+Define trigger, goal, maker, checker, durable state, stop condition, and budget before running.
+Keep Codex as maker for code changes.
+Use a separate checker for review.
+Record state in GitHub/files, not only chat.
+Ask the owner only with a decision-ready brief.
+```
+
+Use `.ai/templates/owner-decision-brief.md` before asking for product/security/access/land-delete decisions.
 
 ## Codex Handoff
 

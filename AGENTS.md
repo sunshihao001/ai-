@@ -5,12 +5,14 @@ This repository is configured for an AI-assisted software engineering workflow. 
 ## Core Principle
 Do not jump from vague request to code. Use this loop:
 
-1. Interrogate the idea.
-2. Convert decisions into production documents.
-3. Split into user stories / issues.
-4. Implement with Codex or a coding agent.
-5. Verify with tests, Playwright, accessibility, security, and human review.
-6. Record decisions in GitHub: specs, ADRs, issues, PRs.
+1. Design the loop if the task may run repeatedly or involve multiple agents.
+2. Interrogate the idea.
+3. Convert decisions into production documents.
+4. Split into user stories / issues.
+5. Implement with Codex or a coding agent as maker.
+6. Verify with a separate checker, tests, Playwright, accessibility, security, and human review.
+7. Record decisions in GitHub: specs, ADRs, issues, PRs.
+8. If the workflow failed, repair the harness and capture a regression.
 
 ## Required Reading Order for Agents
 Before editing code, read:
@@ -23,6 +25,7 @@ Before editing code, read:
 
 ## Work Rules
 - Ask clarifying questions when the goal, acceptance criteria, or risk is unclear.
+- For looped or multi-agent work, define maker, checker, durable state, stop condition, and budget before running.
 - Prefer vertical slices over technical-layer tasks.
 - Do not expand scope beyond the issue/spec.
 - For implementation tasks, use TDD when practical: failing test → minimal code → passing test → refactor.
