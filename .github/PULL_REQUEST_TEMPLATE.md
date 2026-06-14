@@ -26,3 +26,14 @@ Commands run:
 
 ## Agent Notes
 What did the coding agent do, and what should a human reviewer focus on?
+
+
+## Codex / Agent handoff
+- [ ] Codex read `AGENTS.md`, `CONTEXT.md`, relevant spec/tasks, and issue.
+- [ ] Agent stayed within issue scope.
+- [ ] Completion report includes commands and results.
+
+## QA gates
+- [ ] Playwright/E2E considered or run.
+- [ ] Accessibility checklist considered.
+- [ ] Security checklist considered.

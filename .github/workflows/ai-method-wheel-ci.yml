@@ -1,0 +1,24 @@
+name: AI Method Wheel CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate required method-wheel files
+        run: python scripts/validate-ai-method-wheel.py
+
+      - name: Check installer syntax
+        run: python -m py_compile scripts/install-ai-workflow-skills.py scripts/validate-ai-method-wheel.py
