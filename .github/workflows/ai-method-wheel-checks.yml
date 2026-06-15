@@ -23,6 +23,7 @@ jobs:
             AGENTS.md
             CONTEXT.md
             .ai/methods/ai-method-wheel.md
+            .ai/methods/demand-grilling-control-gate.md
             .github/PULL_REQUEST_TEMPLATE.md
             .github/ISSUE_TEMPLATE/feature.yml
             docs/qa/checklist.md

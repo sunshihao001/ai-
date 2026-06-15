@@ -6,13 +6,14 @@ This project uses a curated subset of three external skill systems:
 - `github/spec-kit` — spec-driven development: specify → plan → tasks → checklist → implement.
 - `mattpocock/skills` — requirement grilling, shared language, TDD, diagnosis, review.
 
-It also absorbs newer loop-engineering and maintainer-orchestrator patterns:
+It also absorbs newer loop-engineering, maintainer-orchestrator, and upstream control-plane patterns:
 
 - Loop engineering — design systems that prompt/check agents instead of hand-prompting forever.
 - Maker/checker separation — the agent that produces work should not be the only judge.
 - Durable state — state belongs in files/GitHub/CI, not only in chat context.
 - Decision-ready owner asks — ask the human only after autonomous work is prepared and evidenced.
 - Harness repair — when the AI workflow fails, repair the prompt/skill/checklist and lock the failure as a regression.
+- Demand Control Plane boundary — reusable demand-grilling/product-boundary work belongs upstream in this AI workflow repo; business repos keep only minimal adapters and trial-field artifacts.
 
 The goal is not to install every skill. The goal is to compose the core behaviors into one project workflow.
 
@@ -70,7 +71,25 @@ Idea
 
 Use only the skills needed for the current phase.
 
-## Phase 0 — Loop / Orchestration Design
+## Phase 0 — Upstream Control-Plane Boundary
+
+Use `.ai/methods/demand-control-plane-upstream-boundary.md` when a project reveals a reusable demand-grilling or method-wheel correction.
+
+Purpose:
+
+- Keep the Demand Control Plane independent from any one business repository.
+- Put reusable protocol, benchmark, template, validator, and skill changes in this AI workflow repository.
+- Keep business repositories minimal: pointer, adapter, trial artifact, issue/handoff, project-local validator, and domain output.
+- Prevent the method wheel from becoming larger than the project it is helping.
+
+Routing rule:
+
+```text
+Reusable workflow correction → this AI workflow repo
+Project-specific evidence or trial field artifact → business repo
+```
+
+## Phase 1 — Loop / Orchestration Design
 
 Use `ai-workflow-loop-orchestrator`.
 
@@ -107,30 +126,42 @@ Bad first-loop candidates:
 - destructive production changes,
 - anything where done is mostly judgment.
 
-## Phase 1 — Requirement Interrogation
+## Phase 2 — Demand Grilling Control Gate
 
-Use `ai-workflow-brainstorm-grill`.
+Use `ai-workflow-brainstorm-grill` and `dbs-good-question`.
+
+Detailed method: `.ai/methods/demand-grilling-control-gate.md`.
 
 Sources:
 
 - Superpowers: `brainstorming`
 - Matt Pocock: `grill-me`, `grill-with-docs`
 - Spec Kit: `clarify`
+- DBS Good Question: agent-reasonable, criticizable, verifiable brief
+- Maintainer orchestrator: autonomous / needs-owner classification and authority boundaries
+- Review / verification gate: evidence, checker, false-success traps
 
 Purpose:
 
 - Challenge vague ideas before code changes.
-- Find hidden assumptions, constraints, edge cases, failure modes, and security/accessibility implications.
+- Find hidden assumptions, constraints, edge cases, failure modes, and security/accessibility/operations implications.
+- Decide the correct route: more questions, spec, GitHub issue, Codex task, maintainer-orchestrator queue item, or owner decision.
+- Define maker, checker, durable state, authority boundary, verification evidence, and loop stop conditions before execution.
 - Update `CONTEXT.md` when new shared language appears.
+
+Output:
+
+- `.ai/templates/good-question-brief.md` filled as a **Demand Grilling Brief**.
 
 Exit criteria:
 
-- Questions start repeating.
-- Tradeoffs are explicit.
-- Non-goals are documented.
-- Acceptance criteria are testable.
+- A Demand Grilling Brief exists.
+- Tradeoffs, non-goals, assumptions, risks, and testable acceptance criteria are documented.
+- Execution classification is explicit: `Autonomous`, `Needs owner`, or `Ignored by owner`.
+- Maker/checker, authority boundary, verification plan, and stop conditions are defined when a loop or Codex handoff is possible.
+- Missing questions are limited to the smallest high-value set that changes scope, safety, routing, authority, or verification.
 
-## Phase 2 — Production Documentation
+## Phase 3 — Production Documentation
 
 Use `ai-workflow-specify`.
 
@@ -149,7 +180,7 @@ Outputs:
 - GitHub issues
 - ADRs when architecture decisions are made
 
-## Phase 3 — Codex Execution
+## Phase 4 — Codex Execution
 
 Use `ai-workflow-codex-issue` and `ai-workflow-tdd`.
 
@@ -166,7 +197,7 @@ Purpose:
 - Ask Codex to write or update tests first where practical.
 - Codex is usually the maker, not the sole checker.
 
-## Phase 4 — QA / Review / Completion
+## Phase 5 — QA / Review / Completion
 
 Use `ai-workflow-review-qa` and `ai-workflow-debug`.
 
@@ -185,7 +216,7 @@ Quality gate:
 - Separate checker has reviewed spec alignment and diff.
 - Human reads important diffs before merge.
 
-## Phase 5 — Harness Repair / Method Improvement
+## Phase 6 — Harness Repair / Method Improvement
 
 Use `ai-workflow-loop-orchestrator` plus `ai-workflow-debug`.
 

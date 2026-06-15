@@ -156,6 +156,61 @@ Method-wheel impact:
 - Added owner decision brief template.
 - Added no-subdelegation worker rule.
 
+## 2026-06 Demand Control Plane Boundary and Benchmarks
+
+### MQL5 FCZ trial-field correction
+
+Source context: a real trading-research project exposed that demand-grilling/product-boundary corrections were being stored inside the business repository. The correction is:
+
+- The Demand Control Plane is an upstream AI workflow product/control layer.
+- Business repositories should keep minimal adapters and trial artifacts.
+- Reusable method corrections belong in this repo.
+
+Method-wheel impact:
+
+- Added `.ai/methods/demand-control-plane-upstream-boundary.md`.
+- Added an explicit upstream boundary to the demand-grilling control gate.
+- Clarified that project reality stays primary; method-wheel artifacts should not bloat business repos.
+
+### External benchmark sources for demand/control-plane design
+
+Sources searched and absorbed:
+
+- Spec Kit: `https://speckit.org/`
+  - `constitution → specify → clarify → plan → tasks → analyze → implement`.
+- Jama Software SDD: `https://www.jamasoftware.com/blog/what-is-spec-driven-development-sdd-for-ai-powered-engineering`
+  - spec as authoritative source; SDD as context engineering; traceability.
+- JetBrains Junie: `https://blog.jetbrains.com/junie/2025/10/how-to-use-a-spec-driven-approach-for-coding-with-ai`
+  - `requirements.md → plan.md → tasks.md`.
+- GSD Core: `https://docs.opengsd.net/core/introduction`
+  - Discuss → Plan → Execute → Verify → Ship; fresh context; persistent artifacts.
+- OpenSpec: `https://openspec.pro/`
+  - proposal / specs / design / tasks; brownfield-friendly; spec delta review.
+- Grill Me / Claude skill: `https://www.claudedirectory.org/skills/claude-skills-grill-me`
+  - one question per turn; recommended answer; decision tree; inspect repo before asking.
+- Mistral PRD-to-ticket workflow: `https://mistral.ai/news/agentic-workflows-from-meetings-to-dev-tickets/`
+  - transcript → PRD → development tickets → Linear/Jira.
+
+Method-wheel impact:
+
+- Demand Control Plane modules: Constitution, Discovery/Grill, Clarify/Specify, Plan/Tasks, Issue/Ticket, Persistent Context, Verify/Analyze, Archive/Learnback.
+- Spec Kit and GSD are useful target shapes; OpenSpec is useful for brownfield projects; Grill Me is a strong front-gate lens but not a complete workflow alone.
+
+### MQL5 domain trial-field sources
+
+Sources:
+
+- `https://www.mql5.com/zh/articles`
+- `https://www.mql5.com/zh/forum`
+- `https://www.mql5.com/zh/articles/8410`
+- `https://www.mql5.com/zh/articles/16973`
+- `https://www.mql5.com/zh/articles/13506`
+
+Method-wheel impact:
+
+- Domain sources can constrain a trial field but do not define the control-plane product boundary.
+- Trading projects require extra skepticism: simple systems over complexity, indicator-as-observer boundary, realistic cost/slippage/drawdown evidence, and no jump from AI-assisted analysis to automated execution.
+
 ## Current Synthesis
 
 The method wheel now treats AI software engineering as a layered system:

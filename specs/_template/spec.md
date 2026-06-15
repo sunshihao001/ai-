@@ -18,6 +18,15 @@ What user or operational problem are we solving?
 
 - As a <user>, I want <capability>, so that <outcome>.
 
+## Demand Grilling Brief Link
+
+- Brief file or issue comment:
+- Execution classification: Autonomous / Needs owner / Ignored by owner
+- Maker:
+- Checker:
+- Authority boundary:
+- Loop stop condition:
+
 ## Scope
 
 ### In scope

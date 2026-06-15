@@ -15,6 +15,8 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Curated portable skills: `.agents/skills/*`
 - Codex project skills: `.codex/skills/*`
 - Method wheel: `.ai/methods/ai-method-wheel.md`
+- Demand Control Plane upstream boundary: `.ai/methods/demand-control-plane-upstream-boundary.md`
+- Demand grilling control gate: `.ai/methods/demand-grilling-control-gate.md`
 - Maintainer orchestrator mapping: `.ai/methods/maintainer-orchestrator-mapping.md`
 - Codex handoff template: `.ai/templates/codex-issue-handoff.md`
 - Project onboarding template: `.ai/templates/project-onboarding.md`
@@ -42,8 +44,10 @@ The repository remains the durable source of truth. Local installs are convenien
 ## Recommended Workflow
 
 ```text
-Loop / orchestration design
-→ brainstorm / grill requirements
+Upstream control-plane boundary check
+→ semantic divergence / problem-world modeling
+→ search-intent translation + internal/external recall
+→ demand-grilling control gate / Demand Grilling Brief
 → specify / plan / tasks
 → GitHub issues
 → Codex implementation as maker
@@ -51,7 +55,7 @@ Loop / orchestration design
 → TDD / debugging
 → Playwright / accessibility / security QA
 → PR / CI / human review / merge
-→ regression or method update
+→ archive / learnback / method update
 ```
 
 ## GitHub as Project Memory
@@ -64,6 +68,41 @@ Do not treat chat history as durable project memory. Put long-lived context into
 - Agent rules: `AGENTS.md`
 - Work items: GitHub Issues
 - Execution record: Pull Requests and CI logs
+
+## Demand Grilling / Demand Control Plane v0.2
+
+Use `.ai/methods/demand-grilling-control-gate.md`, `.ai/methods/demand-control-plane-upstream-boundary.md`, and `.ai/templates/good-question-brief.md` when a request is vague, risky, product-facing, research-heavy, about the method itself, or needs agent-loop routing.
+
+The v0.2 model replaces the older “front gate only” view with an upstream Demand Control Plane:
+
+```text
+semantic divergence / problem-world modeling
+→ search-intent translation and internal/external recall
+→ intent-brainstorm-grill funnel
+→ Demand Grilling Brief
+→ spec / issue / Codex / maintainer-orchestrator / owner decision
+→ verification / CI / review
+→ archive and learnback to this AI workflow repo
+```
+
+It decides:
+
+```text
+intent → problem world → context/recall → scope → assumptions/risks → acceptance criteria → verification → autonomous/needs-owner classification → maker/checker → authority boundary → stop conditions → next stage → learnback target
+```
+
+Do not run every upstream skill as a giant questionnaire. Ask only the 1-3 highest-value questions that change scope, safety, routing, authority, or verification.
+
+## Demand Control Plane Boundary
+
+The demand-grilling layer is maintained as an upstream control plane in this AI workflow repository. When a real business project reveals a reusable method flaw, update this repo rather than burying the correction in that business repo.
+
+```text
+Reusable workflow protocol / template / benchmark / quality gate → this repo
+Project-local evidence / adapter / trial artifact / issue / domain output → business repo
+```
+
+Use `.ai/methods/demand-control-plane-upstream-boundary.md` for the boundary and external benchmark matrix.
 
 ## Project Onboarding
 

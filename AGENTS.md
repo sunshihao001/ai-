@@ -6,7 +6,7 @@ This repository is configured for an AI-assisted software engineering workflow. 
 Do not jump from vague request to code. Use this loop:
 
 1. Design the loop if the task may run repeatedly or involve multiple agents.
-2. Interrogate the idea.
+2. Run the demand-grilling control gate: combine brainstorming, grill-me, grill-with-docs, clarify, dbs-good-question, maintainer-orchestrator, and verification lenses into one Demand Grilling Brief.
 3. Convert decisions into production documents.
 4. Split into user stories / issues.
 5. Implement with Codex or a coding agent as maker.
@@ -19,12 +19,15 @@ Before editing code, read:
 
 1. `AGENTS.md`
 2. `.ai/methods/ai-method-wheel.md`
-3. Relevant `specs/<feature>/spec.md`, `plan.md`, `tasks.md`, `checklist.md`
-4. Relevant GitHub issue
-5. Existing tests and CI configuration
+3. `.ai/methods/demand-grilling-control-gate.md` when the ask is vague, risky, product-facing, or needs agent-loop routing
+4. Relevant `specs/<feature>/spec.md`, `plan.md`, `tasks.md`, `checklist.md`
+5. Relevant GitHub issue
+6. Existing tests and CI configuration
 
 ## Work Rules
 - Ask clarifying questions when the goal, acceptance criteria, or risk is unclear.
+- For vague/risky/product-facing asks, produce a Demand Grilling Brief before spec, issue, Codex, or maintainer-orchestrator handoff.
+- The Demand Grilling Brief must cover intent, context, scope, assumptions, risks, acceptance criteria, verification, execution classification, maker/checker split, authority boundary, stop conditions, critique prompts, missing high-value questions, and next stage.
 - For looped or multi-agent work, define maker, checker, durable state, stop condition, and budget before running.
 - Prefer vertical slices over technical-layer tasks.
 - Do not expand scope beyond the issue/spec.
