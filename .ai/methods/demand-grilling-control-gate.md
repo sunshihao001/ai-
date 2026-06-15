@@ -377,6 +377,17 @@ autonomous preparation is already done or impossible without that decision
 
 ## 8. Stop Conditions
 
+A target-driven cyclic-agent run must not stop after merely producing recommendations. Once the owner gives a goal, the Demand Control Plane should continue selecting the next slice, executing it, writing durable artifacts, verifying them, and looping until the goal is complete or a real blocker/owner decision is reached.
+
+Do **not** stop at:
+
+```text
+recommendation only
+static route only
+"next step would be..."
+"if you want, I can..."
+```
+
 The control gate is complete when:
 
 ```text
