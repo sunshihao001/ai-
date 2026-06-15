@@ -44,7 +44,9 @@ The repository remains the durable source of truth. Local installs are convenien
 ## Recommended Workflow
 
 ```text
-Loop / orchestration design
+Upstream control-plane boundary check
+→ semantic divergence / problem-world modeling
+→ search-intent translation + internal/external recall
 → demand-grilling control gate / Demand Grilling Brief
 → specify / plan / tasks
 → GitHub issues
@@ -53,7 +55,7 @@ Loop / orchestration design
 → TDD / debugging
 → Playwright / accessibility / security QA
 → PR / CI / human review / merge
-→ regression or method update
+→ archive / learnback / method update
 ```
 
 ## GitHub as Project Memory
@@ -67,14 +69,26 @@ Do not treat chat history as durable project memory. Put long-lived context into
 - Work items: GitHub Issues
 - Execution record: Pull Requests and CI logs
 
-## Demand Grilling Control Gate
+## Demand Grilling / Demand Control Plane v0.2
 
-Use `.ai/methods/demand-grilling-control-gate.md` and `.ai/templates/good-question-brief.md` when a request is vague, risky, product-facing, or needs agent-loop routing.
+Use `.ai/methods/demand-grilling-control-gate.md`, `.ai/methods/demand-control-plane-upstream-boundary.md`, and `.ai/templates/good-question-brief.md` when a request is vague, risky, product-facing, research-heavy, about the method itself, or needs agent-loop routing.
 
-The gate combines brainstorming, requirement grilling, repo-doc grilling, Spec Kit clarification, DBS Good Question, maintainer-orchestrator classification, and verification/review thinking into one **Demand Grilling Brief**. It decides:
+The v0.2 model replaces the older “front gate only” view with an upstream Demand Control Plane:
 
 ```text
-intent → context → scope → assumptions/risks → acceptance criteria → verification → autonomous/needs-owner classification → maker/checker → authority boundary → stop conditions → next stage
+semantic divergence / problem-world modeling
+→ search-intent translation and internal/external recall
+→ intent-brainstorm-grill funnel
+→ Demand Grilling Brief
+→ spec / issue / Codex / maintainer-orchestrator / owner decision
+→ verification / CI / review
+→ archive and learnback to this AI workflow repo
+```
+
+It decides:
+
+```text
+intent → problem world → context/recall → scope → assumptions/risks → acceptance criteria → verification → autonomous/needs-owner classification → maker/checker → authority boundary → stop conditions → next stage → learnback target
 ```
 
 Do not run every upstream skill as a giant questionnaire. Ask only the 1-3 highest-value questions that change scope, safety, routing, authority, or verification.

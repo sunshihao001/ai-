@@ -12,7 +12,34 @@ Quote or summarize the raw user request.
 Given <current context/state>, for <user/operator>, change/decide <specific target>, while preserving <constraints/non-goals>. Success means <objective acceptance criteria>. Verify by <specific checks/evidence>. If blocked, ask <exact owner question>.
 ```
 
-## 3. Intent and Alternatives
+## 3. Semantic Divergence and Problem World
+
+Use when the ask is complex, strategic, research-heavy, or about the method/workflow itself.
+
+- problem_world:
+- solution_world:
+- shared_phenomena:
+- concept_map_seed:
+- issue_tree_seed:
+- unchosen_branches:
+- current_convergence_slice:
+
+## 4. Search / Recall Plan
+
+Do not mechanically search the user's surface words. Translate intent first.
+
+- owner_surface_terms:
+- interpreted_information_need:
+- professional_concept_family:
+- retrieval_failure_mode:
+- query_transformation_strategy:
+- search_query_variants:
+- query_drift_risk:
+- internal_sources_to_check:
+- external_sources_to_check:
+- not_applicable_reason, if no external search:
+
+## 5. Intent and Alternatives
 
 - True goal:
 - User-proposed solution or actual goal:
@@ -20,7 +47,7 @@ Given <current context/state>, for <user/operator>, change/decide <specific targ
 - Recommended default:
 - Why now:
 
-## 4. Context and Constraints
+## 6. Context and Constraints
 
 - Repo/system:
 - Current state:
@@ -30,7 +57,7 @@ Given <current context/state>, for <user/operator>, change/decide <specific targ
 - External dependencies:
 - Compatibility constraints:
 
-## 5. Scope and Non-Goals
+## 7. Scope and Non-Goals
 
 ### In Scope
 
@@ -44,7 +71,7 @@ Given <current context/state>, for <user/operator>, change/decide <specific targ
 
 - 
 
-## 6. Assumptions and Risks
+## 8. Assumptions and Risks
 
 - [confirmed] 
 - [unconfirmed] 
@@ -60,11 +87,11 @@ Risk areas to check:
 - Operations/deploy/rollback:
 - Cost/performance:
 
-## 7. Acceptance Criteria
+## 9. Acceptance Criteria
 
 - [ ] 
 
-## 8. Verification Plan
+## 10. Verification Plan
 
 - Unit tests:
 - Integration tests:
@@ -76,7 +103,7 @@ Risk areas to check:
 - CI evidence:
 - Live proof, if applicable:
 
-## 9. Agent Execution Classification
+## 11. Agent Execution Classification
 
 - Classification: Autonomous / Needs owner / Ignored by owner
 - Handoff target: more questions / spec / GitHub issue / Codex task / maintainer-orchestrator / owner decision
@@ -94,7 +121,7 @@ Risk areas to check:
   - May delete data/resources: yes/no
 - Requires owner approval before:
 
-## 10. Loop Stop Conditions
+## 12. Loop Stop Conditions
 
 - Max maker/checker loops:
 - Time/token/cost budget:
@@ -103,7 +130,7 @@ Risk areas to check:
 - No-progress guard:
 - Blocker brief required when:
 
-## 11. Critique Prompts
+## 13. Critique Prompts
 
 - What assumption is weakest?
 - What simpler interpretation exists?
@@ -113,7 +140,7 @@ Risk areas to check:
 - What proof would convince a skeptical maintainer?
 - What decision truly requires the owner?
 
-## 12. Missing High-Value Questions
+## 14. Missing High-Value Questions
 
 Ask the fewest questions that change scope, safety, routing, authority, or verification.
 
@@ -121,7 +148,7 @@ Ask the fewest questions that change scope, safety, routing, authority, or verif
 2. 
 3. 
 
-## 13. Next Stage
+## 15. Next Stage
 
 Ready for:
 

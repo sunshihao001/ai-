@@ -126,7 +126,7 @@ Bad first-loop candidates:
 - destructive production changes,
 - anything where done is mostly judgment.
 
-## Phase 1 — Demand Grilling Control Gate
+## Phase 2 — Demand Grilling Control Gate
 
 Use `ai-workflow-brainstorm-grill` and `dbs-good-question`.
 
@@ -161,7 +161,7 @@ Exit criteria:
 - Maker/checker, authority boundary, verification plan, and stop conditions are defined when a loop or Codex handoff is possible.
 - Missing questions are limited to the smallest high-value set that changes scope, safety, routing, authority, or verification.
 
-## Phase 2 — Production Documentation
+## Phase 3 — Production Documentation
 
 Use `ai-workflow-specify`.
 
@@ -180,7 +180,7 @@ Outputs:
 - GitHub issues
 - ADRs when architecture decisions are made
 
-## Phase 3 — Codex Execution
+## Phase 4 — Codex Execution
 
 Use `ai-workflow-codex-issue` and `ai-workflow-tdd`.
 
@@ -197,7 +197,7 @@ Purpose:
 - Ask Codex to write or update tests first where practical.
 - Codex is usually the maker, not the sole checker.
 
-## Phase 4 — QA / Review / Completion
+## Phase 5 — QA / Review / Completion
 
 Use `ai-workflow-review-qa` and `ai-workflow-debug`.
 
@@ -216,7 +216,7 @@ Quality gate:
 - Separate checker has reviewed spec alignment and diff.
 - Human reads important diffs before merge.
 
-## Phase 5 — Harness Repair / Method Improvement
+## Phase 6 — Harness Repair / Method Improvement
 
 Use `ai-workflow-loop-orchestrator` plus `ai-workflow-debug`.
 
