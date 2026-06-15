@@ -6,13 +6,14 @@ This project uses a curated subset of three external skill systems:
 - `github/spec-kit` — spec-driven development: specify → plan → tasks → checklist → implement.
 - `mattpocock/skills` — requirement grilling, shared language, TDD, diagnosis, review.
 
-It also absorbs newer loop-engineering and maintainer-orchestrator patterns:
+It also absorbs newer loop-engineering, maintainer-orchestrator, and upstream control-plane patterns:
 
 - Loop engineering — design systems that prompt/check agents instead of hand-prompting forever.
 - Maker/checker separation — the agent that produces work should not be the only judge.
 - Durable state — state belongs in files/GitHub/CI, not only in chat context.
 - Decision-ready owner asks — ask the human only after autonomous work is prepared and evidenced.
 - Harness repair — when the AI workflow fails, repair the prompt/skill/checklist and lock the failure as a regression.
+- Demand Control Plane boundary — reusable demand-grilling/product-boundary work belongs upstream in this AI workflow repo; business repos keep only minimal adapters and trial-field artifacts.
 
 The goal is not to install every skill. The goal is to compose the core behaviors into one project workflow.
 
@@ -70,7 +71,25 @@ Idea
 
 Use only the skills needed for the current phase.
 
-## Phase 0 — Loop / Orchestration Design
+## Phase 0 — Upstream Control-Plane Boundary
+
+Use `.ai/methods/demand-control-plane-upstream-boundary.md` when a project reveals a reusable demand-grilling or method-wheel correction.
+
+Purpose:
+
+- Keep the Demand Control Plane independent from any one business repository.
+- Put reusable protocol, benchmark, template, validator, and skill changes in this AI workflow repository.
+- Keep business repositories minimal: pointer, adapter, trial artifact, issue/handoff, project-local validator, and domain output.
+- Prevent the method wheel from becoming larger than the project it is helping.
+
+Routing rule:
+
+```text
+Reusable workflow correction → this AI workflow repo
+Project-specific evidence or trial field artifact → business repo
+```
+
+## Phase 1 — Loop / Orchestration Design
 
 Use `ai-workflow-loop-orchestrator`.
 

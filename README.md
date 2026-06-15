@@ -15,6 +15,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Curated portable skills: `.agents/skills/*`
 - Codex project skills: `.codex/skills/*`
 - Method wheel: `.ai/methods/ai-method-wheel.md`
+- Demand Control Plane upstream boundary: `.ai/methods/demand-control-plane-upstream-boundary.md`
 - Demand grilling control gate: `.ai/methods/demand-grilling-control-gate.md`
 - Maintainer orchestrator mapping: `.ai/methods/maintainer-orchestrator-mapping.md`
 - Codex handoff template: `.ai/templates/codex-issue-handoff.md`
@@ -77,6 +78,17 @@ intent → context → scope → assumptions/risks → acceptance criteria → v
 ```
 
 Do not run every upstream skill as a giant questionnaire. Ask only the 1-3 highest-value questions that change scope, safety, routing, authority, or verification.
+
+## Demand Control Plane Boundary
+
+The demand-grilling layer is maintained as an upstream control plane in this AI workflow repository. When a real business project reveals a reusable method flaw, update this repo rather than burying the correction in that business repo.
+
+```text
+Reusable workflow protocol / template / benchmark / quality gate → this repo
+Project-local evidence / adapter / trial artifact / issue / domain output → business repo
+```
+
+Use `.ai/methods/demand-control-plane-upstream-boundary.md` for the boundary and external benchmark matrix.
 
 ## Project Onboarding
 

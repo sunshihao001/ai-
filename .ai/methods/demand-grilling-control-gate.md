@@ -6,6 +6,10 @@ Demand grilling is the front control gate of the AI Method Wheel. In the loop-ag
 
 Do not run every upstream skill as a giant checklist. Use one control gate that combines the useful questioning perspectives and produces one durable brief.
 
+The Demand Grilling / Demand Control Plane boundary is upstream: reusable demand-grilling protocol, templates, benchmark research, and quality gates belong in this AI workflow repository. Business repositories should keep only a minimal adapter, trial artifact, issue/handoff, project-local validator, or domain output.
+
+See `.ai/methods/demand-control-plane-upstream-boundary.md` for the boundary and external benchmark matrix.
+
 ```text
 vague ask
 → demand-grilling control gate
