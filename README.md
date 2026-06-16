@@ -16,7 +16,9 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Codex project skills: `.codex/skills/*`
 - Method wheel: `.ai/methods/ai-method-wheel.md`
 - Maintainer orchestrator mapping: `.ai/methods/maintainer-orchestrator-mapping.md`
+- Hermes → Codex command orchestration: `.ai/methods/hermes-codex-command-orchestration.md`
 - Codex handoff template: `.ai/templates/codex-issue-handoff.md`
+- Codex theory-generation handoff template: `.ai/templates/codex-theory-generation-handoff.md`
 - Project onboarding template: `.ai/templates/project-onboarding.md`
 - Loop run template: `.ai/templates/loop-run.md`
 - Owner decision brief template: `.ai/templates/owner-decision-brief.md`
@@ -126,6 +128,22 @@ inspect → classify → delegate → monitor → decision-ready brief → repor
 ```
 
 Key rule: do not ask the owner from a rough issue or half-finished PR. First prepare the work to the decision-ready boundary, then ask for the exact remaining decision/access/waiver/land/delete action.
+
+## Hermes-Orchestrated Codex Commands
+
+Use `.ai/methods/hermes-codex-command-orchestration.md` when Hermes needs to call Codex CLI as a bounded worker. The corrected pattern is:
+
+```text
+Hermes clarifies and routes → Hermes writes prompt/source pack → Hermes invokes Codex command → Hermes checks output/diff/validation → GitHub/CI records evidence → owner decides.
+```
+
+For long theory generation, prefer a compact Hermes-built source pack and:
+
+```text
+codex exec -C <repo> --sandbox read-only --output-last-message <draft.md> - < <prompt.md>
+```
+
+For landing reviewed content into a repo, prefer a separate bounded worker with explicit allowed paths and `workspace-write`; use `danger-full-access` only as a gateway/sandbox fallback with clean git state and post-run review.
 
 ## Codex Handoff
 

@@ -200,6 +200,28 @@ Bad run / failed PR / bad trace
 → document the lesson
 ```
 
+## Hermes-Orchestrated Codex Command Layer
+
+Codex should not be treated as a vague separate chat or an all-purpose executor. For this method wheel:
+
+```text
+Hermes = demand clarification, control plane, command orchestrator, checker, PR/CI coordinator
+Codex = bounded maker worker invoked through specific CLI commands
+GitHub/CI = durable state and objective verification
+Owner = product/security/access/merge/release decision maker
+```
+
+Use `.ai/methods/hermes-codex-command-orchestration.md` for command selection. Common patterns:
+
+```text
+Long theory generation → codex exec + read-only + output-last-message + source pack + background
+Repo landing → codex exec + workspace-write + explicit allowed paths + post-run validation
+Review → codex review as second opinion, not final checker
+Patch mode → generate diff → Hermes review → codex apply → validation
+```
+
+A lesson from live use: broad `--add-dir` over large knowledge bases can make Codex spend time expanding source material instead of producing the target artifact. For long theory work, Hermes should first create a compact source pack, then ask Codex to generate from that pack.
+
 ## GitHub-Centered Record
 
 Use GitHub as the durable record:
