@@ -20,6 +20,8 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | 2026-06-17-addy-osmani-loop-engineering | Addy Osmani Loop Engineering | expert article | S2 | extracted | `sources/2026-06-17-addy-osmani-loop-engineering.md` |
 | 2026-06-17-freeman1266-loop-engineering-pr-watch | freeman1266 / MacTalk on Loop Engineering practice and PR watch loop | social/practitioner article | S2.5/S3 | extracted with caveat | `sources/2026-06-17-freeman1266-loop-engineering-pr-watch.md` |
 | 2026-06-17-harnesscode-loop-system | yzddp/harnesscode GitHub repo loop system | GitHub repo | S1 | extracted | `sources/2026-06-17-harnesscode-loop-system.md` |
+| 2026-06-17-sydney-runkle-art-of-loop-engineering | Sydney Runkle on stacked loop engineering / loopcraft | X article | S2 | extracted with caveat | `sources/2026-06-17-sydney-runkle-art-of-loop-engineering.md` |
+| 2026-06-17-zach-lloyd-self-improving-skills | Zach Lloyd on self-improving Skills inner/outer loops | X article + GitHub demo | S1/S2 | extracted with caveat | `sources/2026-06-17-zach-lloyd-self-improving-skills.md` |
 
 ## Concept index
 
@@ -39,6 +41,8 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | Goal vs Loop distinction | `2026-06-17-pandatalk8-goal-loop-workflows`, `2026-06-17-freeman1266-loop-engineering-pr-watch` | candidate | A-port / loop-run template |
 | Runtime loop state files | `2026-06-17-harnesscode-loop-system` | partial_accept | `.ai/templates/runtime-loop-state.md` |
 | False-completion guard | `2026-06-17-harnesscode-loop-system` | partial_accept | `.ai/templates/false-completion-guard.md` |
+| Stacked loop taxonomy | `2026-06-17-sydney-runkle-art-of-loop-engineering` | partial_accept | A-port loop classification / synthesis |
+| Self-improving Skill Loop | `2026-06-17-zach-lloyd-self-improving-skills` | accept_with_guardrails | `.ai/templates/self-improving-skill-loop.md` |
 
 ## Frame updates
 
@@ -51,3 +55,9 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | Frame | Status | Latest update | Notes |
 | --- | --- | --- | --- |
 | HarnessCode loop system | comparison | `sources/2026-06-17-harnesscode-loop-system.md` | Centralized five-agent harness with PRD/spec/state-file execution loop. |
+
+## Decision updates
+
+| ID | Decision | Scope | Note |
+| --- | --- | --- | --- |
+| `2026-06-17-stacked-loops-self-improving-skills` | PARTIAL_ACCEPT / ACCEPT_WITH_GUARDRAILS | stacked-loop taxonomy + self-improving skill template | Adds outer improvement loop while preserving baseline protection. |
