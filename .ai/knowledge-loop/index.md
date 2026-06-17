@@ -19,6 +19,7 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | 2026-06-17-yanhua-design-loops-not-prompts | Yanhua X article on designing loops instead of prompts | social article | S3 | extracted | `sources/2026-06-17-yanhua-design-loops-not-prompts.md` |
 | 2026-06-17-addy-osmani-loop-engineering | Addy Osmani Loop Engineering | expert article | S2 | extracted | `sources/2026-06-17-addy-osmani-loop-engineering.md` |
 | 2026-06-17-freeman1266-loop-engineering-pr-watch | freeman1266 / MacTalk on Loop Engineering practice and PR watch loop | social/practitioner article | S2.5/S3 | extracted with caveat | `sources/2026-06-17-freeman1266-loop-engineering-pr-watch.md` |
+| 2026-06-17-harnesscode-loop-system | yzddp/harnesscode GitHub repo loop system | GitHub repo | S1 | extracted | `sources/2026-06-17-harnesscode-loop-system.md` |
 
 ## Concept index
 
@@ -42,3 +43,9 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | ID | Decision | Scope | Note |
 | --- | --- | --- | --- |
 | `2026-06-17-protective-loop-engineering-update` | PARTIAL_ACCEPT | protective knowledge-update gate + loop template update | Preserves current baseline while allowing new AI workflow knowledge to enter candidate/proposal layers. |
+
+## Comparison frames
+
+| Frame | Status | Latest update | Notes |
+| --- | --- | --- | --- |
+| HarnessCode loop system | comparison | `sources/2026-06-17-harnesscode-loop-system.md` | Centralized five-agent harness with PRD/spec/state-file execution loop. |
