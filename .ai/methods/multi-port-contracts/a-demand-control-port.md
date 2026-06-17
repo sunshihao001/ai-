@@ -52,6 +52,27 @@ Given <current baseline/context>, evaluate <source/request> as a candidate chang
 
 然后只吸收它解决的问题，不吸收它的叙事包装。
 
+### 1.2 Harness control-surface classification
+
+A端必须先判断输入类型，再决定是否交给 model/maker：
+
+```text
+ordinary task request → Demand Grilling Brief / spec / route
+control command → harness/local command，不当作普通 prompt
+state query → 从 runtime state / repo / GitHub 给确定答案
+diagnostic → 本地 audit/doctor/check，不让 model 猜
+skill invocation → 加载对应 SKILL.md procedure context
+knowledge-frame update → 进入 A↔B 双闸门和保护性知识更新循环
+owner decision → F端 owner decision record
+```
+
+A端要保护这条边界：
+
+```text
+Model can request. Harness decides.
+Transcript records what happened. Runtime state records what is true. Context is the projection for the next step.
+```
+
 
 ## 2. 你的输入
 

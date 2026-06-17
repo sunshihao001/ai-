@@ -51,13 +51,17 @@ Layer meanings:
 A safe loop requires:
 
 - explicit trigger,
+- input routing before model prompting,
 - isolated branch/worktree when changing code,
 - runtime state under `.ai/loop-runs/<run-id>/` or equivalent GitHub issue/PR,
+- separation of durable log, app/runtime state, and model-visible context,
+- context projection before each model call,
 - separate maker and checker,
 - false-completion guard,
 - max iterations,
 - budget/time cap,
 - deterministic checks where possible,
+- harness policy checks before tool side effects,
 - human/owner review for sensitive actions and broad framework changes,
 - self-improvement changes as reviewable diffs, never silent mutation.
 
@@ -283,6 +287,35 @@ Patch mode → generate diff → Hermes review → codex apply → validation
 ```
 
 A lesson from live use: broad `--add-dir` over large knowledge bases can make Codex spend time expanding source material instead of producing the target artifact. For long theory work, Hermes should first create a compact source pack, then ask Codex to generate from that pack.
+
+## Harness Control Surface / Context Projection
+
+For coding-agent work, the harness is part of the product. A model may propose actions, but the harness/control plane decides what is routed, what context is visible, what tool calls execute, and what state is true.
+
+Use `.ai/templates/harness-control-surface.md` when designing or auditing long-running agent work.
+
+Core split:
+
+```text
+Durable log = what happened.
+Runtime/app state = what is true now.
+Model-visible context = selected projection for the next step.
+```
+
+Do not send every input to the model as ordinary prompt text. A-port should first classify whether the input is:
+
+```text
+ordinary user request / control command / state query / diagnostic / skill invocation / owner decision / knowledge-frame update
+```
+
+Markdown files are also context interfaces, not raw text dumps:
+
+```text
+AGENTS.md = workspace instruction context
+SKILL.md = task procedure context
+specs/plans = bounded implementation context
+logs/transcripts = durable evidence that must be projected/summarized
+```
 
 ## Knowledge Loop / Learning Reserve
 
