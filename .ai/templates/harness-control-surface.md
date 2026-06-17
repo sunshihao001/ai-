@@ -24,6 +24,9 @@ The harness/control plane must own:
 - [ ] context projection before model calls;
 - [ ] slash/local command routing;
 - [ ] delegation boundaries;
+- [ ] sandbox/environment selection;
+- [ ] hooks/middleware for compaction, continuation, lint/test checks, and false-completion guards;
+- [ ] context-rot mitigation and progressive disclosure;
 - [ ] human approval for sensitive actions.
 
 ## 2. Truth / transcript / context split
@@ -103,3 +106,39 @@ A-port output should name:
 - state files/artifacts to update;
 - checker/verification evidence;
 - stop/rollback rule.
+
+
+## 7. Harness anatomy checklist
+
+When auditing an agent system, check whether these harness pieces are explicit:
+
+| Harness component | Questions |
+| --- | --- |
+| System prompts / instructions | Are stable rules separated from transient chat? |
+| Tools / Skills / MCPs | Are tools described, scoped, and loaded only when useful? |
+| Bundled infrastructure | What filesystem, sandbox, browser, git, package/runtime tools exist? |
+| Orchestration logic | Who chooses subagents, handoffs, model routing, and command pattern? |
+| Hooks / middleware | What runs before/after model calls and tool calls? |
+| Context management | How does the harness prevent context rot and stale state? |
+| Verification | Which deterministic checks, graders, tests, or review gates exist? |
+| Continuation | How does long-horizon work resume without trusting stale transcript? |
+
+## 8. Skill progression path
+
+A repeated task should mature through this path:
+
+```text
+one-off prompt
+→ reusable prompt skeleton
+→ prompt library/template
+→ API or batch loop
+→ tool/MCP-connected workflow
+→ SKILL.md with trigger, steps, checks, output shape
+→ self-improving skill loop when feedback accumulates
+```
+
+Promotion rule:
+
+```text
+Do not promote a private prompt/template into a shared skill until A/E review confirms trigger conditions, verification, risk, and rollback.
+```

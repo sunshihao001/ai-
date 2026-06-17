@@ -23,6 +23,8 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | 2026-06-17-sydney-runkle-art-of-loop-engineering | Sydney Runkle on stacked loop engineering / loopcraft | X article | S2 | extracted with caveat | `sources/2026-06-17-sydney-runkle-art-of-loop-engineering.md` |
 | 2026-06-17-zach-lloyd-self-improving-skills | Zach Lloyd on self-improving Skills inner/outer loops | X article + GitHub demo | S1/S2 | extracted with caveat | `sources/2026-06-17-zach-lloyd-self-improving-skills.md` |
 | 2026-06-17-dongxi-nlp-harness-series | dongxi_nlp Harness series on runtime control/context | X article series | S2 | extracted with caveat | `sources/2026-06-17-dongxi-nlp-harness-series.md` |
+| 2026-06-17-viv-agent-harness-anatomy | Viv on Agent = Model + Harness and harness primitives | X article | S2 | extracted with caveat | `sources/2026-06-17-viv-agent-harness-anatomy.md` |
+| 2026-06-17-riley-west-ai-30-day-roadmap | Riley West AI 30-day roadmap / skill progression | X article | S3 | extracted with caveat | `sources/2026-06-17-riley-west-ai-30-day-roadmap.md` |
 
 ## Concept index
 
@@ -46,6 +48,8 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | Self-improving Skill Loop | `2026-06-17-zach-lloyd-self-improving-skills` | accept_with_guardrails | `.ai/templates/self-improving-skill-loop.md` |
 | Harness control surface | `2026-06-17-dongxi-nlp-harness-series` | partial_accept | `.ai/templates/harness-control-surface.md` |
 | Context projection | `2026-06-17-dongxi-nlp-harness-series` | partial_accept | AI Method Wheel control layer / harness template |
+| Harness anatomy | `2026-06-17-viv-agent-harness-anatomy` | accept_with_guardrails | AI Method Wheel Phase 0 / harness template |
+| Skill progression path | `2026-06-17-riley-west-ai-30-day-roadmap` | watch/partial_accept | AI Method Wheel Skill Layer |
 
 ## Frame updates
 
@@ -65,3 +69,4 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | --- | --- | --- | --- |
 | `2026-06-17-stacked-loops-self-improving-skills` | PARTIAL_ACCEPT / ACCEPT_WITH_GUARDRAILS | stacked-loop taxonomy + self-improving skill template | Adds outer improvement loop while preserving baseline protection. |
 | `2026-06-17-harness-control-context-projection` | PARTIAL_ACCEPT | harness control surface + context projection | Clarifies truth/transcript/context split and A-port input routing. |
+| `2026-06-17-agent-harness-anatomy-skill-progression` | ACCEPT_WITH_GUARDRAILS / PARTIAL_ACCEPT | harness anatomy + skill progression | Strengthens harness primitive checklist and prompt-to-skill progression. |

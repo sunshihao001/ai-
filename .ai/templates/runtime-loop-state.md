@@ -73,6 +73,29 @@ harness_policy:
     specs: "bounded task context"
     logs: "projected evidence, not raw prompt dump"
 
+environment:
+  sandbox: "local | worktree | container | remote-vm | cloud-agent | none"
+  allowed_paths: []
+  forbidden_paths: []
+  network_policy: "allowed | restricted | blocked | owner_approval_required"
+  required_tools: []
+  validation_commands: []
+
+hooks_middleware:
+  before_model: []
+  before_tool: []
+  after_tool: []
+  after_model: []
+  compaction: "manual | threshold | disabled"
+  continuation: "manual | stop-hook | scheduled | disabled"
+  false_completion_guard: true
+
+context_rot_mitigation:
+  large_output_policy: "preview + handle"
+  compaction_threshold: ""
+  progressive_disclosure: true
+  stale_state_check: true
+
 ports:
   A:
     role: "demand/control"

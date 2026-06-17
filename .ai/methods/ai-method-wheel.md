@@ -89,9 +89,25 @@ Idea
 
 Use only the skills needed for the current phase.
 
-## Phase 0 — Loop / Orchestration Design
+### Skill progression path
 
-Use `ai-workflow-loop-orchestrator`.
+Repeated AI work should mature through this path:
+
+```text
+one-off prompt
+→ reusable prompt skeleton
+→ prompt library/template
+→ API or batch loop
+→ tool/MCP-connected workflow
+→ SKILL.md with trigger, steps, checks, output shape
+→ self-improving skill loop when feedback accumulates
+```
+
+Do not promote a personal prompt into a shared repo skill until A/E review confirms trigger conditions, verification, risk, and rollback.
+
+## Phase 0 — Harness / Loop / Orchestration Design
+
+Use `ai-workflow-loop-orchestrator` and `.ai/templates/harness-control-surface.md`.
 
 Sources:
 
@@ -106,6 +122,7 @@ Purpose:
 - Classify work as autonomous, needs owner, or ignored by owner.
 - Define maker/checker roles.
 - Define durable state and stop conditions before work starts.
+- Define harness components: prompts/instructions, tools/skills/MCP, filesystem/sandbox/browser/git, orchestration logic, hooks/middleware, context management, verification, and continuation.
 - Prevent uncontrolled agent sprawl and hidden token burn.
 
 Good loop candidates:
