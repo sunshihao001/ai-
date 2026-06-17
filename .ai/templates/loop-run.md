@@ -35,7 +35,7 @@ Reason:
 
 ```
 
-## 4. Durable State
+## 4. Durable State and Harness Truth
 
 Where progress is recorded:
 
@@ -44,7 +44,27 @@ Where progress is recorded:
 - [ ] `specs/<feature>/`:
 - [ ] ADR:
 - [ ] QA checklist:
+- [ ] `.ai/loop-runs/<run-id>/state.yaml`:
+- [ ] `.ai/loop-runs/<run-id>/context-projection.md`:
+- [ ] `.ai/loop-runs/<run-id>/tool-policy.md`:
+- [ ] `.ai/loop-runs/<run-id>/command-router.md`:
 - [ ] other:
+
+Truth/context rule:
+
+```text
+Transcript is evidence, not truth. Runtime state is truth. Model-visible context is a projection.
+```
+
+Input classification before model call:
+
+- [ ] ordinary task request
+- [ ] control command
+- [ ] state query
+- [ ] diagnostic
+- [ ] skill invocation
+- [ ] owner decision
+- [ ] knowledge-frame update
 
 ## 5. Maker
 
@@ -106,6 +126,9 @@ If still failing, stop and write a blocker brief.
 - [ ] CI URL
 - [ ] PR URL
 - [ ] Screenshots/logs if UI/runtime
+- [ ] Context projection record
+- [ ] Tool policy / approval record for side effects
+- [ ] File-state baseline/freshness evidence
 - [ ] Security/a11y notes if applicable
 - [ ] Rollback plan
 

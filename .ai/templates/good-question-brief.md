@@ -64,6 +64,19 @@ Do not:
 - Review/checker evidence:
 - False-completion traps:
 
+
+## Harness Control Surface
+
+Before routing to a maker/model, classify the input:
+
+- Input type: ordinary task / control command / state query / diagnostic / skill invocation / owner decision / knowledge-frame update
+- Source of truth:
+- Runtime state to inspect/update:
+- Model-visible context projection:
+- Markdown context to load: AGENTS / SKILL / spec / source note / logs
+- Tool side-effect policy:
+- Human approval boundary:
+
 ## Agent Execution Classification
 
 - Classification: Autonomous / Needs owner / Ignored by owner

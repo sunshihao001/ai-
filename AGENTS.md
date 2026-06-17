@@ -34,6 +34,14 @@ Before editing code, read:
 - Do not mark work complete unless there is objective verification.
 - Never commit secrets, tokens, `.env` files, credentials, or private keys.
 
+
+## Harness Control Rules
+- Treat the repo/GitHub/state files as truth; chat transcripts are evidence, not source of truth.
+- Before sending input to a maker/model, classify whether it is an ordinary task, control command, state query, diagnostic, skill invocation, owner decision, or knowledge-frame update.
+- Do not route tool side effects directly from model proposals to execution; apply path, permission, scope, and owner-policy checks first.
+- Load markdown by context type: `AGENTS.md` as workspace instruction context, `SKILL.md` as task procedure context, specs as bounded task context, logs/transcripts as projected evidence.
+- For long-running work, project context before each model call: preserve current state, selected evidence, and handles to full logs instead of blindly appending transcript.
+
 ## Recommended Verification
 Use what exists in the project. Typical commands may include:
 
