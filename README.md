@@ -17,6 +17,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Method wheel: `.ai/methods/ai-method-wheel.md`
 - Maintainer orchestrator mapping: `.ai/methods/maintainer-orchestrator-mapping.md`
 - Hermes → Codex command orchestration: `.ai/methods/hermes-codex-command-orchestration.md`
+- Multi-port skill stack method: `.ai/methods/multi-port-skill-stack.md`
 - Codex handoff template: `.ai/templates/codex-issue-handoff.md`
 - Codex theory-generation handoff template: `.ai/templates/codex-theory-generation-handoff.md`
 - Project onboarding template: `.ai/templates/project-onboarding.md`
@@ -128,6 +129,16 @@ inspect → classify → delegate → monitor → decision-ready brief → repor
 ```
 
 Key rule: do not ask the owner from a rough issue or half-finished PR. First prepare the work to the decision-ready boundary, then ask for the exact remaining decision/access/waiver/land/delete action.
+
+## Multi-Port Skill Stacks
+
+Use `.ai/methods/multi-port-skill-stack.md` when splitting a loop-agent workflow across multiple bots, profiles, or new conversations. The corrected model is:
+
+```text
+port = port identity prompt + port primary skill + auxiliary skill stack + handoff protocol + verification checklist
+```
+
+This prevents multi-bot workflows from becoming disconnected context islands.
 
 ## Hermes-Orchestrated Codex Commands
 

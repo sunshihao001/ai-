@@ -200,6 +200,27 @@ Bad run / failed PR / bad trace
 → document the lesson
 ```
 
+## Multi-Port Skill Stack Layer
+
+When a loop spans multiple Telegram bots, profiles, agents, or new conversations, do not rely on a long prompt alone. Use a port skill stack:
+
+```text
+port = port identity prompt + primary port skill + auxiliary skills + input/output protocol + verification checklist
+```
+
+Typical ports:
+
+```text
+A demand/control
+B source-pack/context compression
+C theory/draft maker
+D repo landing/implementation
+E verification/PR-CI checker
+F owner decision
+```
+
+The primary skill defines identity and boundaries. Auxiliary skills provide capabilities such as requirement grilling, source inspection, Codex invocation, GitHub PR workflow, code review, or debugging. See `.ai/methods/multi-port-skill-stack.md`.
+
 ## Hermes-Orchestrated Codex Command Layer
 
 Codex should not be treated as a vague separate chat or an all-purpose executor. For this method wheel:
