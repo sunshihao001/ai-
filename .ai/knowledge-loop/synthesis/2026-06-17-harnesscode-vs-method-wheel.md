@@ -63,3 +63,22 @@ Do not borrow wholesale:
 - single central orchestrator as the only brain,
 - five-role model as a replacement for A/B/C/D/E/F,
 - unattended autonomy claims without the user's protective baseline gates.
+
+## Landed narrow updates
+
+The comparison was converted into two additive templates rather than a baseline rewrite:
+
+- `.ai/templates/runtime-loop-state.md` — state-file structure for long-running A/B/C/D/E/F loop runs.
+- `.ai/templates/false-completion-guard.md` — E-port/A-port check that prevents accepting agent self-reported completion without state, test, review, blocker, scope, and rollback evidence.
+
+A-port wording was also tightened in:
+
+- `.ai/methods/multi-port-contracts/a-demand-control-port.md`
+- `.ai/templates/good-question-brief.md`
+
+Professional phrasing:
+
+```text
+A端 is an Intent-to-Spec Control Gate / Demand-Control Plane.
+It converts raw intent into an operational question and then into a routed execution contract.
+```

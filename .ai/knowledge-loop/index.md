@@ -37,6 +37,8 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | PR Watch Loop | `2026-06-17-freeman1266-loop-engineering-pr-watch` | watch/experiment | E-port / maintainer-orchestrator / future loop-run template |
 | Same-failure escalation rule | `2026-06-17-freeman1266-loop-engineering-pr-watch` | partial_accept | `.ai/templates/loop-run.md` stop/uncertainty rule |
 | Goal vs Loop distinction | `2026-06-17-pandatalk8-goal-loop-workflows`, `2026-06-17-freeman1266-loop-engineering-pr-watch` | candidate | A-port / loop-run template |
+| Runtime loop state files | `2026-06-17-harnesscode-loop-system` | partial_accept | `.ai/templates/runtime-loop-state.md` |
+| False-completion guard | `2026-06-17-harnesscode-loop-system` | partial_accept | `.ai/templates/false-completion-guard.md` |
 
 ## Frame updates
 

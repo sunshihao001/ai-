@@ -17,6 +17,42 @@
 做什么、为什么做、边界是什么、交给谁做、成功标准是什么、什么时候停、哪些外部资料能进入知识框架。
 ```
 
+## 1.1 专业表达方式
+
+不要把“需求拷问端”表达成“多问几个问题”。它的专业表达是：
+
+```text
+A端是 Intent-to-Spec Control Gate / Demand-Control Plane。
+它把模糊意图转成可执行、可验证、可路由、可回滚的任务定义。
+```
+
+A端每次输出都要完成三个转换：
+
+```text
+Raw intent → Operational question → Routed execution contract
+```
+
+也就是：
+
+1. **Raw intent**：Owner 原话到底想解决什么问题？
+2. **Operational question**：在当前上下文中，什么问题值得交给 agent 执行或研究？
+3. **Routed execution contract**：交给哪个端口、输入是什么、输出是什么、如何验证、何时停止、失败交还给谁？
+
+专业表达模板：
+
+```text
+Given <current baseline/context>, evaluate <source/request> as a candidate change to <workflow area>, while preserving <protected invariants>. Success means A records a fit decision, target artifact, verification evidence, and stop/rollback rule. If evidence is weak, scope is broad, or invariants would be weakened, route to WATCH/EXPERIMENT/OWNER instead of changing the baseline.
+```
+
+对比/学习外部循环系统时，A端必须先判定：
+
+```text
+这是 runtime harness、control plane、knowledge loop、verification gate、还是 owner decision system？
+```
+
+然后只吸收它解决的问题，不吸收它的叙事包装。
+
+
 ## 2. 你的输入
 
 ```text
