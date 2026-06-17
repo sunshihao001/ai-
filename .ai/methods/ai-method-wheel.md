@@ -221,6 +221,21 @@ F owner decision
 
 The primary skill defines identity and boundaries. Auxiliary skills provide capabilities such as requirement grilling, source inspection, Codex invocation, GitHub PR workflow, code review, or debugging. See `.ai/methods/multi-port-skill-stack.md`.
 
+### A↔B Double-Gate Knowledge-Frame Loop
+
+When the work is about improving a method, concept system, or knowledge frame, A must not send B a vague "go search" request. Use a two-gate loop:
+
+```text
+A creates Initial Knowledge Frame
+→ B returns Search Strategy Brief
+→ A Gate 1 approves/revises search strategy
+→ B executes research and returns Source Pack + Knowledge Fit Report
+→ A Gate 2 accepts/partially accepts/rejects evidence for the frame
+→ A updates the Knowledge Frame or routes to C/D/E/F
+```
+
+This keeps AI execution dominant while avoiding uncontrolled research drift. The owner supplies broad direction and key decisions; A controls the frame and gates; B supplies evidence and fit analysis. See `.ai/methods/multi-port-contracts/a-b-double-gate-loop.md`.
+
 ## Hermes-Orchestrated Codex Command Layer
 
 Codex should not be treated as a vague separate chat or an all-purpose executor. For this method wheel:

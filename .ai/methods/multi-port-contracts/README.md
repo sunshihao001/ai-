@@ -38,6 +38,26 @@ E管凭什么说它对。
 F管是否允许进入下一阶段。
 ```
 
+## A↔B 双闸门循环
+
+A端不应把初步想法直接丢给 B端“去搜索”。当任务目标是完善知识框架或方法论时，A/B 应使用双闸门：
+
+```text
+A 初步知识框架
+  → B Search Strategy Brief
+  → A Gate 1 审核搜索策略
+  → B Source Pack + Knowledge Fit Report
+  → A Gate 2 审核是否吸收进知识框架
+```
+
+详见：
+
+```text
+.ai/methods/multi-port-contracts/a-b-double-gate-loop.md
+```
+
+这条规则服务总体目标：AI 主导执行循环，人类只负责大方向、边界和关键决策。
+
 ## 下一步建议
 
 如果这些端口契约方向确认，下一步可以把它们同步到：
