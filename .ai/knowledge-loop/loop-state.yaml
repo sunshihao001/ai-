@@ -1,12 +1,12 @@
 schema_version: 1
-updated_at: "2026-06-16T23:08:49"
+updated_at: "2026-06-17T06:35:42Z"
 owner: user
 purpose: "Maintain learning articles and knowledge reserve as a continuous update loop, not one-shot notes."
 current_focus:
   - "Loop Engineering / Ralph Loop"
   - "A-port Goal Engineering and Loop Control"
   - "A↔B double-gate evidence-to-frame loop"
-active_phase: "source_notes_and_synthesis"
+active_phase: "protective_absorption_review"
 ports:
   A:
     role: "knowledge frame and loop control"
@@ -15,6 +15,7 @@ ports:
       - "define evidence fit criteria"
       - "approve B search strategy"
       - "decide absorption into method wheel"
+      - "protect current baseline before promotion"
   B:
     role: "search strategy and source pack"
     responsibilities:
@@ -28,29 +29,29 @@ ports:
   D:
     role: "repo landing"
     responsibilities:
-      - "land accepted updates into repo docs/templates"
+      - "land accepted updates first as proposals or narrow rollbackable changes"
   E:
     role: "verification/review"
     responsibilities:
-      - "check consistency and evidence"
+      - "check consistency, evidence, scope drift, and baseline protection"
   F:
     role: "owner decision"
     responsibilities:
       - "approve high-level direction/risky changes"
 open_gaps:
-  - "Normalize yupi996 Loop Engineering X post and related public articles into source notes."
-  - "Decide which Goal/Loop/Workflows and Loop Engineering concepts should update A-port, B-port, and loop-orchestrator docs."
-  - "Create reusable learning-loop request templates for B-port."
+  - "Find stronger primary sources for Ralph Loop and exact /goal /loop /workflows command semantics before broad baseline rewrites."
+  - "Create a dedicated PR Watch Loop template only after another E-port/CI use case confirms the pattern."
+  - "Keep social-source insights in candidate/proposal form unless corroborated by S1/S2 evidence."
 stop_conditions:
   - "Each accepted concept has source note, synthesis, decision, and target doc update."
   - "No source remains only in chat if it influenced the method wheel."
   - "A decision exists for accept/partial/reject/escalate."
 risks:
   - "Over-absorbing viral social concepts without strong evidence."
+  - "Replacing the current stable method-wheel baseline without a rollback point."
   - "Turning knowledge reserve into raw link dump."
   - "Letting B search without A strategy and absorption gates."
 next_actions:
-  - "Review synthesis/2026-06-17-pr-watch-and-product-feedback-loop-patterns.md and decide whether to create a PR Watch Loop template."
-  - "Review synthesis/2026-06-17-goal-loop-workflows-and-loop-engineering.md for absorption decisions."
-  - "Add first source note for yupi996 Loop Engineering/Ralph/Overbaking thread."
-  - "Create synthesis note for Loop Engineering components."
+  - "Use `frame-updates/2026-06-17-protective-loop-engineering-update.md` as the gate for promoting future learning sources."
+  - "Apply `.ai/templates/loop-run.md` Knowledge-Update Protection Gate whenever an article may change the workflow."
+  - "Escalate to owner before changing core A/B/C/D/E/F contracts or current V4 baseline."

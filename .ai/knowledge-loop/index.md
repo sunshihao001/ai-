@@ -8,7 +8,7 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | --- | --- | --- | --- |
 | Multi-port loop agents | active | see `.ai/methods/multi-port-contracts/` | A/B/C/D/E/F port contracts |
 | A↔B double-gate knowledge loop | active | see `.ai/methods/multi-port-contracts/a-b-double-gate-loop.md` | A controls frame, B supplies strategy/evidence |
-| Loop Engineering / Ralph Loop | learning | pending source notes | Goal files, feedback, stop hooks, overbaking prevention |
+| Loop Engineering / Ralph Loop | protected-learning | `frame-updates/2026-06-17-protective-loop-engineering-update.md` | Goal files, feedback, stop hooks, overbaking prevention with baseline protection |
 
 ## Source index
 
@@ -33,6 +33,12 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | Environment Feedback | `2026-06-17-yupi996-loop-engineering-ralph-overbaking`, `2026-06-17-addy-osmani-loop-engineering` | candidate | loop-orchestrator docs |
 | Persistent State / Prompt file | `2026-06-17-yupi996-loop-engineering-ralph-overbaking`, `2026-06-17-addy-osmani-loop-engineering` | candidate | `.ai/knowledge-loop/loop-state.yaml` / templates |
 
-| PR Watch Loop | `2026-06-17-freeman1266-loop-engineering-pr-watch` | candidate | E-port / maintainer-orchestrator / loop-run template |
-| Same-failure escalation rule | `2026-06-17-freeman1266-loop-engineering-pr-watch` | candidate | loop-run stop conditions |
+| PR Watch Loop | `2026-06-17-freeman1266-loop-engineering-pr-watch` | watch/experiment | E-port / maintainer-orchestrator / future loop-run template |
+| Same-failure escalation rule | `2026-06-17-freeman1266-loop-engineering-pr-watch` | partial_accept | `.ai/templates/loop-run.md` stop/uncertainty rule |
 | Goal vs Loop distinction | `2026-06-17-pandatalk8-goal-loop-workflows`, `2026-06-17-freeman1266-loop-engineering-pr-watch` | candidate | A-port / loop-run template |
+
+## Frame updates
+
+| ID | Decision | Scope | Note |
+| --- | --- | --- | --- |
+| `2026-06-17-protective-loop-engineering-update` | PARTIAL_ACCEPT | protective knowledge-update gate + loop template update | Preserves current baseline while allowing new AI workflow knowledge to enter candidate/proposal layers. |

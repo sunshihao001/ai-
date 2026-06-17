@@ -102,6 +102,28 @@ If still failing, stop and write a blocker brief.
 - [ ] Security/a11y notes if applicable
 - [ ] Rollback plan
 
+## 8.1 Knowledge-Update Protection Gate
+
+Use this subsection when the loop absorbs an external article, X/Reddit thread, repo, video, or method source that may change the AI workflow.
+
+- Current baseline / rollback point:
+- Source quality: S1 / S2 / S3 / S4
+- A-port decision: REJECT / WATCH / EXPERIMENT / PARTIAL_ACCEPT / ACCEPT / ESCALATE
+- Proposed target: source note / synthesis / frame-update / template / method doc / skill
+- E-port consistency result: pass / pass-with-caveat / block
+- Promotion scope: additive candidate / narrow update / baseline change / owner approval required
+
+Protection checks:
+
+- [ ] Baseline is identified before update.
+- [ ] Social-source caveats are preserved.
+- [ ] Maker/checker separation remains intact.
+- [ ] Stop conditions and escalation rules remain explicit.
+- [ ] Owner boundary is not weakened.
+- [ ] Change is rollbackable.
+
+Repeated-uncertainty rule: if the same evidence gap or contradiction appears in 3 rounds, stop and produce an owner decision brief instead of rewriting the current frame.
+
 ## 9. Owner Decision Brief
 
 Only fill this after autonomous work is complete or truly blocked.
