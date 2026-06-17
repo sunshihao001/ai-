@@ -75,6 +75,52 @@ Owner trigger
 
 This is not merely “many bots.” It is a loop with explicit maker/checker separation, state handoff, stop conditions, and owner gates.
 
+
+---
+
+## 3.1 Port core-focus rule
+
+A port is mature only when its unique core product is obvious. The current corrected model is:
+
+```text
+A = decide what to do and why
+B = decide what evidence/source context it is based on
+C = form the theory/plan/package
+D = land the reviewed package into repo state
+E = prove whether it is correct with evidence
+F = decide whether the next risk/permission/merge phase is allowed
+```
+
+Each port must have a Port Contract with:
+
+```text
+identity
+unique core task
+inputs
+outputs
+forbidden actions
+return-to-upstream rules
+downstream handoff rules
+completion standard
+```
+
+Canonical port contracts live in:
+
+```text
+.ai/methods/multi-port-contracts/
+```
+
+Do not let ports compete for the same work:
+
+```text
+A does not do B's source compression.
+B does not do C's theory generation.
+C does not do D's repo landing.
+D does not do E's independent review.
+E does not do F's final decision.
+F does not debug routine port work.
+```
+
 ---
 
 ## 4. Port skill stack pattern

@@ -18,6 +18,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Maintainer orchestrator mapping: `.ai/methods/maintainer-orchestrator-mapping.md`
 - Hermes → Codex command orchestration: `.ai/methods/hermes-codex-command-orchestration.md`
 - Multi-port skill stack method: `.ai/methods/multi-port-skill-stack.md`
+- Multi-port contracts: `.ai/methods/multi-port-contracts/`
 - Codex handoff template: `.ai/templates/codex-issue-handoff.md`
 - Codex theory-generation handoff template: `.ai/templates/codex-theory-generation-handoff.md`
 - Project onboarding template: `.ai/templates/project-onboarding.md`
@@ -139,6 +140,12 @@ port = port identity prompt + port primary skill + auxiliary skill stack + hando
 ```
 
 This prevents multi-bot workflows from becoming disconnected context islands.
+
+Canonical port contracts are in `.ai/methods/multi-port-contracts/`. Their core split is:
+
+```text
+A = what/why, B = evidence, C = theory/plan, D = repo landing, E = proof, F = permission/decision.
+```
 
 ## Hermes-Orchestrated Codex Commands
 
