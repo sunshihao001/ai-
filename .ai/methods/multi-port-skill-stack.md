@@ -129,6 +129,7 @@ Each port should declare:
 
 ```text
 primary skill: defines role, scope, non-goals, handoff shape
+internal skill modules: input router, reasoning procedure, artifact writer, handoff builder, boundary self-check
 auxiliary skills: provide specific capabilities
 inputs: files, briefs, source packs, issues, PRs
 outputs: files, reports, diffs, commits, owner briefs
@@ -136,6 +137,14 @@ forbidden actions: safety and authority boundaries
 verification: commands, CI, diff checks, review checklists
 return path: when to send work back upstream
 ```
+
+Detailed per-port internals live in:
+
+```text
+.ai/methods/multi-port-internal-skill-blueprint.md
+```
+
+Do not update Telegram bot prompts directly from a high-level role name. First define the port's internal modules, then create/update the port skill, then update the bot prompt only after A/E review and owner approval.
 
 ---
 
