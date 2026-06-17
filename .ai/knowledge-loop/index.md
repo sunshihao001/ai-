@@ -18,6 +18,7 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | 2026-06-17-pandatalk8-goal-loop-workflows | PandaTalk8 X article on Goal + Loop + Workflows | social article | S3 | extracted | `sources/2026-06-17-pandatalk8-goal-loop-workflows.md` |
 | 2026-06-17-yanhua-design-loops-not-prompts | Yanhua X article on designing loops instead of prompts | social article | S3 | extracted | `sources/2026-06-17-yanhua-design-loops-not-prompts.md` |
 | 2026-06-17-addy-osmani-loop-engineering | Addy Osmani Loop Engineering | expert article | S2 | extracted | `sources/2026-06-17-addy-osmani-loop-engineering.md` |
+| 2026-06-17-freeman1266-loop-engineering-pr-watch | freeman1266 / MacTalk on Loop Engineering practice and PR watch loop | social/practitioner article | S2.5/S3 | extracted with caveat | `sources/2026-06-17-freeman1266-loop-engineering-pr-watch.md` |
 
 ## Concept index
 
@@ -31,3 +32,7 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | Overbaking | `2026-06-17-yupi996-loop-engineering-ralph-overbaking` | candidate | A-port stop conditions / E verification |
 | Environment Feedback | `2026-06-17-yupi996-loop-engineering-ralph-overbaking`, `2026-06-17-addy-osmani-loop-engineering` | candidate | loop-orchestrator docs |
 | Persistent State / Prompt file | `2026-06-17-yupi996-loop-engineering-ralph-overbaking`, `2026-06-17-addy-osmani-loop-engineering` | candidate | `.ai/knowledge-loop/loop-state.yaml` / templates |
+
+| PR Watch Loop | `2026-06-17-freeman1266-loop-engineering-pr-watch` | candidate | E-port / maintainer-orchestrator / loop-run template |
+| Same-failure escalation rule | `2026-06-17-freeman1266-loop-engineering-pr-watch` | candidate | loop-run stop conditions |
+| Goal vs Loop distinction | `2026-06-17-pandatalk8-goal-loop-workflows`, `2026-06-17-freeman1266-loop-engineering-pr-watch` | candidate | A-port / loop-run template |
