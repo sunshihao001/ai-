@@ -19,6 +19,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Hermes → Codex command orchestration: `.ai/methods/hermes-codex-command-orchestration.md`
 - Multi-port skill stack method: `.ai/methods/multi-port-skill-stack.md`
 - Multi-port contracts: `.ai/methods/multi-port-contracts/`
+- Knowledge loop / learning reserve: `.ai/knowledge-loop/`
 - Codex handoff template: `.ai/templates/codex-issue-handoff.md`
 - Codex theory-generation handoff template: `.ai/templates/codex-theory-generation-handoff.md`
 - Project onboarding template: `.ai/templates/project-onboarding.md`
@@ -146,6 +147,16 @@ Canonical port contracts are in `.ai/methods/multi-port-contracts/`. Their core 
 ```text
 A = what/why, B = evidence, C = theory/plan, D = repo landing, E = proof, F = permission/decision.
 ```
+
+## Knowledge Loop / Learning Reserve
+
+Use `.ai/knowledge-loop/` for articles, X/Reddit threads, GitHub repos, videos, forum discussions, and external methodology sources that may update the method wheel. This is a continuing learning/update loop, not a one-time link dump:
+
+```text
+inbox → sources → synthesis → frame-updates → decisions → method docs/templates
+```
+
+A-port owns the knowledge frame and absorption decisions. B-port supplies search strategy and source packs. D/E only land and verify method changes after a recorded fit decision.
 
 ## Hermes-Orchestrated Codex Commands
 

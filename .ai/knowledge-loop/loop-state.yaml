@@ -1,0 +1,54 @@
+schema_version: 1
+updated_at: "2026-06-16T22:50:21"
+owner: user
+purpose: "Maintain learning articles and knowledge reserve as a continuous update loop, not one-shot notes."
+current_focus:
+  - "Loop Engineering / Ralph Loop"
+  - "A-port Goal Engineering and Loop Control"
+  - "A↔B double-gate evidence-to-frame loop"
+active_phase: "source_notes_and_synthesis"
+ports:
+  A:
+    role: "knowledge frame and loop control"
+    responsibilities:
+      - "create initial knowledge frame"
+      - "define evidence fit criteria"
+      - "approve B search strategy"
+      - "decide absorption into method wheel"
+  B:
+    role: "search strategy and source pack"
+    responsibilities:
+      - "propose search strategy"
+      - "collect and normalize sources"
+      - "produce knowledge fit report"
+  C:
+    role: "theory/spec synthesis"
+    responsibilities:
+      - "turn accepted concepts into method drafts"
+  D:
+    role: "repo landing"
+    responsibilities:
+      - "land accepted updates into repo docs/templates"
+  E:
+    role: "verification/review"
+    responsibilities:
+      - "check consistency and evidence"
+  F:
+    role: "owner decision"
+    responsibilities:
+      - "approve high-level direction/risky changes"
+open_gaps:
+  - "Normalize yupi996 Loop Engineering X post and related public articles into source notes."
+  - "Decide which Ralph Loop concepts should update A-port and loop-orchestrator docs."
+  - "Create reusable learning-loop request templates for B-port."
+stop_conditions:
+  - "Each accepted concept has source note, synthesis, decision, and target doc update."
+  - "No source remains only in chat if it influenced the method wheel."
+  - "A decision exists for accept/partial/reject/escalate."
+risks:
+  - "Over-absorbing viral social concepts without strong evidence."
+  - "Turning knowledge reserve into raw link dump."
+  - "Letting B search without A strategy and absorption gates."
+next_actions:
+  - "Add first source note for yupi996 Loop Engineering/Ralph/Overbaking thread."
+  - "Create synthesis note for Loop Engineering components."

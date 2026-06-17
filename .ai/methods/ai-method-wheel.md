@@ -258,6 +258,16 @@ Patch mode → generate diff → Hermes review → codex apply → validation
 
 A lesson from live use: broad `--add-dir` over large knowledge bases can make Codex spend time expanding source material instead of producing the target artifact. For long theory work, Hermes should first create a compact source pack, then ask Codex to generate from that pack.
 
+## Knowledge Loop / Learning Reserve
+
+Learning articles, social threads, repos, videos, and external methodology sources should not remain one-off chat notes. Store and process them through `.ai/knowledge-loop/`:
+
+```text
+inbox → sources → synthesis → frame-updates → decisions → method docs/templates
+```
+
+Use this loop when a new article or thread may change the method wheel. A owns the Knowledge Frame and absorption decisions; B supplies search strategy and Source Pack evidence; C/D/E/F only act after the source has a recorded fit/decision. This prevents raw link dumps, over-absorbing viral concepts, and one-time knowledge loss.
+
 ## GitHub-Centered Record
 
 Use GitHub as the durable record:
@@ -267,3 +277,4 @@ Use GitHub as the durable record:
 - PRs contain verification evidence.
 - CI enforces objective gates.
 - Method lessons become skills/templates/checklists, not only chat memories.
+- External learning sources and knowledge-frame updates live in `.ai/knowledge-loop/`.
