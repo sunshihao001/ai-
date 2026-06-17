@@ -24,6 +24,22 @@ Before editing code, read:
 4. Relevant GitHub issue
 5. Existing tests and CI configuration
 
+## Spec Spine
+Use a Spec Kit-inspired artifact spine inside the broader AI Method Wheel. The spine is:
+
+```text
+constitution/governance → spec.md → clarification answers → plan.md → research/data/contracts/quickstart → tasks.md → checklists → E-port analyze → D/Codex bounded implementation → E-port verification → PR/ADR/handoff
+```
+
+- A-port owns intent, scope, non-goals, acceptance criteria, `[NEEDS CLARIFICATION]` markers, and the spec persistence choice.
+- B-port supplies research/source evidence for `research.md` or source packs.
+- C-port drafts theory, architecture, `plan.md`, data models, contracts, and quickstart artifacts.
+- D-port lands bounded repo changes or Codex task slices; do not treat a broad implementation command as permission to expand scope.
+- E-port runs read-only cross-artifact analysis before implementation and objective verification after implementation.
+- F/owner approves broad persistence-model changes, baseline changes, risky governance changes, and broad execution scope.
+
+Default spec persistence: use `spec-anchored + flow-forward` for method-wheel or baseline-changing work; use `spec-anchored + controlled flow-back` for normal repo implementation discoveries; use `spec-first` only for throwaway spikes.
+
 ## Work Rules
 - Ask clarifying questions when the goal, acceptance criteria, or risk is unclear.
 - For looped or multi-agent work, classify the loop layer (agent, verification, event-driven, or self-improvement), then define maker, checker, durable state, stop condition, and budget before running.

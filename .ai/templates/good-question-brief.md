@@ -71,6 +71,9 @@ Before routing to a maker/model, classify the input:
 
 - Input type: ordinary task / control command / state query / diagnostic / skill invocation / owner decision / knowledge-frame update
 - Source of truth:
+- Spec spine artifact: constitution/governance / spec.md / plan.md / tasks.md / checklist / analyze report / PR
+- Spec persistence model: spec-first / spec-anchored / spec-as-source
+- Artifact mutation model: flow-back / flow-forward / living spec
 - Runtime state to inspect/update:
 - Model-visible context projection:
 - Markdown context to load: AGENTS / SKILL / spec / source note / logs

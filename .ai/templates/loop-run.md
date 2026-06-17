@@ -42,7 +42,11 @@ Where progress is recorded:
 - [ ] GitHub issue:
 - [ ] PR:
 - [ ] `specs/<feature>/`:
-- [ ] ADR:
+- [ ] `specs/<feature>/spec.md`:
+- [ ] `specs/<feature>/plan.md`:
+- [ ] `specs/<feature>/tasks.md`:
+- [ ] `specs/<feature>/checklists/`:
+- [ ] E-port read-only analyze report:
 - [ ] QA checklist:
 - [ ] `.ai/loop-runs/<run-id>/state.yaml`:
 - [ ] `.ai/loop-runs/<run-id>/context-projection.md`:
@@ -65,6 +69,13 @@ Input classification before model call:
 - [ ] skill invocation
 - [ ] owner decision
 - [ ] knowledge-frame update
+
+Spec spine policy:
+
+- Spec persistence: spec-first / spec-anchored / spec-as-source
+- Artifact mutation: flow-back / flow-forward / living spec
+- Unknown handling: unresolved `[NEEDS CLARIFICATION]` markers are listed before maker execution
+- Pre-implementation gate: E-port read-only analyze passes or produces blockers
 
 ## 5. Maker
 
