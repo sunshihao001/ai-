@@ -22,6 +22,13 @@ State the desired end state in checkable terms.
 - [ ] Needs owner
 - [ ] Ignored by owner
 
+Loop layer:
+
+- [ ] Agent loop — maker executes one bounded task
+- [ ] Verification loop — checker/rubric/test feedback loops until pass or cap
+- [ ] Event-driven loop — schedule/webhook/issue/CI/message triggers runs
+- [ ] Self-improvement loop — traces/feedback propose skill/template/harness diffs
+
 Reason:
 
 ```text
@@ -138,13 +145,18 @@ Rollback:
 Exact action requested:
 ```
 
-## 10. Harness Repair Notes
+## 10. Harness Repair / Self-Improvement Notes
 
-If the loop failed, record how to prevent recurrence.
+If the loop failed, record how to prevent recurrence. If the failure is repeated or generalizable, route through `.ai/templates/self-improving-skill-loop.md`.
 
 ```text
 Failure:
 Root cause in workflow:
-Skill/template/checklist/CI change:
+Feedback signal strength:
+Generalizable lesson? yes/no:
+Proposed skill/template/checklist/CI diff:
 Regression test/check added:
+A-port decision: REJECT / WATCH / EXPERIMENT / PARTIAL_ACCEPT / ACCEPT / ESCALATE
+E-port verification:
+Rollback:
 ```

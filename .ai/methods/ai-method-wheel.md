@@ -22,29 +22,44 @@ The goal is not to install every skill. The goal is to compose the core behavior
 
 AI agents are tools. The hard part is knowing what to ask, which assumptions are risky, and whether the output is correct, secure, maintainable, accessible, and simple enough.
 
-### 2. Control Layer: Loop Engineering
+### 2. Control Layer: Stacked Loop Engineering
 
-The operator should not be the bottleneck for every next prompt. A loop surrounds the agent:
+The operator should not be the bottleneck for every next prompt. A loop surrounds the agent, but the current method now treats "loop" as a **stack of control loops**, not one repeated agent call:
 
 ```text
-Trigger
-→ maker produces work
-→ separate checker grades it
-→ state is written to disk/GitHub
-→ maker fixes findings
-→ repeat until stop condition or budget cap
+Agent loop
+→ Verification loop
+→ Event-driven loop
+→ Self-improvement / hill-climbing loop
 ```
+
+Professional A-port question:
+
+```text
+Which loop layer are we designing, checking, or improving?
+```
+
+Layer meanings:
+
+| Layer | Purpose | Main owner |
+| --- | --- | --- |
+| Agent loop | A bounded maker uses tools to complete one task. | C/D |
+| Verification loop | A checker applies tests, rubrics, review, false-completion checks, and feedback. | E |
+| Event-driven loop | GitHub issues, PRs, CI, cron, webhooks, Slack/Telegram, or heartbeat triggers start runs. | A/D/E |
+| Self-improvement loop | Run traces, review failures, owner corrections, and feedback propose diffs to skills/templates/harness. | A/B/E/D/F |
 
 A safe loop requires:
 
 - explicit trigger,
-- isolated branch/worktree,
-- durable state file or GitHub issue/PR,
-- separate checker,
+- isolated branch/worktree when changing code,
+- runtime state under `.ai/loop-runs/<run-id>/` or equivalent GitHub issue/PR,
+- separate maker and checker,
+- false-completion guard,
 - max iterations,
 - budget/time cap,
 - deterministic checks where possible,
-- human diff reading before important merges.
+- human/owner review for sensitive actions and broad framework changes,
+- self-improvement changes as reviewable diffs, never silent mutation.
 
 ### 3. Feedback Layer: Software Engineering Loop
 
@@ -185,20 +200,31 @@ Quality gate:
 - Separate checker has reviewed spec alignment and diff.
 - Human reads important diffs before merge.
 
-## Phase 5 — Harness Repair / Method Improvement
+## Phase 5 — Harness Repair / Self-Improving Skills
 
-Use `ai-workflow-loop-orchestrator` plus `ai-workflow-debug`.
+Use `ai-workflow-loop-orchestrator`, `ai-workflow-debug`, and `.ai/templates/self-improving-skill-loop.md`.
 
-When an agent workflow fails, do not only fix the artifact. Improve the harness:
+When an agent workflow fails, do not only fix the artifact. Improve the harness with an inner/outer loop:
 
 ```text
-Bad run / failed PR / bad trace
-→ diagnose why the workflow allowed it
-→ patch skill/prompt/template/checklist/CI
-→ replay or reproduce the failure when possible
-→ add regression test or checklist item
-→ document the lesson
+Inner loop: skill/template runs on real work and records versioned output + feedback.
+Outer loop: scheduled or manual review extracts generalizable lessons and proposes a diff.
+A/E gates: accept, experiment, watch, reject, or escalate before baseline changes.
 ```
+
+Repair flow:
+
+```text
+Bad run / failed PR / bad trace / owner correction
+→ collect feedback signal and evidence
+→ decide whether the lesson is generalizable
+→ propose a skill/prompt/template/checklist/CI diff
+→ E-port verifies the change and rollback path
+→ owner approves broad/risky principle changes
+→ merge/promote or keep as experiment/watch
+```
+
+Never silently mutate core skills, port prompts, or baseline workflow docs. Self-improvement means **reviewable diffs**, not hidden prompt drift.
 
 ## Multi-Port Skill Stack Layer
 

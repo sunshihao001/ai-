@@ -13,6 +13,7 @@ Do not jump from vague request to code. Use this loop:
 6. Verify with a separate checker, tests, Playwright, accessibility, security, and human review.
 7. Record decisions in GitHub: specs, ADRs, issues, PRs.
 8. If the workflow failed, repair the harness and capture a regression.
+9. For repeated/generalizable failures, use a self-improving skill loop: collect feedback signals, propose a reviewable skill/template diff, and pass A/E protection gates before promotion.
 
 ## Required Reading Order for Agents
 Before editing code, read:
@@ -25,7 +26,7 @@ Before editing code, read:
 
 ## Work Rules
 - Ask clarifying questions when the goal, acceptance criteria, or risk is unclear.
-- For looped or multi-agent work, define maker, checker, durable state, stop condition, and budget before running.
+- For looped or multi-agent work, classify the loop layer (agent, verification, event-driven, or self-improvement), then define maker, checker, durable state, stop condition, and budget before running.
 - Prefer vertical slices over technical-layer tasks.
 - Do not expand scope beyond the issue/spec.
 - For implementation tasks, use TDD when practical: failing test → minimal code → passing test → refactor.

@@ -464,3 +464,36 @@ durable repo record
 ```
 
 Without skill stacks, multi-bot workflows become context islands. With skill stacks, each port can restart in a new chat and still know its role, tools, boundaries, and next handoff.
+
+---
+
+## 13.1 Stacked loop layer mapping
+
+The current workflow treats loop engineering as four stacked layers:
+
+```text
+Agent loop → Verification loop → Event-driven loop → Self-improvement loop
+```
+
+Port mapping:
+
+| Loop layer | Port meaning | Typical artifacts |
+| --- | --- | --- |
+| Agent loop | C/D produce bounded work from A's routed contract. | spec, source pack, diff, PR |
+| Verification loop | E checks output with tests, rubrics, review, and false-completion guard. | test-report, review-report, false-completion check |
+| Event-driven loop | A/D/E runs are triggered by issue, PR, CI, cron, webhook, Telegram/Slack, or heartbeat. | runtime-loop-state, cycle-log, owner decision queue |
+| Self-improvement loop | A/B/E/D improve skills/templates from traces, failures, and owner corrections. | skill-improvement proposal, PR/diff, decision record |
+
+This means a port stack is not complete unless it defines both:
+
+```text
+execution behavior + improvement behavior
+```
+
+For recurring port failures, use:
+
+```text
+.ai/templates/self-improving-skill-loop.md
+```
+
+Do not let a self-improvement loop silently change a core port prompt. It must propose a diff and pass A/E protection gates.
