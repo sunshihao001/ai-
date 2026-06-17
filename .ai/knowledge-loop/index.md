@@ -25,6 +25,7 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | 2026-06-17-dongxi-nlp-harness-series | dongxi_nlp Harness series on runtime control/context | X article series | S2 | extracted with caveat | `sources/2026-06-17-dongxi-nlp-harness-series.md` |
 | 2026-06-17-viv-agent-harness-anatomy | Viv on Agent = Model + Harness and harness primitives | X article | S2 | extracted with caveat | `sources/2026-06-17-viv-agent-harness-anatomy.md` |
 | 2026-06-17-riley-west-ai-30-day-roadmap | Riley West AI 30-day roadmap / skill progression | X article | S3 | extracted with caveat | `sources/2026-06-17-riley-west-ai-30-day-roadmap.md` |
+| 2026-06-17-tan-agent-basic-primer | TAN beginner primer on LLM vs Agent | X article | S3 | extracted with caveat | `sources/2026-06-17-tan-agent-basic-primer.md` |
 
 ## Concept index
 
@@ -50,6 +51,7 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | Context projection | `2026-06-17-dongxi-nlp-harness-series` | partial_accept | AI Method Wheel control layer / harness template |
 | Harness anatomy | `2026-06-17-viv-agent-harness-anatomy` | accept_with_guardrails | AI Method Wheel Phase 0 / harness template |
 | Skill progression path | `2026-06-17-riley-west-ai-30-day-roadmap` | watch/partial_accept | AI Method Wheel Skill Layer |
+| LLM vs Agent distinction | `2026-06-17-tan-agent-basic-primer` | watch/partial_accept | onboarding/glossary support |
 
 ## Frame updates
 
@@ -70,3 +72,4 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | `2026-06-17-stacked-loops-self-improving-skills` | PARTIAL_ACCEPT / ACCEPT_WITH_GUARDRAILS | stacked-loop taxonomy + self-improving skill template | Adds outer improvement loop while preserving baseline protection. |
 | `2026-06-17-harness-control-context-projection` | PARTIAL_ACCEPT | harness control surface + context projection | Clarifies truth/transcript/context split and A-port input routing. |
 | `2026-06-17-agent-harness-anatomy-skill-progression` | ACCEPT_WITH_GUARDRAILS / PARTIAL_ACCEPT | harness anatomy + skill progression | Strengthens harness primitive checklist and prompt-to-skill progression. |
+| `2026-06-17-tan-agent-basic-primer` | WATCH / PARTIAL_ACCEPT | beginner LLM-vs-Agent explanation | Keep as onboarding/glossary support; no baseline architecture change. |
