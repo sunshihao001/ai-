@@ -65,6 +65,20 @@ Do not treat chat history as durable project memory. Put long-lived context into
 - Work items: GitHub Issues
 - Execution record: Pull Requests and CI logs
 
+## Meme Project Direction
+
+For the user's meme/token project, keep the workflow simple and professional:
+
+- accept rough natural-language ideas;
+- convert them into clear research questions;
+- gather external professional sources into source packs;
+- write evidence-based research notes;
+- decide the next small task or stop point;
+- use Codex only for bounded file/code execution, not for vague thinking;
+- borrow only lightweight loop ideas from `-xunhuan` such as target, state, stop gate, and verification.
+
+A good meme-project workflow should help a non-professional user express an intuition, then turn it into usable professional output without adding unnecessary roles, files, or ceremony.
+
 ## Project Onboarding
 
 Use `.ai/templates/project-onboarding.md` when connecting a real repository to this method wheel.

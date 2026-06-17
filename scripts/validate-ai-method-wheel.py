@@ -12,6 +12,7 @@ REQUIRED_FILES = [
     'CONTEXT.md',
     '.ai/methods/ai-method-wheel.md',
     '.ai/methods/maintainer-orchestrator-mapping.md',
+    '.ai/methods/meme-project-lite-direction.md',
     '.github/PULL_REQUEST_TEMPLATE.md',
     '.github/ISSUE_TEMPLATE/feature.yml',
     'docs/adr/README.md',

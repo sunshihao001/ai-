@@ -107,6 +107,22 @@ Bad first-loop candidates:
 - destructive production changes,
 - anything where done is mostly judgment.
 
+## Phase 0.5 — Meme Project Lite Application
+
+When applying this method to the user's meme/token project, use `.ai/methods/meme-project-lite-direction.md` as the adaptation layer.
+
+The meme project is not an AI-workflow research project. It needs a simple professionalization flow:
+
+```text
+rough natural-language intuition
+→ professional question framing
+→ external source pack
+→ evidence-based research note
+→ small decision / next task / stop
+```
+
+Keep the workflow lightweight for non-programmer operation. Borrow only lightweight ideas from `-xunhuan`—target, acceptance, state, stop gate, handoff, verification—unless repeated maker/checker execution is truly needed.
+
 ## Phase 1 — Requirement Interrogation
 
 Use `ai-workflow-brainstorm-grill`.

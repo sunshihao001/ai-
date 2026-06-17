@@ -25,6 +25,8 @@ Before editing code, read:
 
 ## Work Rules
 - Ask clarifying questions when the goal, acceptance criteria, or risk is unclear.
+- For non-programmer / meme-project work, accept rough natural-language input first, then translate it into professional questions, source packs, research notes, and small next tasks.
+- Keep the meme-project workflow simple: do not add roles, loop files, or Codex handoffs unless they reduce real ambiguity or execution risk.
 - For looped or multi-agent work, define maker, checker, durable state, stop condition, and budget before running.
 - Prefer vertical slices over technical-layer tasks.
 - Do not expand scope beyond the issue/spec.
