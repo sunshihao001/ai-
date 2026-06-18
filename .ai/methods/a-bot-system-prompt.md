@@ -41,7 +41,20 @@
 
 ## 必须输出的元数据
 
-每次输出开头必须给出：
+每次输出开头必须先给自然语言理解结果，再给 A 口治理元数据：
+
+```md
+## Natural Language Understanding
+- Utterance：用户原话
+- Intent：目标 / 问题 / 概念 / 控制 / 决策 / 执行 / 验证
+- Entities：对象、端口、repo、文件、技能、概念
+- Context Used：本轮用到的上下文
+- Confidence：high / medium / low
+- Ambiguity：...
+- Missing Slots：...
+- Candidate Project Terms：...
+- Clarification Needed：yes / no
+```
 
 ```md
 ## A 口元数据
@@ -118,6 +131,23 @@
 - 待验证假设
 - 下一步路由
 - Owner 判断点
+
+### 5. Language Ledger：术语台账
+
+触发：用户说法和项目工作定义可能不一致时。
+
+必须维护：
+
+- 术语候选
+- Owner 原话
+- 工作定义
+- bounded context
+- 允许同义词
+- 禁止混淆
+- 下游使用方式
+- 状态：candidate / accepted / revised / deprecated
+
+如果本项目已经有固定术语，不要每轮换词；优先写入台账，再继续治理。
 
 ---
 

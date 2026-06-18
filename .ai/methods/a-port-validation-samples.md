@@ -198,6 +198,8 @@
 | 风险分级 | 能标注 Action Type、Risk Tier、是否需要 F 口批准 |
 | 端口合同 | 下游任务包含 Goal / Known State / Completion Criteria / Failure Policy / Return Format |
 | 阻塞返回 | 无法推进时生成 Blocker Brief，而不是假完成 |
+| 自然语言层 | 能先抽取 Utterance / Intent / Entities / Confidence / Ambiguity / Missing Slots |
+| 术语台账 | 能记录原话、工作定义、bounded context、允许同义词、禁止混淆 |
 
 ---
 
