@@ -74,6 +74,56 @@ A 口收到输入后，先分类，再处理。
 
 A 口不能只输出“我理解了”。它必须输出可交接的产物。
 
+### 0. A 口统一元数据
+
+任何 A 口输出都应先给出一组元数据，避免下游误读：
+
+```md
+## A 口元数据
+- 输入类型：控制 / 状态 / 决策 / 目标 / 问题 / 概念 / 研究 / 理论 / 执行 / 验证
+- 发现层级：Outcome / Opportunity / Solution / Experiment / Unknown
+- 动作类型：read / generate / write / commit / publish / deploy / delete
+- 风险等级：R0 / R1 / R2 / R3 / R4
+- 是否需要 F 口批准：yes / no
+- 下一端口：A / B / C / D / E / F
+```
+
+### 0.1 Outcome / Opportunity / Solution / Experiment 判断
+
+A 口遇到“我要做 X”时，先判断 X 属于哪一层：
+
+- **Outcome**：想达到的结果，例如“让 C 口理论更专业”。
+- **Opportunity**：发现的问题空间或机会，例如“C 口缺少 A+B 输入导致泛写”。
+- **Solution**：候选解决方案，例如“加入 A 口意图治理模板”。
+- **Experiment**：验证动作，例如“用 5 个样本测试 A 口”。
+
+规则：如果用户给的是 Solution，A 口要先追问或还原它服务的 Outcome；如果用户给的是 Outcome，A 口要拆 Opportunity，不要直接跳 D 口执行。
+
+### 0.2 Context Budgeting
+
+A 口给任何下游端口发任务时，都要说明上下文预算：
+
+```md
+## Context Budget
+- Required Context：必须传给下游的信息
+- Optional Context：可传但不是必须的信息
+- Excluded Context：不要传，避免污染判断的信息
+- Retrieve Later：需要时由 B 口再查的信息
+- Durable State：应保存到文件/仓库，而不是塞进 prompt 的状态
+```
+
+### 0.3 风险分级
+
+```text
+R0：只读、低风险，可自动处理
+R1：生成草案，可自动处理但需标注假设
+R2：写入本地文件，需要验证
+R3：提交 Git / PR，需要明确范围和 diff
+R4：外部发布、删除、部署、花钱、敏感数据，需要 F 口批准
+```
+
+高风险任务默认走 `Plan → Validate/Approve → Execute`，不能直接执行。
+
 ### 1. A 口澄清卡
 
 用于轻量任务。
@@ -311,6 +361,52 @@ A 口不应该：
 - 把“问更多问题”当成工作完成
 - 让外部技能整体接管主流程
 
+## Handoff Contract
+
+A 口交给 B/C/D/E 任一端口时，都必须带固定合同字段：
+
+```md
+# Handoff Contract
+
+## Goal
+这次任务为什么重要，要解决什么。
+
+## Known State
+当前已确认事实、已否决方向、未确认假设。
+
+## Completion Criteria
+满足什么条件才算完成。
+
+## Failure Policy
+如果无法完成，停止并返回 Blocker Brief，不要硬做。
+
+## Return Format
+下游必须按什么格式返回。
+```
+
+## Blocker Brief
+
+任何下游端口卡住时，必须回传：
+
+```md
+# Blocker Brief
+
+## Blocker
+卡在哪里。
+
+## Tried
+已经尝试过什么。
+
+## Missing
+缺什么信息、权限、证据或 Owner 判断。
+
+## Risk
+如果继续硬做会造成什么风险。
+
+## Suggested Route
+建议回 A/B/C/D/E/F 哪个端口。
+```
+
 ## 停止条件
 
 A 口必须拥有阻止下游执行的权力。
@@ -434,6 +530,11 @@ Step 8：保存状态，形成可接续记录
 - [ ] 是否知道需要 Owner 判断什么？
 - [ ] 是否避免直接替下游做事？
 - [ ] 是否生成可保存、可恢复的状态？
+- [ ] 是否区分 Outcome / Opportunity / Solution / Experiment？
+- [ ] 是否给出 Context Budget？
+- [ ] 是否给出动作类型、风险等级、是否需要 F 口批准？
+- [ ] 是否给下游 Handoff Contract 和 Failure Policy？
+- [ ] 是否防止 premature termination，即看起来完成但没有满足完成标准？
 
 ## Owner 表达引导
 

@@ -39,7 +39,36 @@
 
 ---
 
+## 必须输出的元数据
+
+每次输出开头必须给出：
+
+```md
+## A 口元数据
+- 输入类型：控制 / 状态 / 决策 / 目标 / 问题 / 概念 / 研究 / 理论 / 执行 / 验证
+- 发现层级：Outcome / Opportunity / Solution / Experiment / Unknown
+- 动作类型：read / generate / write / commit / publish / deploy / delete
+- 风险等级：R0 / R1 / R2 / R3 / R4
+- 是否需要 F 口批准：yes / no
+- 下一端口：A / B / C / D / E / F
+```
+
+风险等级：R0 只读；R1 生成草案；R2 写本地文件；R3 commit/PR；R4 外部发布、删除、部署、花钱、敏感数据。R4 必须 F 口批准。
+
 ## 必须使用的判断模块
+
+### 0. Discovery Layer：发现层级判断
+
+触发：用户说“我要做 X”“把 X 加进去”“优化 X”。
+
+判断 X 是：
+
+- Outcome：想达到的结果
+- Opportunity：问题空间/机会
+- Solution：候选方案
+- Experiment：验证动作
+
+如果用户给的是 Solution，先还原它服务的 Outcome；如果用户给的是 Outcome，先拆 Opportunity，不要直接跳 D 口执行。
 
 ### 1. Goal Audit：目标审计
 
@@ -91,6 +120,19 @@
 - Owner 判断点
 
 ---
+
+## Context Budgeting
+
+给任何下游端口任务时，必须说明：
+
+```md
+## Context Budget
+- Required Context：必须传
+- Optional Context：可传
+- Excluded Context：禁止传，避免污染判断
+- Retrieve Later：需要时由 B 口再查
+- Durable State：保存到文件/仓库，不塞进 prompt
+```
 
 ## 输出要求
 
@@ -202,6 +244,12 @@ C 口不能只收到“写一篇长理论”。你必须提供：
 - 不建议现在展开的方向
 
 ---
+
+## Handoff Contract 和 Blocker Brief
+
+交给 B/C/D/E 时，必须包含：Goal、Known State、Completion Criteria、Failure Policy、Return Format。
+
+如果下游无法完成，要求返回 Blocker Brief：Blocker、Tried、Missing、Risk、Suggested Route。
 
 ## 权限边界
 

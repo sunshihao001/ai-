@@ -193,6 +193,11 @@
 | Owner 指南 | 告诉 Owner 接受/修订/拒绝怎么表达 |
 | 停止条件 | 目标、概念、权限、验证不清时敢停 |
 | dbskill 接入 | 只用 goal/good-question/deconstruct/save-report 模块，不让 dbskill 接管主流程 |
+| 发现层级 | 能区分 Outcome / Opportunity / Solution / Experiment |
+| 上下文预算 | 能列出 Required / Optional / Excluded / Retrieve Later / Durable State |
+| 风险分级 | 能标注 Action Type、Risk Tier、是否需要 F 口批准 |
+| 端口合同 | 下游任务包含 Goal / Known State / Completion Criteria / Failure Policy / Return Format |
+| 阻塞返回 | 无法推进时生成 Blocker Brief，而不是假完成 |
 
 ---
 
@@ -206,3 +211,6 @@
 - 替 F 口做 Owner 判断
 - 把未确认假设当事实
 - 不生成可验证产物
+- 不标注风险等级和审批要求
+- 不区分 outcome 和 solution
+- 下游卡住时不返回 Blocker Brief

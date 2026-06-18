@@ -36,6 +36,13 @@ B 口不能从模糊需求直接开始大搜。B 口必须先拿到 A 口的 Sou
 ## 采用标准
 什么证据算支持？什么证据算反驳？什么证据只算参考？
 
+## Context Budget
+- Required Context：B 必须读取/压缩的信息
+- Optional Context：可参考但不强制的信息
+- Excluded Context：不要纳入，避免污染判断的信息
+- Retrieve Later：本轮不查，必要时再查的信息
+- Durable State：应保存到仓库/文件的信息
+
 ## 返回格式
 Source Pack + 不确定点 + 对 A 口框架的支持/反驳
 
@@ -59,8 +66,10 @@ Source Pack + 不确定点 + 对 A 口框架的支持/反驳
 每个来源要包含：
 - 标题/仓库/文件
 - URL 或本地路径
-- 可信度
+- 来源类型：官方文档 / GitHub / paper / blog / 社区 / 本地文件
+- 可信度：high / medium / low
 - 为什么相关
+- 支持、反驳还是修正 A 口框架
 - 摘要
 
 ## 3. 支持 A 口框架的证据
@@ -91,6 +100,29 @@ Source Pack + 不确定点 + 对 A 口框架的支持/反驳
 ```
 
 ---
+
+## B 口 Blocker Brief
+
+如果 B 口无法完成资料压缩，必须返回：
+
+```md
+# B 口 Blocker Brief
+
+## Blocker
+卡在哪里。
+
+## Tried
+已搜索/读取哪些来源。
+
+## Missing
+缺什么关键词、权限、文件、链接或 Owner 判断。
+
+## Risk
+继续硬搜会造成什么噪音或误导。
+
+## Suggested Route
+建议回 A 口重定义问题，或请求 Owner 补资料。
+```
 
 ## B 口禁止事项
 
