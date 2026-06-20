@@ -172,13 +172,15 @@ Entering C-port does not automatically invoke Codex. Hermes handles understandin
 
 ## Spec Kit Runtime Integration Plan
 
-Use `.ai/methods/spec-kit-runtime-integration-plan.md` before any real Spec Kit installation or `specify init --integration hermes` attempt. The current stage is C-port planning only:
+Use `.ai/methods/spec-kit-runtime-integration-plan.md` before any real Spec Kit installation or `specify init --integration hermes` attempt. The current runtime status is:
 
 ```text
-B2 absorption complete enough → C runtime plan → E plan verification → D/E sandbox experiment → F owner decision before real install
+B2 absorption complete enough → C runtime plan complete → first D/E sandbox experiment complete → wrapper/adapter needed before real install
 ```
 
-Do not install global `speckit-*` Hermes skills or run `specify init --here --force` in the Method Wheel repo. First test inside an isolated sandbox with a temporary `HERMES_HOME`, capture generated files, verify no writes hit the active `cangwei` profile, and produce `.ai/research/spec-kit-runtime/experiment-YYYY-MM-DD.md`.
+The first runtime experiment is recorded at `.ai/research/spec-kit-runtime/experiment-2026-06-20.md`. It found that Spec Kit's Hermes integration hardcodes `Path.home() / ".hermes" / "skills"`; a temporary `HERMES_HOME` did not isolate generated `speckit-*` skills. The generated default `~/.hermes/skills/speckit-*` directories were removed after the experiment, and active `cangwei` profile diff count was 0.
+
+Do not install global `speckit-*` Hermes skills or run `specify init --here --force` in the Method Wheel repo. Next required stage is a Spec Kit Hermes wrapper/adapter design that solves profile targeting, rollback tracking, and `/speckit-implement` gating.
 
 ## Spec Kit Bridge Layer
 

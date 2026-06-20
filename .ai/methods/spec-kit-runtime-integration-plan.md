@@ -1,8 +1,8 @@
 # Spec Kit Runtime Integration Plan
 
-> Status: v0.1 C-port plan  
+> Status: v0.2 C-port plan + first D/E sandbox result  
 > Scope: design a safe runtime path for testing Spec Kit with Hermes, without installing into the active Method Wheel repo or active Hermes profile yet.  
-> Related: `.ai/research/spec-kit/`, `.ai/methods/spec-kit-bridge-layer.md`, `.ai/methods/hermes-codex-role-split.md`
+> Related: `.ai/research/spec-kit/`, `.ai/research/spec-kit-runtime/experiment-2026-06-20.md`, `.ai/methods/spec-kit-bridge-layer.md`, `.ai/methods/hermes-codex-role-split.md`
 
 ---
 
@@ -332,7 +332,9 @@ recommendation: SAFE / NEEDS WRAPPER / UNSAFE
 
 ## 10. Current stage completion definition
 
-This plan is complete when:
+### 10.1 Original planning-stage definition
+
+This plan was complete when:
 
 ```text
 - The plan is written and committed.
@@ -341,10 +343,44 @@ This plan is complete when:
 - No runtime experiment has been run yet.
 ```
 
+### 10.2 First sandbox experiment update
+
+A first D/E sandbox runtime experiment has now been run and recorded at:
+
+```text
+.ai/research/spec-kit-runtime/experiment-2026-06-20.md
+```
+
+Result:
+
+```text
+NEEDS WRAPPER / UNSAFE FOR DIRECT ACTIVE-PROFILE INSTALL
+```
+
+Key finding:
+
+```text
+Spec Kit's Hermes integration hardcodes `Path.home() / ".hermes" / "skills"`.
+A temporary `HERMES_HOME` did not isolate generated `speckit-*` skills.
+```
+
+Therefore the next phase is no longer generic sandboxing. It is:
+
+```text
+C: Spec Kit Hermes wrapper/adapter design
+```
+
+Do not proceed to real installation until a wrapper/adapter plan solves:
+
+```text
+- active profile targeting
+- default ~/.hermes pollution
+- uninstall/rollback tracking
+- `/speckit-implement` gating or exclusion
+```
+
 After that, the next phase is:
 
 ```text
-D/E sandbox runtime experiment
+C wrapper/adapter design → E review → D bounded implementation/prototype if approved
 ```
-
-with Hermes as runner/checker and Codex only optional for bounded automation.
