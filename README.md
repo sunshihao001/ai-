@@ -20,6 +20,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Multi-port skill stack method: `.ai/methods/multi-port-skill-stack.md`
 - A-port autonomous logical loop: `.ai/methods/a-port-autonomous-logical-loop.md`
 - Finished project absorption method: `.ai/methods/finished-project-absorption.md`
+- Updated workflow after finished-project absorption: `.ai/methods/updated-workflow-after-finished-project-absorption.md`
 - Spec Kit bridge layer: `.ai/methods/spec-kit-bridge-layer.md`
 - Spec Kit full absorption pack: `.ai/research/spec-kit/`
 - Multi-port contracts: `.ai/methods/multi-port-contracts/`
@@ -57,6 +58,7 @@ The repository remains the durable source of truth. Local installs are convenien
 ```text
 Loop / orchestration design
 → brainstorm / grill requirements
+→ if the source is a mature external project: B2 finished-project absorption
 → specify / plan / tasks
 → GitHub issues
 → Codex implementation as maker

@@ -33,6 +33,10 @@ fit to AI Method Wheel
 5. `05-extension-and-ecosystem-model.md` — integrations, extensions, presets, workflows, bundles, catalogs, priorities, trust boundaries.
 6. `06-fit-to-ai-method-wheel.md` — where Spec Kit enters the current workflow and why it creates the B2 Finished Project Absorption component.
 
+Related method update:
+
+- `.ai/methods/updated-workflow-after-finished-project-absorption.md` — updated Method Wheel cognition and workflow changes after adding B2.
+
 ---
 
 ## Current high-level conclusion
