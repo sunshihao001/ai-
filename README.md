@@ -33,6 +33,8 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - A-mode replay samples: `.ai/research/a-mode-replay-*.md`
 - A-mode evolution log template: `.ai/templates/a-mode-evolution-log.md`
 - Finished project absorption templates: `.ai/templates/finished-project-absorption/`
+- Spec Kit Hermes adapter generator: `scripts/generate-spec-kit-hermes-adapter.py`
+- Spec Kit repo-local wrapper drafts: `.ai/generated/spec-kit-hermes-adapter/`
 - Codex handoff template: `.ai/templates/codex-issue-handoff.md`
 - Codex theory-generation handoff template: `.ai/templates/codex-theory-generation-handoff.md`
 - Project onboarding template: `.ai/templates/project-onboarding.md`
@@ -219,7 +221,7 @@ Bridge the commands as:
 /speckit.implement    → D-port execution only after A/B/C/E/F gates
 ```
 
-Do not run broad `speckit.implement` from vague owner intent, and do not install global Hermes `speckit-*` skills without profile-path and rollback checks.
+Do not run broad `speckit.implement` from vague owner intent, and do not install global Hermes `speckit-*` skills without profile-path and rollback checks. Use `scripts/generate-spec-kit-hermes-adapter.py` only for repo-local wrapper drafts under `.ai/generated/spec-kit-hermes-adapter/`; those drafts are not active Hermes skills.
 
 ## Logical A/B/C Loop Before Physical Multi-Port Split
 

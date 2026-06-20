@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "deterministic; regenerate from source_commit and command templates",
+  "source_repo": "https://github.com/github/spec-kit",
+  "source_path": "C:\\Users\\Administrator\\spec-kit-source",
+  "source_commit": "487af97864901462874f18f1c7f8d8adec0b7ddd",
+  "target": "repo-local review drafts only",
+  "writes_active_hermes_profile": false,
+  "writes_default_hermes_home": false,
+  "output_dir": ".ai/generated/spec-kit-hermes-adapter",
+  "commands": [
+    {
+      "name": "speckit-analyze",
+      "command": "analyze",
+      "status": "enabled-draft",
+      "port": "E",
+      "source_template": "templates/commands/analyze.md",
+      "source_sha256": "33641d1bdf7e8d1534a4e2a1a83458d580a43d6975f72cc7455b4c71b6fb1c5e",
+      "wrapper_sha256": "77c84a0a1b4d57751f1b7bd8fb30d76ffe995a517db113fc8d647315d128f070",
+      "guardrail": "Read-only cross-artifact checker; no mutation.",
+      "promotable": true,
+      "target_path": ".ai/generated/spec-kit-hermes-adapter/wrappers/speckit-analyze.md"
+    },
+    {
+      "name": "speckit-checklist",
+      "command": "checklist",
+      "status": "enabled-draft",
+      "port": "A/E",
+      "source_template": "templates/commands/checklist.md",
+      "source_sha256": "9da1606dafc49fa240dab35324fbe09af8f41303424ba948fa5f32c891788282",
+      "wrapper_sha256": "f85f115a4efc43eac643896327106f162192f9fe1c4a3b01a765e52e3444208b",
+      "guardrail": "Check requirement/spec quality; do not implement.",
+      "promotable": true,
+      "target_path": ".ai/generated/spec-kit-hermes-adapter/wrappers/speckit-checklist.md"
+    },
+    {
+      "name": "speckit-clarify",
+      "command": "clarify",
+      "status": "enabled-draft",
+      "port": "A",
+      "source_template": "templates/commands/clarify.md",
+      "source_sha256": "4409c32ef3d1d6875b313d9ed6926054be619c70d18dfd88df8602f74f645a20",
+      "wrapper_sha256": "f289ad6beb2d9e826275514637f87436b70ef5fa9c2e55332c515bf8b839df00",
+      "guardrail": "Ask only high-impact questions and write accepted answers back to durable spec.",
+      "promotable": true,
+      "target_path": ".ai/generated/spec-kit-hermes-adapter/wrappers/speckit-clarify.md"
+    },
+    {
+      "name": "speckit-constitution",
+      "command": "constitution",
+      "status": "gated-draft",
+      "port": "F/A",
+      "source_template": "templates/commands/constitution.md",
+      "source_sha256": "58d35eb026f56bb7364d91b8b0382d5dd1249ded6c1449a2b69546693afb85f7",
+      "wrapper_sha256": "68d2592a6a0694cee2b184b079009f0e0892734f8ae07f8af1b1a45ede7099c6",
+      "guardrail": "Governance/baseline command; owner/F approval required before use.",
+      "promotable": true,
+      "target_path": ".ai/generated/spec-kit-hermes-adapter/wrappers/speckit-constitution.md"
+    },
+    {
+      "name": "speckit-converge",
+      "command": "converge",
+      "status": "enabled-draft",
+      "port": "E→D",
+      "source_template": "templates/commands/converge.md",
+      "source_sha256": "3df5d5e035d04126c07d109b99b167870f5726c552909b6b9613a68757b38afe",
+      "wrapper_sha256": "780542a025627fdffb720ddcd61158d7b75630206e549f9cf8d43ca07a1653bc",
+      "guardrail": "Append-only repair task generation after checker finding.",
+      "promotable": true,
+      "target_path": ".ai/generated/spec-kit-hermes-adapter/wrappers/speckit-converge.md"
+    },
+    {
+      "name": "speckit-implement",
+      "command": "implement",
+      "status": "disabled-handoff-only",
+      "port": "D",
+      "source_template": "templates/commands/implement.md",
+      "source_sha256": "a68c4c6411a9a0baeeb0074ff0bfaf35819f01e6a0e04b0caef41453b4c0042c",
+      "wrapper_sha256": "720cc8c91b516451825540c92dc3c9d3634c034ae7a23b31ba1aa2702097076d",
+      "guardrail": "Do not expose as raw skill. Represent only as D-port handoff after A/B/C/E/F gates.",
+      "promotable": false,
+      "target_path": ".ai/generated/spec-kit-hermes-adapter/wrappers/speckit-implement.md"
+    },
+    {
+      "name": "speckit-plan",
+      "command": "plan",
+      "status": "enabled-draft",
+      "port": "C",
+      "source_template": "templates/commands/plan.md",
+      "source_sha256": "b960e229507cec3949f559bfcd22863b93b26c008b14b5db9279bceca178084b",
+      "wrapper_sha256": "09794c8bb7abdf99e2439b52bb2c98070c5d99a966cf19dcd2d9a3bfc3c28785",
+      "guardrail": "Requires stable WHAT and accepted evidence/caveat state before HOW.",
+      "promotable": true,
+      "target_path": ".ai/generated/spec-kit-hermes-adapter/wrappers/speckit-plan.md"
+    },
+    {
+      "name": "speckit-specify",
+      "command": "specify",
+      "status": "enabled-draft",
+      "port": "A",
+      "source_template": "templates/commands/specify.md",
+      "source_sha256": "e0aeff5a5e0ef50eac6205b4f13bbcbcad366d2e4640e8d78e93af5c224117e0",
+      "wrapper_sha256": "8c7d7816af4688d347785495033f303cdaafac6410da93a90cb66a635dc35369",
+      "guardrail": "WHAT/spec candidate only; do not choose technology stack.",
+      "promotable": true,
+      "target_path": ".ai/generated/spec-kit-hermes-adapter/wrappers/speckit-specify.md"
+    },
+    {
+      "name": "speckit-tasks",
+      "command": "tasks",
+      "status": "enabled-draft",
+      "port": "D-prep",
+      "source_template": "templates/commands/tasks.md",
+      "source_sha256": "3fe0b9903a66ee18cfe6ff96cf7ee74a46ea0d2dabc3b37523f97336900ff5cf",
+      "wrapper_sha256": "25ca8ce1db044b24056a98c94f88cc52aaa3caf3a1cd3dbf9930ba3d931ad7fc",
+      "guardrail": "Produce bounded maker queue only; does not grant execution authority.",
+      "promotable": true,
+      "target_path": ".ai/generated/spec-kit-hermes-adapter/wrappers/speckit-tasks.md"
+    },
+    {
+      "name": "speckit-taskstoissues",
+      "command": "taskstoissues",
+      "status": "gated-draft",
+      "port": "D/F",
+      "source_template": "templates/commands/taskstoissues.md",
+      "source_sha256": "f52dd508ab0367eec34288f4155c76e58dceec6d6976b4b9cc4de375612bc48b",
+      "wrapper_sha256": "657c007ba31c9c6b6ad3f6ae063cd16c46464854e54986f3d9a63dba0719e47d",
+      "guardrail": "GitHub side-effect handoff; requires repo/remote confirmation and owner approval.",
+      "promotable": true,
+      "target_path": ".ai/generated/spec-kit-hermes-adapter/wrappers/speckit-taskstoissues.md"
+    }
+  ]
+}

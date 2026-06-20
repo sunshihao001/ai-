@@ -436,13 +436,35 @@ Adapter design is acceptable when:
 
 ## 13. Current recommendation
 
-Proceed with:
+Stage 1 generator prototype now exists:
 
 ```text
-Option B first: repo-local generator prototype
+scripts/generate-spec-kit-hermes-adapter.py
+.ai/generated/spec-kit-hermes-adapter/manifest.json
+.ai/generated/spec-kit-hermes-adapter/report.md
+.ai/generated/spec-kit-hermes-adapter/wrappers/speckit-*.md
 ```
 
-but only after E/F accept this adapter design.
+It performs repo-local generation only and records:
+
+```text
+source commit
+source template sha256
+wrapper sha256
+command status
+A/B/B2/C/D/E/F port mapping
+whether a command is promotable
+```
+
+The current generated policy is:
+
+```text
+enabled-draft: specify, clarify, checklist, plan, tasks, analyze, converge
+gated-draft: constitution, taskstoissues
+disabled-handoff-only: implement
+```
+
+Next stage is E-port review of generated wrappers before any promotion.
 
 Do not proceed with:
 
