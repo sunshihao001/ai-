@@ -42,6 +42,7 @@ open_gaps:
   - "Find stronger primary sources for Ralph Loop and exact /goal /loop /workflows command semantics before broad baseline rewrites."
   - "Create a dedicated PR Watch Loop template only after another E-port/CI use case confirms the pattern."
   - "Keep social-source insights in candidate/proposal form unless corroborated by S1/S2 evidence."
+  - "Create a Spec Kit bridge layer proposal that maps specify/plan/tasks/analyze/implement, presets, extensions, workflows, and Hermes integration to A/B/C/D/E/F without replacing the method wheel."
 stop_conditions:
   - "Each accepted concept has source note, synthesis, decision, and target doc update."
   - "No source remains only in chat if it influenced the method wheel."
