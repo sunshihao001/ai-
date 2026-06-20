@@ -28,7 +28,20 @@ GitHub/CI = durable state and objective verification
 Owner = product/security/access/merge/release decision maker
 ```
 
-This preserves maker/checker separation. Codex should not receive raw ambiguous chat, should not choose its own authority boundary, and should not be the final judge of completion.
+For the stricter Method Wheel boundary between C/D/E, also read:
+
+```text
+.ai/methods/hermes-codex-role-split.md
+```
+
+Key correction:
+
+```text
+Entering C-port does not automatically invoke Codex.
+Hermes handles C-port method design unless the task becomes a bounded code/scaffold/test/review job.
+```
+
+This preserves maker/checker separation.
 
 ---
 

@@ -17,6 +17,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Method wheel: `.ai/methods/ai-method-wheel.md`
 - Maintainer orchestrator mapping: `.ai/methods/maintainer-orchestrator-mapping.md`
 - Hermes → Codex command orchestration: `.ai/methods/hermes-codex-command-orchestration.md`
+- Hermes / Codex role split: `.ai/methods/hermes-codex-role-split.md`
 - Multi-port skill stack method: `.ai/methods/multi-port-skill-stack.md`
 - A-port autonomous logical loop: `.ai/methods/a-port-autonomous-logical-loop.md`
 - Finished project absorption method: `.ai/methods/finished-project-absorption.md`
@@ -156,6 +157,17 @@ A absorption question
 ```
 
 A B2 pack must understand theory, code architecture, project structure/scaffold, command/artifact model, extension ecosystem, fit/non-fit, and risks before baseline updates. Spec Kit is the first example pack at `.ai/research/spec-kit/`.
+
+## Hermes / Codex Role Split
+
+Use `.ai/methods/hermes-codex-role-split.md` whenever C/D/E work may involve Codex. The rule is:
+
+```text
+Hermes = control plane / orchestrator / owner-facing reasoning loop
+Codex  = bounded coding or review worker, invoked only with a prepared contract
+```
+
+Entering C-port does not automatically invoke Codex. Hermes handles understanding, routing, method design, runtime-integration planning, E checks, and owner briefs. Codex is optional only for bounded code/scaffold/test/review tasks with exact scope, verification commands, and stop conditions.
 
 ## Spec Kit Bridge Layer
 
