@@ -34,6 +34,7 @@ fit to AI Method Wheel
 5. `05-extension-and-ecosystem-model.md` — integrations, extensions, presets, workflows, bundles, catalogs, priorities, trust boundaries.
 6. `06-fit-to-ai-method-wheel.md` — where Spec Kit enters the current workflow and why it creates the B2 Finished Project Absorption component.
 7. `07-absorption-decision.md` — final B2 decision: `PARTIAL_ACCEPT_EXPAND`, with ADOPT / BRIDGE / MERGE / PATTERN_ONLY / WATCH / REJECT boundaries.
+8. `08-b2-completeness-audit.md` — E-port audit against the reusable B2 template standard; current verdict is `PARTIAL PASS` with v0.2 hardening repairs.
 
 Related method update:
 
