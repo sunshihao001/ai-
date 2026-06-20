@@ -33,6 +33,7 @@ fit to AI Method Wheel
 4. `04-command-and-artifact-model.md` — `/speckit.*` commands mapped to inputs, outputs, gates, and AI Method Wheel roles.
 5. `05-extension-and-ecosystem-model.md` — integrations, extensions, presets, workflows, bundles, catalogs, priorities, trust boundaries.
 6. `06-fit-to-ai-method-wheel.md` — where Spec Kit enters the current workflow and why it creates the B2 Finished Project Absorption component.
+7. `07-absorption-decision.md` — final B2 decision: `PARTIAL_ACCEPT_EXPAND`, with ADOPT / BRIDGE / MERGE / PATTERN_ONLY / WATCH / REJECT boundaries.
 
 Related method update:
 
