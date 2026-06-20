@@ -30,6 +30,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Multi-port contracts: `.ai/methods/multi-port-contracts/`
 - Knowledge loop / learning reserve: `.ai/knowledge-loop/`
 - A-port strong trigger template: `.ai/templates/a-port-strong-trigger.md`
+- A-port clarification loop prompt: `.ai/templates/a-port-clarify-loop.md`
 - A-mode regression test template: `.ai/templates/a-mode-regression-test.md`
 - A-mode replay samples: `.ai/research/a-mode-replay-*.md`
 - A-mode evolution log template: `.ai/templates/a-mode-evolution-log.md`
