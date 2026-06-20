@@ -19,6 +19,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Hermes → Codex command orchestration: `.ai/methods/hermes-codex-command-orchestration.md`
 - Multi-port skill stack method: `.ai/methods/multi-port-skill-stack.md`
 - A-port autonomous logical loop: `.ai/methods/a-port-autonomous-logical-loop.md`
+- Spec Kit bridge layer: `.ai/methods/spec-kit-bridge-layer.md`
 - Multi-port contracts: `.ai/methods/multi-port-contracts/`
 - Knowledge loop / learning reserve: `.ai/knowledge-loop/`
 - A-port strong trigger template: `.ai/templates/a-port-strong-trigger.md`
@@ -136,6 +137,29 @@ inspect → classify → delegate → monitor → decision-ready brief → repor
 ```
 
 Key rule: do not ask the owner from a rough issue or half-finished PR. First prepare the work to the decision-ready boundary, then ask for the exact remaining decision/access/waiver/land/delete action.
+
+## Spec Kit Bridge Layer
+
+Use `.ai/methods/spec-kit-bridge-layer.md` when applying GitHub Spec Kit to the AI Method Wheel. The accepted model is:
+
+```text
+Spec Kit = spec-driven artifact spine
+AI Method Wheel = A/B/C/D/E/F control plane
+```
+
+Bridge the commands as:
+
+```text
+/speckit.constitution → F/A governance baseline
+/speckit.specify      → A-port WHAT/spec candidate
+/speckit.clarify      → A-port targeted ambiguity removal
+/speckit.plan         → C-port HOW/package
+/speckit.tasks        → D-port bounded maker queue
+/speckit.analyze      → E-port read-only checker
+/speckit.implement    → D-port execution only after A/B/C/E/F gates
+```
+
+Do not run broad `speckit.implement` from vague owner intent, and do not install global Hermes `speckit-*` skills without profile-path and rollback checks.
 
 ## Logical A/B/C Loop Before Physical Multi-Port Split
 

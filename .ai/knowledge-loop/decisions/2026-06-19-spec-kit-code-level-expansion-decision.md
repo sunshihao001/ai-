@@ -135,7 +135,31 @@ This is a C-port synthesis/update task after B Source Pack is complete.
 
 ---
 
-## 6. Protection rules
+## 7. Owner framing update
+
+The owner emphasized the core reason for adoption:
+
+```text
+Spec Kit is not a normal project; it is GitHub showing how to really program with AI.
+The agent problem is not the model, but that plain text intent lets the agent freely interpret.
+Spec Kit forces intent through constitution/specify/clarify/plan/tasks/implement before code.
+```
+
+A-port accepts this framing. It strengthens the decision to create a bridge layer, because the bridge layer's purpose is exactly:
+
+```text
+plain idea → structured living specification → ordered execution → verification
+```
+
+A-port also preserves the E-port correction from source review:
+
+```text
+/speckit.analyze is required as a read-only checker gate even if the public six-command summary omits it.
+```
+
+---
+
+## 8. Protection rules
 
 - Do not run `specify init --here --force` in the AI Method Wheel repo without an explicit owner decision and clean git branch.
 - Do not install global Hermes skills until the active Hermes profile path and uninstall behavior are confirmed.

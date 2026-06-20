@@ -349,7 +349,45 @@ REJECT AS BASELINE:
 
 ---
 
-## 10. Main gap in current AI Method Wheel
+## 10. User framing absorbed: why Spec Kit matters
+
+The owner emphasized that Spec Kit is GitHub explaining how to really program with AI:
+
+```text
+The AI agent problem is not mainly the model.
+The problem is that a plain text idea lets the agent interpret freely.
+Spec Kit solves this by turning the idea into structured specifications before a single line of code is written.
+```
+
+This framing should be preserved in the bridge layer because it states the core adoption reason:
+
+```text
+prompt-to-code is unsafe for serious work;
+intent-to-spec-to-code is the bridge into controlled AI programming.
+```
+
+The owner summarized six commands:
+
+```text
+/speckit.constitution → project rules: quality, testing, architecture
+/speckit.specify      → describe WHAT, not tech stack
+/speckit.clarify      → agent asks what it does not understand before starting
+/speckit.plan         → now choose technology
+/speckit.tasks        → dependency-ordered task list
+/speckit.implement    → agent builds
+```
+
+A-port adds one critical Method Wheel correction from code-level review:
+
+```text
+/speckit.analyze      → E-port read-only consistency gate
+```
+
+This is not a contradiction. The six-command summary captures the owner-facing flow; `analyze` is the checker gate the Method Wheel must preserve before D execution.
+
+---
+
+## 11. Main gap in current AI Method Wheel
 
 The existing AI Method Wheel already absorbed Spec Kit as a Spec Spine. The new code-level review suggests one expansion:
 
