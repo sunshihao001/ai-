@@ -18,8 +18,10 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Maintainer orchestrator mapping: `.ai/methods/maintainer-orchestrator-mapping.md`
 - Hermes → Codex command orchestration: `.ai/methods/hermes-codex-command-orchestration.md`
 - Multi-port skill stack method: `.ai/methods/multi-port-skill-stack.md`
+- A-port autonomous logical loop: `.ai/methods/a-port-autonomous-logical-loop.md`
 - Multi-port contracts: `.ai/methods/multi-port-contracts/`
 - Knowledge loop / learning reserve: `.ai/knowledge-loop/`
+- A-port strong trigger template: `.ai/templates/a-port-strong-trigger.md`
 - Codex handoff template: `.ai/templates/codex-issue-handoff.md`
 - Codex theory-generation handoff template: `.ai/templates/codex-theory-generation-handoff.md`
 - Project onboarding template: `.ai/templates/project-onboarding.md`
@@ -132,15 +134,28 @@ inspect → classify → delegate → monitor → decision-ready brief → repor
 
 Key rule: do not ask the owner from a rough issue or half-finished PR. First prepare the work to the decision-ready boundary, then ask for the exact remaining decision/access/waiver/land/delete action.
 
+## Logical A/B/C Loop Before Physical Multi-Port Split
+
+Use `.ai/methods/a-port-autonomous-logical-loop.md` when the owner wants A/B/C reasoning without splitting into multiple physical bots. The corrected default is:
+
+```text
+one Hermes/control-plane session
+→ logical A/B/C stages
+→ explicit skill routing
+→ durable repo/GitHub artifacts
+```
+
+Use `.ai/templates/a-port-strong-trigger.md` to force A-mode when a vague idea needs demand excavation. In A-mode, do not keep asking the owner to choose A/B/C/D repeatedly. Infer the primary route, select the smallest relevant skill family, ask only the next blocking question, and transfer to B/C only when the stop rule says the route is mature enough.
+
 ## Multi-Port Skill Stacks
 
-Use `.ai/methods/multi-port-skill-stack.md` when splitting a loop-agent workflow across multiple bots, profiles, or new conversations. The corrected model is:
+Use `.ai/methods/multi-port-skill-stack.md` only when splitting a loop-agent workflow across multiple bots, profiles, or new conversations is explicitly desired. The corrected model is:
 
 ```text
 port = port identity prompt + port primary skill + auxiliary skill stack + handoff protocol + verification checklist
 ```
 
-This prevents multi-bot workflows from becoming disconnected context islands.
+This prevents physical multi-bot workflows from becoming disconnected context islands.
 
 Canonical port contracts are in `.ai/methods/multi-port-contracts/`. Their core split is:
 

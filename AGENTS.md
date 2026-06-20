@@ -31,9 +31,10 @@ Use a Spec Kit-inspired artifact spine inside the broader AI Method Wheel. The s
 constitution/governance → spec.md → clarification answers → plan.md → research/data/contracts/quickstart → tasks.md → checklists → E-port analyze → D/Codex bounded implementation → E-port verification → PR/ADR/handoff
 ```
 
-- A-port owns intent, scope, non-goals, acceptance criteria, `[NEEDS CLARIFICATION]` markers, and the spec persistence choice.
+- A-port owns intent, scope, non-goals, acceptance criteria, `[NEEDS CLARIFICATION]` markers, the spec persistence choice, and the autonomous A-mode route judgment.
 - B-port supplies research/source evidence for `research.md` or source packs.
 - C-port drafts theory, architecture, `plan.md`, data models, contracts, and quickstart artifacts.
+- A/B/C are logical stages by default inside one control plane; do not split them into multiple physical bots unless the owner explicitly requests runtime separation.
 - D-port lands bounded repo changes or Codex task slices; do not treat a broad implementation command as permission to expand scope.
 - E-port runs read-only cross-artifact analysis before implementation and objective verification after implementation.
 - F/owner approves broad persistence-model changes, baseline changes, risky governance changes, and broad execution scope.
@@ -42,6 +43,7 @@ Default spec persistence: use `spec-anchored + flow-forward` for method-wheel or
 
 ## Work Rules
 - Ask clarifying questions when the goal, acceptance criteria, or risk is unclear.
+- When the owner uses a strong A-mode trigger, enter A-port logical-loop mode: infer the primary route, select the relevant skill family, avoid repeated multiple-choice loops, and ask only the next blocking question.
 - For looped or multi-agent work, classify the loop layer (agent, verification, event-driven, or self-improvement), then define maker, checker, durable state, stop condition, and budget before running.
 - Prefer vertical slices over technical-layer tasks.
 - Do not expand scope beyond the issue/spec.

@@ -3,7 +3,9 @@
 Use this file to preserve shared terms, domain concepts, architectural boundaries, and repeated project decisions discovered through `grill-with-docs` style questioning.
 
 ## Domain Terms
-- **Port Skill Stack**: a role-specific bundle of primary skill + auxiliary skills + handoff protocol + verification checklist for multi-bot loop-agent workflows.
+- **Port Skill Stack**: a role-specific bundle of primary skill + auxiliary skills + handoff protocol + verification checklist for loop-agent workflows.
+- **Logical Port**: an A/B/C/D/E/F role stage inside one control plane. Logical ports do not require separate bots by default.
+- **A-Port Strong Trigger**: an owner phrase that forces A-mode demand excavation, autonomous skill routing, and anti-choice-loop behavior.
 - **Hermes-Orchestrated Codex**: Hermes remains the demand/control/checker layer and invokes Codex CLI as a bounded maker worker using explicit command patterns.
 - **Source Pack**: a compact Hermes-built context file used for long Codex theory generation to avoid broad uncontrolled `--add-dir` crawling.
 

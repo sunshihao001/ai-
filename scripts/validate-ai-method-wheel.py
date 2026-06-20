@@ -12,6 +12,8 @@ REQUIRED_FILES = [
     'CONTEXT.md',
     '.ai/methods/ai-method-wheel.md',
     '.ai/methods/maintainer-orchestrator-mapping.md',
+    '.ai/methods/multi-port-skill-stack.md',
+    '.ai/methods/a-port-autonomous-logical-loop.md',
     '.github/PULL_REQUEST_TEMPLATE.md',
     '.github/ISSUE_TEMPLATE/feature.yml',
     'docs/adr/README.md',
@@ -25,6 +27,7 @@ REQUIRED_FILES = [
     '.ai/templates/loop-run.md',
     '.ai/templates/owner-decision-brief.md',
     '.ai/templates/good-question-brief.md',
+    '.ai/templates/a-port-strong-trigger.md',
     '.codex/skills/dbs-good-question/SKILL.md',
     '.agents/skills/dbs-good-question/SKILL.md',
     '.ai/research/latest-ai-methodology-sources.md',
@@ -47,8 +50,10 @@ REQUIRED_SKILLS = [
 ]
 
 REQUIRED_MARKERS = {
-    'AGENTS.md': ['GitHub', 'Codex', 'test'],
+    'AGENTS.md': ['GitHub', 'Codex', 'test', 'A-mode'],
     '.ai/methods/ai-method-wheel.md': ['grill', 'spec', 'Codex', 'review'],
+    '.ai/methods/a-port-autonomous-logical-loop.md': ['logical', 'A-mode', 'skill', 'B', 'C'],
+    '.ai/templates/a-port-strong-trigger.md': ['A 端强制触发模式', 'A/B/C', 'skill'],
     'docs/handoffs/issue-to-codex.md': ['AGENTS.md', 'CONTEXT.md', 'GitHub issue', 'verification'],
 }
 
