@@ -56,6 +56,51 @@ Acceptance criteria for this analysis:
 
 ## 2. B-port source reality check
 
+### 2.0 B-port search audit after owner correction
+
+The owner correction is valid: when the preferred X extraction path fails, A-mode should explicitly route to B-port search/retrieval rather than stop at "cannot access full text".
+
+What was attempted:
+
+```text
+1. opencli twitter article <url> -f yaml
+2. web_extract on the X status URL
+3. web_search by exact title
+4. web_extract on X article URL and YouMind mirror
+5. additional B-port search by exact title excluding YouMind
+6. additional B-port search by author + tagline
+7. opencli doctor to verify why the preferred extractor failed
+```
+
+B-port findings:
+
+```text
+- OpenCLI daemon is running.
+- Browser Bridge extension is not connected, so OpenCLI cannot read the X article session.
+- X article endpoint returns login/interstitial content to anonymous extraction.
+- YouMind mirror exposes title, metadata, and TL;DR, but not full article body.
+- Search finds related repost/status metadata and related articles, but not a complete public copy of this exact article.
+- ThreadReader has related @Av1dlive threads and a separate Harness Engineering thread, but not this article's full 6/5/1 content.
+```
+
+Additional preview recovered from search:
+
+```text
+Prompting died in 2024. The new skill is Orchestration
+I ran a 1,000 AI Agents for 30 days and here is what I found
+The skill that replaced prompting, and the systems you can run today.
+Stop optimizing your prompt. It is not the bottleneck anymore.
+```
+
+Corrected process rule:
+
+```text
+For X article failures, A should route to B-port search audit:
+preferred extractor → direct web extract → exact-title search → mirror/archive/thread-reader search → author/status search → related-source search → record what is still missing.
+```
+
+This synthesis now records that B-port route explicitly.
+
 Available extracted content:
 
 ```text

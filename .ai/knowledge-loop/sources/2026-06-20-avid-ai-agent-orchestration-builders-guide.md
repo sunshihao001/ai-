@@ -8,7 +8,7 @@
 - Author: Avid / `@Av1dlive`
 - Source type: X article / social practitioner article
 - Quality: S3 — social article, high-level/viral framing; needs corroboration before baseline adoption
-- Extraction status: partial extraction with caveat
+- Extraction status: partial extraction with caveat; B-port search audit completed after owner correction
 
 ---
 
