@@ -22,6 +22,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Multi-port contracts: `.ai/methods/multi-port-contracts/`
 - Knowledge loop / learning reserve: `.ai/knowledge-loop/`
 - A-port strong trigger template: `.ai/templates/a-port-strong-trigger.md`
+- A-mode regression test template: `.ai/templates/a-mode-regression-test.md`
 - Codex handoff template: `.ai/templates/codex-issue-handoff.md`
 - Codex theory-generation handoff template: `.ai/templates/codex-theory-generation-handoff.md`
 - Project onboarding template: `.ai/templates/project-onboarding.md`
@@ -145,7 +146,7 @@ one Hermes/control-plane session
 → durable repo/GitHub artifacts
 ```
 
-Use `.ai/templates/a-port-strong-trigger.md` to force A-mode when a vague idea needs demand excavation. In A-mode, do not keep asking the owner to choose A/B/C/D repeatedly. Infer the primary route, select the smallest relevant skill family, ask only the next blocking question, and transfer to B/C only when the stop rule says the route is mature enough.
+Use `.ai/templates/a-port-strong-trigger.md` to force A-mode when a vague idea needs demand excavation. Use `.ai/templates/a-mode-regression-test.md` when A-mode behavior drifts. In A-mode, do not keep asking the owner to choose A/B/C/D repeatedly. Infer the primary route, select the smallest relevant skill family, report skill ambiguity explicitly, ask only the next blocking question, and transfer to B/C only when the stop rule says the route is mature enough.
 
 ## Multi-Port Skill Stacks
 

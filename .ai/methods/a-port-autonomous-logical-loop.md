@@ -198,7 +198,42 @@ If the owner says “do not do this repo now; focus on A-skill磨合,” treat t
 
 ---
 
-## 9. Output shape for A-mode
+## 9. Skill invocation ambiguity rule
+
+A-mode must not pretend a skill ran.
+
+If a skill name is ambiguous, missing, or unavailable, the response must say so and then choose the explicit known path only if the local convention is already known.
+
+Example:
+
+```text
+dbs-good-question is ambiguous in this profile.
+Use software-development/dbs-good-question for the AI Method Wheel A-port route.
+```
+
+This is not a failure to route; it is the correct routing behavior. Silent fallback is the failure.
+
+---
+
+## 10. Regression testing
+
+Use `.ai/templates/a-mode-regression-test.md` when A-mode behavior drifts.
+
+A response fails the A-mode regression if it:
+
+```text
+asks another A/B/C/D choice before making a routing judgment
+claims a skill was invoked when it was ambiguous or not loaded
+treats logical ports as physical bot splitting
+jumps to C/D execution before A has goal/boundary/verification clarity
+turns deferred external GitHub skill repos into the main branch after owner correction
+```
+
+Pass threshold: 6/7 on the regression rubric.
+
+---
+
+## 11. Output shape for A-mode
 
 Each A-mode turn should use this compact structure:
 
@@ -215,7 +250,7 @@ If the route is inferable, do not ask a multiple-choice question just to avoid d
 
 ---
 
-## 10. One-line rule
+## 12. One-line rule
 
 ```text
 A/B/C are logical stages inside one control plane; A-mode must infer, route, and invoke skill families autonomously before asking the owner for another choice.
