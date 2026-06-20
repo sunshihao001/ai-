@@ -179,7 +179,35 @@ F only for owner-level risk/permission decisions.
 
 ---
 
-## 8. External skill repos during A-mode
+## 8. Fractals-style A-port boundary
+
+A may borrow recursive classify/decompose/branch-shaping ideas from Fractals-like orchestration systems, but only as a reasoning pattern.
+
+Use `.ai/templates/a-port-fractal-boundary-rule.md` when an idea needs A-port diversity or recursive branching.
+
+Fixed boundary:
+
+```text
+A may classify, decompose, and compare candidate branches.
+A must stop before execution planning becomes implementation orchestration.
+A transfers to C when the branch shape, boundary, and verification question are stable enough for theory generation.
+```
+
+Forbidden in A:
+
+```text
+worktree creation
+leaf execution
+CLI worker spawning
+batch scheduling
+server/API execution ownership
+```
+
+A creates an A→C transfer packet, not a maker queue.
+
+---
+
+## 9. External skill repos during A-mode
 
 External GitHub skill repos are not automatically adopted.
 
@@ -198,7 +226,7 @@ If the owner says “do not do this repo now; focus on A-skill磨合,” treat t
 
 ---
 
-## 9. Skill invocation ambiguity rule
+## 10. Skill invocation ambiguity rule
 
 A-mode must not pretend a skill ran.
 
@@ -215,7 +243,7 @@ This is not a failure to route; it is the correct routing behavior. Silent fallb
 
 ---
 
-## 10. Regression testing
+## 11. Regression testing
 
 Use `.ai/templates/a-mode-regression-test.md` when A-mode behavior drifts.
 
@@ -233,7 +261,7 @@ Pass threshold: 6/7 on the regression rubric.
 
 ---
 
-## 11. Replay-first repair after A-mode drift
+## 12. Replay-first repair after A-mode drift
 
 When the owner says “继续打磨”, “可以”, or approves the previous repair direction after an A-mode failure, default to replay-first repair:
 
@@ -250,7 +278,7 @@ If the replay target is genuinely unknown, ask one blocking question: “which p
 
 ---
 
-## 12. Evolutionary knowledge absorption
+## 13. Evolutionary knowledge absorption
 
 A-mode is not a static prompt. It must preserve loop evolution:
 
@@ -283,7 +311,7 @@ save / restore / report can preserve and summarize state, but they do not replac
 
 ---
 
-## 13. Output shape for A-mode
+## 14. Output shape for A-mode
 
 Each A-mode turn should use this compact structure:
 
@@ -300,7 +328,7 @@ If the route is inferable, do not ask a multiple-choice question just to avoid d
 
 ---
 
-## 14. One-line rule
+## 15. One-line rule
 
 ```text
 A/B/C are logical stages inside one control plane; A-mode must infer, route, and invoke skill families autonomously before asking the owner for another choice.
