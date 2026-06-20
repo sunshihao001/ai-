@@ -27,7 +27,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Spec Kit runtime integration plan: `.ai/methods/spec-kit-runtime-integration-plan.md`
 - Spec Kit Hermes wrapper/adapter design: `.ai/methods/spec-kit-hermes-wrapper-adapter.md`
 - Spec Kit full absorption pack: `.ai/research/spec-kit/`
-- Fractals theory pack: `.ai/research/fractals/`
+- Fractals theory pack: `.ai/research/fractals/` — includes `09-long-theory.md` for A-boundary and C/D/E bridge
 - Multi-port contracts: `.ai/methods/multi-port-contracts/`
 - Knowledge loop / learning reserve: `.ai/knowledge-loop/`
 - A-port strong trigger template: `.ai/templates/a-port-strong-trigger.md`

@@ -11,7 +11,8 @@
 - `05-a-port-boundary-brief.md` — A-port automatic-loop boundary and transfer rule.
 - `06-progress-and-resume.md` — current status, Codex block, and next resume point.
 - `07-current-state-and-resume-guide.md` — consolidated current-state summary and resume guide.
-- `08-external-summary.md` — one-page readable summary for future review and handoff.
+- `08-external-summary.md` — one-page readable summary for future review.
+- `09-long-theory.md` — Codex-generated long theory for A-port boundary and C/D/E bridge.
 
 ## Evidence boundary
 
