@@ -24,6 +24,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Updated workflow after finished-project absorption: `.ai/methods/updated-workflow-after-finished-project-absorption.md`
 - Spec Kit bridge layer: `.ai/methods/spec-kit-bridge-layer.md`
 - Spec Kit runtime integration plan: `.ai/methods/spec-kit-runtime-integration-plan.md`
+- Spec Kit Hermes wrapper/adapter design: `.ai/methods/spec-kit-hermes-wrapper-adapter.md`
 - Spec Kit full absorption pack: `.ai/research/spec-kit/`
 - Multi-port contracts: `.ai/methods/multi-port-contracts/`
 - Knowledge loop / learning reserve: `.ai/knowledge-loop/`
@@ -169,6 +170,20 @@ Codex  = bounded coding or review worker, invoked only with a prepared contract
 ```
 
 Entering C-port does not automatically invoke Codex. Hermes handles understanding, routing, method design, runtime-integration planning, E checks, and owner briefs. Codex is optional only for bounded code/scaffold/test/review tasks with exact scope, verification commands, and stop conditions.
+
+## Spec Kit Hermes Wrapper / Adapter Design
+
+Use `.ai/methods/spec-kit-hermes-wrapper-adapter.md` after the runtime experiment verdict `NEEDS WRAPPER / UNSAFE FOR DIRECT ACTIVE-PROFILE INSTALL`. The accepted path is:
+
+```text
+upstream Spec Kit templates
+→ Method Wheel adapter
+→ repo-local generated wrappers
+→ E review
+→ selective cangwei promotion only after F approval
+```
+
+Do not use upstream `specify init --integration hermes` as the active-profile installer. Initial import should exclude raw `speckit-implement`; treat it as a D-port handoff template or guarded wrapper only.
 
 ## Spec Kit Runtime Integration Plan
 
