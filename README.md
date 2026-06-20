@@ -21,6 +21,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Multi-port skill stack method: `.ai/methods/multi-port-skill-stack.md`
 - A-port autonomous logical loop: `.ai/methods/a-port-autonomous-logical-loop.md`
 - Finished project absorption method: `.ai/methods/finished-project-absorption.md`
+- Skill repository intake policy: `.ai/methods/skill-repository-intake-policy.md`
 - Updated workflow after finished-project absorption: `.ai/methods/updated-workflow-after-finished-project-absorption.md`
 - Spec Kit bridge layer: `.ai/methods/spec-kit-bridge-layer.md`
 - Spec Kit runtime integration plan: `.ai/methods/spec-kit-runtime-integration-plan.md`
