@@ -91,6 +91,28 @@ A Finished Project Absorption Pack must contain at least:
 
 For smaller repos, files may be merged. For foundational repos like Spec Kit, keep them separate.
 
+Use the standard templates in:
+
+```text
+.ai/templates/finished-project-absorption/
+```
+
+Template set:
+
+```text
+00-index.template.md
+01-theory-and-doctrine.template.md
+02-code-architecture.template.md
+03-project-structure-and-scaffold.template.md
+04-command-and-artifact-model.template.md
+05-extension-and-ecosystem-model.template.md
+06-fit-to-ai-method-wheel.template.md
+07-absorption-decision.template.md
+e-completeness-checklist.template.md
+```
+
+The `e-completeness-checklist.template.md` file is mandatory for mature projects because E-port must block shallow adoption before A makes the final absorption decision.
+
 ---
 
 ## 5. Required reading axes

@@ -244,6 +244,14 @@ Are validation scripts updated?
 
 For Spec Kit specifically, E also inherits `/speckit.analyze` as a pattern: read-only cross-artifact consistency checking.
 
+The reusable E-port checklist for future mature projects is:
+
+```text
+.ai/templates/finished-project-absorption/e-completeness-checklist.template.md
+```
+
+This checklist is required before A records an absorption decision.
+
 ### F-port / owner — baseline approval
 
 F approves baseline-level changes:

@@ -32,6 +32,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - A-mode regression test template: `.ai/templates/a-mode-regression-test.md`
 - A-mode replay samples: `.ai/research/a-mode-replay-*.md`
 - A-mode evolution log template: `.ai/templates/a-mode-evolution-log.md`
+- Finished project absorption templates: `.ai/templates/finished-project-absorption/`
 - Codex handoff template: `.ai/templates/codex-issue-handoff.md`
 - Codex theory-generation handoff template: `.ai/templates/codex-theory-generation-handoff.md`
 - Project onboarding template: `.ai/templates/project-onboarding.md`
@@ -158,7 +159,7 @@ A absorption question
 → D/E/F landing, verification, and approval
 ```
 
-A B2 pack must understand theory, code architecture, project structure/scaffold, command/artifact model, extension ecosystem, fit/non-fit, and risks before baseline updates. Spec Kit is the first example pack at `.ai/research/spec-kit/`.
+A B2 pack must understand theory, code architecture, project structure/scaffold, command/artifact model, extension ecosystem, fit/non-fit, and risks before baseline updates. Use `.ai/templates/finished-project-absorption/` to create a standard pack; Spec Kit is the first example pack at `.ai/research/spec-kit/`.
 
 ## Hermes / Codex Role Split
 
