@@ -27,7 +27,7 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | 2026-06-17-riley-west-ai-30-day-roadmap | Riley West AI 30-day roadmap / skill progression | X article | S3 | extracted with caveat | `sources/2026-06-17-riley-west-ai-30-day-roadmap.md` |
 | 2026-06-17-tan-agent-basic-primer | TAN beginner primer on LLM vs Agent | X article | S3 | extracted with caveat | `sources/2026-06-17-tan-agent-basic-primer.md` |
 | 2026-06-19-github-spec-kit-code-review | GitHub Spec Kit source-code/docs/templates review | GitHub repo source | S1 | extracted; decision updated | `sources/2026-06-19-github-spec-kit-code-review.md` |
-| 2026-06-20-avid-ai-agent-orchestration-builders-guide | Avid X article on orchestration replacing prompting / 1,000 AI agents | X article | S3 | partial extraction with caveat | `sources/2026-06-20-avid-ai-agent-orchestration-builders-guide.md` |
+| 2026-06-20-avid-ai-agent-orchestration-builders-guide | Avid X article on orchestration replacing prompting / 1,000 AI agents | X article | S3 | partial extraction; deep synthesis added | `sources/2026-06-20-avid-ai-agent-orchestration-builders-guide.md`; `synthesis/2026-06-20-avid-agent-orchestration-deep-analysis.md` |
 
 ## Concept index
 
@@ -56,7 +56,7 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | LLM vs Agent distinction | `2026-06-17-tan-agent-basic-primer` | watch/partial_accept | onboarding/glossary support |
 | Spec Kit bridge layer | `2026-06-19-github-spec-kit-code-review` | partial_accept_expand | `.ai/methods/spec-kit-bridge-layer.md` after B2 full absorption |
 | Finished Project Absorption | `2026-06-19-github-spec-kit-code-review`, `.ai/research/spec-kit/` | accepted_method_component | `.ai/methods/finished-project-absorption.md` |
-| Orchestration over prompting | `2026-06-20-avid-ai-agent-orchestration-builders-guide` | watch/partial_support | Existing loop/harness framing; full article extraction still needed before baseline changes. |
+| Orchestration over prompting | `2026-06-20-avid-ai-agent-orchestration-builders-guide` | watch/partial_support | Existing loop/harness framing; deep synthesis added, but full article extraction still needed before baseline changes. |
 
 ## Frame updates
 
@@ -79,3 +79,4 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | `2026-06-17-agent-harness-anatomy-skill-progression` | ACCEPT_WITH_GUARDRAILS / PARTIAL_ACCEPT | harness anatomy + skill progression | Strengthens harness primitive checklist and prompt-to-skill progression. |
 | `2026-06-17-tan-agent-basic-primer` | WATCH / PARTIAL_ACCEPT | beginner LLM-vs-Agent explanation | Keep as onboarding/glossary support; no baseline architecture change. |
 | `2026-06-19-spec-kit-code-level-expansion-decision` | PARTIAL_ACCEPT_EXPAND | Spec Kit bridge layer + B2 full absorption correction | Expand previous Spec Spine absorption with Hermes integration caution, presets/extensions/workflows governance, A/B/C/D/E/F mapping, and the new Finished Project Absorption norm. |
+| `2026-06-20-avid-agent-orchestration-deep-analysis` | WATCH / PARTIAL_SUPPORT | Avid X article on orchestration replacing prompting | Deep A/B/C/E synthesis added; supports existing loop/harness framing, verifiable loops, judge-as-E-port, and one-file run-state candidates, but does not change baseline until full article text is recovered. |

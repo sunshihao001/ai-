@@ -148,6 +148,24 @@ Existing concepts it reinforces:
 
 ---
 
+## Deep analysis
+
+A-mode/B1/C/E synthesis saved at:
+
+```text
+.ai/knowledge-loop/synthesis/2026-06-20-avid-agent-orchestration-deep-analysis.md
+```
+
+Current decision:
+
+```text
+WATCH / PARTIAL_SUPPORT
+```
+
+The synthesis extracts candidate Method Wheel supplements: orchestration as control plane, verification object before loop start, multi-model judge as E-port pattern, one-file run-state as a merge candidate, and no-progress/budget gates for scaled agent loops. Because full article text is still unavailable, these are not baseline changes yet.
+
+---
+
 ## Follow-up needed
 
 When OpenCLI Browser Bridge is available, re-run:
