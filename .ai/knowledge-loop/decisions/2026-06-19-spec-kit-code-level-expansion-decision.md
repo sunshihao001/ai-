@@ -157,6 +157,8 @@ A-port also preserves the E-port correction from source review:
 /speckit.analyze is required as a read-only checker gate even if the public six-command summary omits it.
 ```
 
+Owner correction on 2026-06-19: the previous bridge was still too shallow for a finished project. Before integrating a mature repo like Spec Kit, the Method Wheel must create a B2 Finished Project Absorption Pack that separately understands theory, code architecture, project structure/scaffold, command/artifact model, extension ecosystem, and fit/non-fit. Spec Kit is now the first reference pack under `.ai/research/spec-kit/`, and `.ai/methods/finished-project-absorption.md` defines the reusable norm.
+
 ---
 
 ## 8. Protection rules

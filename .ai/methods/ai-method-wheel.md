@@ -166,6 +166,42 @@ Exit criteria:
 - Non-goals are documented.
 - Acceptance criteria are testable.
 
+## Phase 1B — Finished Project Absorption
+
+Use `.ai/methods/finished-project-absorption.md` when a mature external GitHub project may improve the workflow.
+
+Purpose:
+
+- Prevent shallow absorption based only on README or command lists.
+- Understand the finished project across theory, code architecture, scaffold, command/artifact model, extension ecosystem, fit/non-fit, and risks.
+- Produce a B2 absorption pack before C-port synthesis or baseline updates.
+
+Route:
+
+```text
+A absorption question
+→ B Source Pack / repo evidence
+→ B2 Finished Project Absorption Pack
+→ A absorption decision
+→ C bridge/method synthesis
+→ D/E/F landing, verification, and owner gate
+```
+
+Required pack shape:
+
+```text
+00-index.md
+01-theory-and-doctrine.md
+02-code-architecture.md
+03-project-structure-and-scaffold.md
+04-command-and-artifact-model.md
+05-extension-and-ecosystem-model.md
+06-fit-to-ai-method-wheel.md
+07-absorption-decision or knowledge-loop decision update
+```
+
+Spec Kit is the first reference example: `.ai/research/spec-kit/`.
+
 ## Phase 2 — Production Documentation
 
 Use `ai-workflow-specify`.

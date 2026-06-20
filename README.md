@@ -19,7 +19,9 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Hermes → Codex command orchestration: `.ai/methods/hermes-codex-command-orchestration.md`
 - Multi-port skill stack method: `.ai/methods/multi-port-skill-stack.md`
 - A-port autonomous logical loop: `.ai/methods/a-port-autonomous-logical-loop.md`
+- Finished project absorption method: `.ai/methods/finished-project-absorption.md`
 - Spec Kit bridge layer: `.ai/methods/spec-kit-bridge-layer.md`
+- Spec Kit full absorption pack: `.ai/research/spec-kit/`
 - Multi-port contracts: `.ai/methods/multi-port-contracts/`
 - Knowledge loop / learning reserve: `.ai/knowledge-loop/`
 - A-port strong trigger template: `.ai/templates/a-port-strong-trigger.md`
@@ -138,9 +140,24 @@ inspect → classify → delegate → monitor → decision-ready brief → repor
 
 Key rule: do not ask the owner from a rough issue or half-finished PR. First prepare the work to the decision-ready boundary, then ask for the exact remaining decision/access/waiver/land/delete action.
 
+## Finished Project Absorption
+
+Use `.ai/methods/finished-project-absorption.md` before absorbing mature external GitHub projects into the Method Wheel. The corrected route is:
+
+```text
+A absorption question
+→ B source pack
+→ B2 finished project absorption pack
+→ A absorption decision
+→ C bridge/method synthesis
+→ D/E/F landing, verification, and approval
+```
+
+A B2 pack must understand theory, code architecture, project structure/scaffold, command/artifact model, extension ecosystem, fit/non-fit, and risks before baseline updates. Spec Kit is the first example pack at `.ai/research/spec-kit/`.
+
 ## Spec Kit Bridge Layer
 
-Use `.ai/methods/spec-kit-bridge-layer.md` when applying GitHub Spec Kit to the AI Method Wheel. The accepted model is:
+Use `.ai/methods/spec-kit-bridge-layer.md` only after the B2 full absorption pack exists. The accepted model is:
 
 ```text
 Spec Kit = spec-driven artifact spine

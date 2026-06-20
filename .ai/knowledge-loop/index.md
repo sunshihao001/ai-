@@ -53,7 +53,8 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | Harness anatomy | `2026-06-17-viv-agent-harness-anatomy` | accept_with_guardrails | AI Method Wheel Phase 0 / harness template |
 | Skill progression path | `2026-06-17-riley-west-ai-30-day-roadmap` | watch/partial_accept | AI Method Wheel Skill Layer |
 | LLM vs Agent distinction | `2026-06-17-tan-agent-basic-primer` | watch/partial_accept | onboarding/glossary support |
-| Spec Kit bridge layer | `2026-06-19-github-spec-kit-code-review` | partial_accept_expand | future `.ai/methods/spec-kit-bridge-layer.md` |
+| Spec Kit bridge layer | `2026-06-19-github-spec-kit-code-review` | partial_accept_expand | `.ai/methods/spec-kit-bridge-layer.md` after B2 full absorption |
+| Finished Project Absorption | `2026-06-19-github-spec-kit-code-review`, `.ai/research/spec-kit/` | accepted_method_component | `.ai/methods/finished-project-absorption.md` |
 
 ## Frame updates
 
@@ -75,4 +76,4 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | `2026-06-17-harness-control-context-projection` | PARTIAL_ACCEPT | harness control surface + context projection | Clarifies truth/transcript/context split and A-port input routing. |
 | `2026-06-17-agent-harness-anatomy-skill-progression` | ACCEPT_WITH_GUARDRAILS / PARTIAL_ACCEPT | harness anatomy + skill progression | Strengthens harness primitive checklist and prompt-to-skill progression. |
 | `2026-06-17-tan-agent-basic-primer` | WATCH / PARTIAL_ACCEPT | beginner LLM-vs-Agent explanation | Keep as onboarding/glossary support; no baseline architecture change. |
-| `2026-06-19-spec-kit-code-level-expansion-decision` | PARTIAL_ACCEPT_EXPAND | Spec Kit bridge layer | Expand previous Spec Spine absorption with Hermes integration caution, presets/extensions/workflows governance, and A/B/C/D/E/F mapping. |
+| `2026-06-19-spec-kit-code-level-expansion-decision` | PARTIAL_ACCEPT_EXPAND | Spec Kit bridge layer + B2 full absorption correction | Expand previous Spec Spine absorption with Hermes integration caution, presets/extensions/workflows governance, A/B/C/D/E/F mapping, and the new Finished Project Absorption norm. |

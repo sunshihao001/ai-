@@ -1,11 +1,37 @@
 # Spec Kit Bridge Layer for AI Method Wheel
 
-> Status: v0.1  
-> Purpose: absorb GitHub Spec Kit as a spec-driven artifact spine and bridge layer inside the AI Method Wheel without replacing A/B/C/D/E/F control.
+> Status: v0.2  
+> Purpose: bridge GitHub Spec Kit into the AI Method Wheel after B2 Finished Project Absorption has established theory, code architecture, scaffold, command/artifact, ecosystem, and fit documents.
 
 ---
 
-## 1. Core judgment
+## 1. Prerequisite: B2 full absorption first
+
+Do not use this bridge layer as a shortcut from repo discovery to method update. For Spec Kit, the bridge layer is downstream of:
+
+```text
+.ai/research/spec-kit/00-index.md
+.ai/research/spec-kit/01-theory-and-doctrine.md
+.ai/research/spec-kit/02-code-architecture.md
+.ai/research/spec-kit/03-project-structure-and-scaffold.md
+.ai/research/spec-kit/04-command-and-artifact-model.md
+.ai/research/spec-kit/05-extension-and-ecosystem-model.md
+.ai/research/spec-kit/06-fit-to-ai-method-wheel.md
+```
+
+The corrected route is:
+
+```text
+B Source Pack
+→ B2 Finished Project Absorption Pack
+→ A absorption decision
+→ C bridge synthesis
+→ D/E/F landing and approval
+```
+
+---
+
+## 2. Core judgment
 
 Spec Kit is not just another code repo. It is GitHub's concrete answer to a common AI-programming failure:
 
