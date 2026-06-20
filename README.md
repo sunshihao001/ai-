@@ -23,6 +23,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - Finished project absorption method: `.ai/methods/finished-project-absorption.md`
 - Updated workflow after finished-project absorption: `.ai/methods/updated-workflow-after-finished-project-absorption.md`
 - Spec Kit bridge layer: `.ai/methods/spec-kit-bridge-layer.md`
+- Spec Kit runtime integration plan: `.ai/methods/spec-kit-runtime-integration-plan.md`
 - Spec Kit full absorption pack: `.ai/research/spec-kit/`
 - Multi-port contracts: `.ai/methods/multi-port-contracts/`
 - Knowledge loop / learning reserve: `.ai/knowledge-loop/`
@@ -168,6 +169,16 @@ Codex  = bounded coding or review worker, invoked only with a prepared contract
 ```
 
 Entering C-port does not automatically invoke Codex. Hermes handles understanding, routing, method design, runtime-integration planning, E checks, and owner briefs. Codex is optional only for bounded code/scaffold/test/review tasks with exact scope, verification commands, and stop conditions.
+
+## Spec Kit Runtime Integration Plan
+
+Use `.ai/methods/spec-kit-runtime-integration-plan.md` before any real Spec Kit installation or `specify init --integration hermes` attempt. The current stage is C-port planning only:
+
+```text
+B2 absorption complete enough → C runtime plan → E plan verification → D/E sandbox experiment → F owner decision before real install
+```
+
+Do not install global `speckit-*` Hermes skills or run `specify init --here --force` in the Method Wheel repo. First test inside an isolated sandbox with a temporary `HERMES_HOME`, capture generated files, verify no writes hit the active `cangwei` profile, and produce `.ai/research/spec-kit-runtime/experiment-YYYY-MM-DD.md`.
 
 ## Spec Kit Bridge Layer
 
