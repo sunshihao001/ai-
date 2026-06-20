@@ -1,7 +1,7 @@
-# Hermes and Codex Role Split in the AI Method Wheel
+# Hermes and Codex Logical-Port Split in the AI Method Wheel
 
 > Status: v0.1  
-> Purpose: define when Hermes remains the control plane and when Codex is invoked as a maker/reviewer during C/D/E work.
+> Purpose: define when Hermes remains the control plane and when Codex is invoked as a maker/reviewer during C/D/E work, without implying separate physical bots.
 
 ---
 
@@ -9,9 +9,16 @@
 
 Entering C-port does **not** automatically mean Codex starts changing files.
 
+This document describes **logical port routing only**:
+
 ```text
+Hermes/Codex are stage roles in one control plane
+not separate physical bots.
+```
 Hermes = control plane / orchestrator / owner-facing reasoning loop
 Codex  = bounded coding or review worker, invoked only with a prepared contract
+
+Both are logical roles inside one workflow; no bot split is implied.
 ```
 
 The AI Method Wheel must preserve:

@@ -1,7 +1,7 @@
-# Multi-Port Skill Stack Method
+# Multi-Port Skill Stack
 
 > Status: v0.1  
-> Purpose: capture the corrected loop-agent cognition that a port is not just one prompt or one skill. A port is a role-specific skill stack: identity skill + auxiliary skills + input/output protocol + verification gates.
+> Purpose: define the contract for composing several skills/roles into a port-oriented workflow using logical ports, not physical bot splits.
 
 ---
 
@@ -31,7 +31,7 @@ The port prompt initializes a new chat. The primary skill stabilizes the port ro
 
 ## 2. Why this matters
 
-In Telegram / gateway / multi-bot workflows, each bot or new conversation may have a separate context. If a port only receives a long prompt once, behavior drifts:
+In gateway-style or multi-session workflows, each runtime instance may have a separate context. If a port only receives a long prompt once, behavior drifts:
 
 ```text
 demand ports start executing
@@ -73,7 +73,7 @@ Owner trigger
 → next loop
 ```
 
-This is not merely “many bots.” It is a loop with explicit maker/checker separation, state handoff, stop conditions, and owner gates.
+This is not merely "many runtimes." It is a loop with explicit maker/checker separation, state handoff, stop conditions, and owner gates.
 
 
 ---
@@ -144,7 +144,7 @@ Detailed per-port internals live in:
 .ai/methods/multi-port-internal-skill-blueprint.md
 ```
 
-Do not update Telegram bot prompts directly from a high-level role name. First define the port's internal modules, then create/update the port skill, then update the bot prompt only after A/E review and owner approval.
+Do not update Telegram bot prompts directly from a high-level role name. First define the port's internal modules, then create/update the port skill, then update the runtime prompt only after A/E review and owner approval.
 
 ---
 

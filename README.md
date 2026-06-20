@@ -223,9 +223,9 @@ Bridge the commands as:
 
 Do not run broad `speckit.implement` from vague owner intent, and do not install global Hermes `speckit-*` skills without profile-path and rollback checks. Use `scripts/generate-spec-kit-hermes-adapter.py` only for repo-local wrapper drafts under `.ai/generated/spec-kit-hermes-adapter/`; those drafts are not active Hermes skills.
 
-## Logical A/B/C Loop Before Physical Multi-Port Split
+## Logical A/B/C Loop
 
-Use `.ai/methods/a-port-autonomous-logical-loop.md` when the owner wants A/B/C reasoning without splitting into multiple physical bots. The corrected default is:
+Use `.ai/methods/a-port-autonomous-logical-loop.md` when the owner wants A/B/C reasoning without splitting the workflow into separate physical bots. The corrected default is:
 
 ```text
 one Hermes/control-plane session
@@ -238,13 +238,13 @@ Use `.ai/templates/a-port-strong-trigger.md` to force A-mode when a vague idea n
 
 ## Multi-Port Skill Stacks
 
-Use `.ai/methods/multi-port-skill-stack.md` only when splitting a loop-agent workflow across multiple bots, profiles, or new conversations is explicitly desired. The corrected model is:
+Use `.ai/methods/multi-port-skill-stack.md` only when a workflow explicitly needs multiple logical ports, not multiple physical bots. The corrected model is:
 
 ```text
 port = port identity prompt + port primary skill + auxiliary skill stack + handoff protocol + verification checklist
 ```
 
-This prevents physical multi-bot workflows from becoming disconnected context islands.
+This prevents logic islands and keeps routing explicit without requiring separate physical bots.
 
 Canonical port contracts are in `.ai/methods/multi-port-contracts/`. Their core split is:
 
