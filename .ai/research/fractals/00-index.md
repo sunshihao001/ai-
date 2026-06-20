@@ -13,6 +13,7 @@
 - `07-current-state-and-resume-guide.md` — consolidated current-state summary and resume guide.
 - `08-external-summary.md` — one-page readable summary for future review.
 - `09-long-theory.md` — Codex-generated long theory for A-port boundary and C/D/E bridge.
+- `10-practical-adoption-correction.md` — owner correction: use existing Fractals practically in sandbox instead of rebuilding it.
 
 ## Evidence boundary
 

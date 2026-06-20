@@ -9,8 +9,10 @@
 Recommended classification:
 
 ```text
-PARTIAL_ACCEPT + BRIDGE
+PRACTICAL_BRIDGE + SANDBOX_ADOPT_CANDIDATE
 ```
+
+This refines the earlier theory decision `PARTIAL_ACCEPT + BRIDGE`.
 
 Meaning:
 
@@ -126,10 +128,10 @@ Then either:
 
 ## Decision status
 
-Current decision is not full adoption.
+Current decision is no longer only theory-pattern acceptance:
 
 ```text
-PARTIAL_ACCEPT + BRIDGE
+PRACTICAL_BRIDGE + SANDBOX_ADOPT_CANDIDATE
 ```
 
-This keeps the useful recursive planning pattern while preventing A-port from becoming an execution orchestrator.
+This refines the earlier `PARTIAL_ACCEPT + BRIDGE` decision. The practical correction is: do not rebuild Fractals; try the existing tool in a sandbox, lightly adapt it, and connect it to the full workflow.
