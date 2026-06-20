@@ -250,7 +250,40 @@ If the replay target is genuinely unknown, ask one blocking question: “which p
 
 ---
 
-## 12. Output shape for A-mode
+## 12. Evolutionary knowledge absorption
+
+A-mode is not a static prompt. It must preserve loop evolution:
+
+```text
+owner correction / failed response / external source / replay result
+→ evolution log
+→ A absorption decision
+→ B Source Pack if evidence is missing
+→ C synthesis only after evidence is adequate
+→ D/E bounded repo update and verification
+→ updated baseline / next gap
+```
+
+Use `.ai/templates/a-mode-evolution-log.md` when a lesson may update the method wheel.
+
+A-mode should distinguish:
+
+```text
+session correction      = useful replay evidence, not automatically a baseline change
+external knowledge      = B-source candidate, not automatically adopted
+accepted rule           = durable method/template/skill update after A decision and E verification
+skill runtime feedback  = candidate skill patch or routing rule
+```
+
+Protected rule:
+
+```text
+save / restore / report can preserve and summarize state, but they do not replace git history, E-port verification, or F/owner decisions.
+```
+
+---
+
+## 13. Output shape for A-mode
 
 Each A-mode turn should use this compact structure:
 
@@ -267,7 +300,7 @@ If the route is inferable, do not ask a multiple-choice question just to avoid d
 
 ---
 
-## 13. One-line rule
+## 14. One-line rule
 
 ```text
 A/B/C are logical stages inside one control plane; A-mode must infer, route, and invoke skill families autonomously before asking the owner for another choice.

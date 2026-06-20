@@ -38,8 +38,22 @@ Capture source
 ## Core principle
 
 ```text
-Knowledge is not a one-time extraction. Knowledge is a maintained reserve with versioned evidence, fit decisions, and follow-up gaps.
+Knowledge is not a one-time extraction. Knowledge is a maintained reserve with versioned evidence, fit decisions, follow-up gaps, and verified baseline updates.
 ```
+
+For A-mode evolution, every durable change should pass this shape:
+
+```text
+feedback/source/replay
+→ evolution log
+→ A absorption decision
+→ B Source Pack if evidence is missing
+→ C synthesis if a framework update is needed
+→ D/E bounded repo update and verification
+→ next gap in loop-state
+```
+
+Use `.ai/templates/a-mode-evolution-log.md` for owner corrections, replay lessons, skill-routing failures, and external knowledge candidates that may change the method wheel.
 
 ## Roles in the loop
 
