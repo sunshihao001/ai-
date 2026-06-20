@@ -36,7 +36,7 @@ This repo intentionally extracts the core behaviors instead of installing every 
 - A/B/C knowledge loop theory: `.ai/methods/abc-knowledge-loop-theory.md`
 - A/B/C theory-generation Codex handoff: `.ai/templates/abc-knowledge-loop-codex-handoff.md`
 - A-mode regression test template: `.ai/templates/a-mode-regression-test.md`
-- A-mode replay samples: `.ai/research/a-mode-replay-*.md`
+- A-mode replay samples: `.ai/research/a-mode-replay-*.md` — includes Fractals boundary regression
 - A-mode evolution log template: `.ai/templates/a-mode-evolution-log.md`
 - Finished project absorption templates: `.ai/templates/finished-project-absorption/`
 - Spec Kit Hermes adapter generator: `scripts/generate-spec-kit-hermes-adapter.py`

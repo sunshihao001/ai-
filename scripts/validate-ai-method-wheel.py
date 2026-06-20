@@ -80,6 +80,7 @@ REQUIRED_FILES = [
     '.ai/templates/finished-project-absorption/07-absorption-decision.template.md',
     '.ai/templates/finished-project-absorption/e-completeness-checklist.template.md',
     '.ai/research/a-mode-replay-2026-06-19-complex-skill-routing.md',
+    '.ai/research/a-mode-replay-2026-06-20-fractals-boundary.md',
     '.codex/skills/dbs-good-question/SKILL.md',
     '.agents/skills/dbs-good-question/SKILL.md',
     '.ai/research/latest-ai-methodology-sources.md',
@@ -147,6 +148,7 @@ REQUIRED_MARKERS = {
     '.ai/templates/finished-project-absorption/06-fit-to-ai-method-wheel.template.md': ['ADOPT', 'BRIDGE', 'PATTERN_ONLY'],
     '.ai/templates/finished-project-absorption/e-completeness-checklist.template.md': ['Anti-shallow-adoption', 'PASS / FAIL / PARTIAL', 'rollback'],
     '.ai/research/a-mode-replay-2026-06-19-complex-skill-routing.md': ['7/7', 'replay-first repair', 'software-development/dbs-good-question'],
+    '.ai/research/a-mode-replay-2026-06-20-fractals-boundary.md': ['7/7 PASS', 'A-port fractal boundary route', 'decomposition is not execution permission'],
     'docs/handoffs/issue-to-codex.md': ['AGENTS.md', 'CONTEXT.md', 'GitHub issue', 'verification'],
 }
 
