@@ -27,6 +27,7 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | 2026-06-17-riley-west-ai-30-day-roadmap | Riley West AI 30-day roadmap / skill progression | X article | S3 | extracted with caveat | `sources/2026-06-17-riley-west-ai-30-day-roadmap.md` |
 | 2026-06-17-tan-agent-basic-primer | TAN beginner primer on LLM vs Agent | X article | S3 | extracted with caveat | `sources/2026-06-17-tan-agent-basic-primer.md` |
 | 2026-06-19-github-spec-kit-code-review | GitHub Spec Kit source-code/docs/templates review | GitHub repo source | S1 | extracted; decision updated | `sources/2026-06-19-github-spec-kit-code-review.md` |
+| 2026-06-20-avid-ai-agent-orchestration-builders-guide | Avid X article on orchestration replacing prompting / 1,000 AI agents | X article | S3 | partial extraction with caveat | `sources/2026-06-20-avid-ai-agent-orchestration-builders-guide.md` |
 
 ## Concept index
 
@@ -55,6 +56,7 @@ This index tracks reusable learning sources and concepts absorbed into the AI Me
 | LLM vs Agent distinction | `2026-06-17-tan-agent-basic-primer` | watch/partial_accept | onboarding/glossary support |
 | Spec Kit bridge layer | `2026-06-19-github-spec-kit-code-review` | partial_accept_expand | `.ai/methods/spec-kit-bridge-layer.md` after B2 full absorption |
 | Finished Project Absorption | `2026-06-19-github-spec-kit-code-review`, `.ai/research/spec-kit/` | accepted_method_component | `.ai/methods/finished-project-absorption.md` |
+| Orchestration over prompting | `2026-06-20-avid-ai-agent-orchestration-builders-guide` | watch/partial_support | Existing loop/harness framing; full article extraction still needed before baseline changes. |
 
 ## Frame updates
 
