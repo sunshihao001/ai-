@@ -35,10 +35,28 @@ fit to AI Method Wheel
 6. `06-fit-to-ai-method-wheel.md` — where Spec Kit enters the current workflow and why it creates the B2 Finished Project Absorption component.
 7. `07-absorption-decision.md` — final B2 decision: `PARTIAL_ACCEPT_EXPAND`, with ADOPT / BRIDGE / MERGE / PATTERN_ONLY / WATCH / REJECT boundaries.
 8. `08-b2-completeness-audit.md` — E-port audit against the reusable B2 template standard; current verdict is `PARTIAL PASS` with v0.2 hardening repairs.
+9. `09-source-evidence-appendix.md` — auditable source/evidence index for the pack.
+10. `10-write-surface-and-rollback.md` — write-surface, derived-artifact, and rollback map.
+11. `e-completeness-checklist.md` — local E checklist copy for the pack.
 
 Related method update:
 
 - `.ai/methods/updated-workflow-after-finished-project-absorption.md` — updated Method Wheel cognition and workflow changes after adding B2.
+
+---
+
+## Evidence inventory
+
+| Claim | Evidence file / path | Status | Notes |
+|---|---|---|---|
+| SDD / WHAT-before-HOW doctrine | `01-theory-and-doctrine.md` | PASS | Covers constitution, specify, clarify, checklist, plan, tasks, analyze, converge. |
+| CLI / code architecture | `02-code-architecture.md` | PASS | Names `specify-cli`, entrypoints, state, extensions, presets, workflows, bundles. |
+| Source vs scaffold split | `03-project-structure-and-scaffold.md` | PASS | Separates repo layout from generated `.specify/` scaffold. |
+| Command / artifact model | `04-command-and-artifact-model.md` | PASS | Maps each command to inputs, outputs, gates, and role. |
+| Ecosystem / trust model | `05-extension-and-ecosystem-model.md` | PASS | Covers integrations, extensions, presets, workflows, bundles, and trust boundaries. |
+| Fit to AI Method Wheel | `06-fit-to-ai-method-wheel.md` | PASS | Gives ADOPT / BRIDGE / MERGE / PATTERN_ONLY / WATCH / REJECT mapping. |
+| Absorption decision | `07-absorption-decision.md` | PASS | Records PARTIAL_ACCEPT_EXPAND and runtime limits. |
+| E completeness audit | `08-b2-completeness-audit.md` | PASS | Captures residual gaps and v0.2 hardening plan. |
 
 ---
 
