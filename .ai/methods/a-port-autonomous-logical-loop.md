@@ -233,7 +233,24 @@ Pass threshold: 6/7 on the regression rubric.
 
 ---
 
-## 11. Output shape for A-mode
+## 11. Replay-first repair after A-mode drift
+
+When the owner says “继续打磨”, “可以”, or approves the previous repair direction after an A-mode failure, default to replay-first repair:
+
+```text
+1. do not ask a new broad A/B/C/D choice question
+2. pick the most recent drift as the regression sample
+3. write a replay note or test artifact
+4. score the expected response against `.ai/templates/a-mode-regression-test.md`
+5. patch method/template files only if a rule gap appears
+6. verify and commit only the bounded repair
+```
+
+If the replay target is genuinely unknown, ask one blocking question: “which previous drift should be replayed?”
+
+---
+
+## 12. Output shape for A-mode
 
 Each A-mode turn should use this compact structure:
 
@@ -250,7 +267,7 @@ If the route is inferable, do not ask a multiple-choice question just to avoid d
 
 ---
 
-## 12. One-line rule
+## 13. One-line rule
 
 ```text
 A/B/C are logical stages inside one control plane; A-mode must infer, route, and invoke skill families autonomously before asking the owner for another choice.

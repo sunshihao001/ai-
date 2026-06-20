@@ -29,6 +29,7 @@ REQUIRED_FILES = [
     '.ai/templates/good-question-brief.md',
     '.ai/templates/a-port-strong-trigger.md',
     '.ai/templates/a-mode-regression-test.md',
+    '.ai/research/a-mode-replay-2026-06-19-complex-skill-routing.md',
     '.codex/skills/dbs-good-question/SKILL.md',
     '.agents/skills/dbs-good-question/SKILL.md',
     '.ai/research/latest-ai-methodology-sources.md',
@@ -56,6 +57,7 @@ REQUIRED_MARKERS = {
     '.ai/methods/a-port-autonomous-logical-loop.md': ['logical', 'A-mode', 'skill', 'B', 'C'],
     '.ai/templates/a-port-strong-trigger.md': ['A 端强制触发模式', 'A/B/C', 'skill'],
     '.ai/templates/a-mode-regression-test.md': ['regression', 'A-mode', 'skill', 'choice'],
+    '.ai/research/a-mode-replay-2026-06-19-complex-skill-routing.md': ['7/7', 'replay-first repair', 'software-development/dbs-good-question'],
     'docs/handoffs/issue-to-codex.md': ['AGENTS.md', 'CONTEXT.md', 'GitHub issue', 'verification'],
 }
 
