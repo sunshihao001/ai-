@@ -3,6 +3,7 @@
 - ID: `2026-06-20-avid-ai-agent-orchestration-builders-guide`
 - Captured: 2026-06-20
 - Original X status: https://x.com/Av1dlive/status/2067286182996902190
+- Alternate shared X status: https://x.com/Av1dlive/status/2067286182996902190?s=20
 - X article URL discovered: https://x.com/Av1dlive/article/2067286182996902190
 - Tracking mirror discovered: https://youmind.com/landing/x-viral-articles/ai-agent-orchestration-builders-guide
 - Author: Avid / `@Av1dlive`
@@ -49,12 +50,21 @@ Post metadata from extracted X page:
 
 ```text
 4:40 PM · Jun 17, 2026
-94.4K Views at extraction time
+94.4K Views at initial extraction time
 23 replies
 13 reposts
 141 likes
 320 bookmarks
 ```
+
+Alternate `?s=20` extraction later showed:
+
+```text
+196.9K Views
+Read 24 replies
+```
+
+The alternate shared URL did not expose the full X article body; it still showed only the post preview and sign-up/cookie prompt.
 
 YouMind tracking page metadata:
 
