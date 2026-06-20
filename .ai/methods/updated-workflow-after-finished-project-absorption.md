@@ -1,6 +1,6 @@
 # Updated AI Method Wheel After Finished Project Absorption
 
-> Status: v0.1  
+> Status: v0.2  
 > Trigger source: owner correction during Spec Kit review  
 > Core change: mature external projects must pass through `B2 Finished Project Absorption` before they are allowed to reshape the AI Method Wheel.
 
@@ -31,7 +31,7 @@ theory / doctrine
 
 If the Method Wheel jumps directly from source discovery to bridge decision, A-port will make a conceptual decision before B/C actually understand the project.
 
-Therefore the workflow now has a new mandatory component:
+Therefore the workflow now has a mandatory component:
 
 ```text
 B2 Finished Project Absorption
@@ -58,6 +58,7 @@ A demand/control
 A demand/control
 → B source/evidence pack
 → B2 finished-project absorption pack
+→ E completeness check for B2
 → A absorption decision
 → C bridge/spec/method synthesis
 → D repo landing / maker
@@ -69,7 +70,57 @@ The new workflow does **not** replace A/B/C/D/E/F. It inserts a project-understa
 
 ---
 
-## 3. What B2 does
+## 3. New complete cognition of the workflow
+
+The AI Method Wheel now has three different knowledge-intake lanes:
+
+```text
+B1: article / thread / small source
+B2: mature GitHub repo / finished project
+B3: ecosystem / platform family / multiple comparable projects
+```
+
+### B1 — simple source intake
+
+Use when the source is a single article, X thread, short tool, or isolated idea.
+
+```text
+A question
+→ B source note
+→ A accept/partial/reject
+→ C small method update if needed
+```
+
+### B2 — finished project absorption
+
+Use when the source is a complete framework, mature repo, CLI toolkit, workflow product, or project that may reshape the Method Wheel.
+
+```text
+A absorption question
+→ B repo/source pack
+→ B2 finished-project absorption pack
+→ E checks B2 coverage
+→ A absorption decision
+→ C synthesis
+→ D/E/F landing
+```
+
+### B3 — ecosystem comparison
+
+Use when the decision depends on comparing multiple projects or ecosystems.
+
+```text
+multiple B2 packs
+→ comparison frame
+→ architecture decision
+→ C/D/E/F controlled update
+```
+
+Spec Kit is a B2 case. A future example of B3 would be comparing several agent workflow platforms before changing the Method Wheel baseline.
+
+---
+
+## 4. What B2 does
 
 B2 converts a complete external project into an internal understanding package.
 
@@ -106,7 +157,7 @@ Spec Kit is the first concrete example:
 
 ---
 
-## 4. Updated port responsibilities
+## 5. Updated port responsibilities
 
 ### A-port — demand/control + absorption framing
 
@@ -119,7 +170,7 @@ Can this repo improve our workflow?
 A must first classify the request:
 
 ```text
-Is this a small source, a tool, or a finished project?
+Is this a small source, a tool, a finished project, or an ecosystem decision?
 ```
 
 If it is a mature project, A routes to B2 and defines the absorption question:
@@ -152,7 +203,7 @@ Then B passes evidence to B2 instead of jumping directly to C.
 
 B2 is the new understanding layer.
 
-It reads across theory, code, scaffold, commands, artifacts, extensions, workflows, and ecosystem. It distinguishes:
+It reads across theory, code, scaffold, commands, artifacts, extensions, workflows, tests, release model, and ecosystem. It distinguishes:
 
 ```text
 source repo layout
@@ -177,7 +228,7 @@ AI Method Wheel = control plane
 
 D implements only bounded repo changes after A/C/E gates.
 
-For Spec Kit-style projects, D should not globally install tools or copy integrations by default. D lands docs, templates, scripts, or isolated experiments first.
+For Spec Kit-style projects, D should not globally install tools or copy integrations by default. D lands docs, templates, scripts, isolated experiments, or branch-only changes first.
 
 ### E-port — checker and anti-shallow-adoption gate
 
@@ -209,7 +260,7 @@ B2 can propose such changes, but cannot silently promote them.
 
 ---
 
-## 5. Updated workflow for absorbing a mature repo
+## 6. Updated workflow for absorbing a mature repo
 
 Use this when the owner says:
 
@@ -237,12 +288,12 @@ Mandatory flow:
 Stop rule:
 
 ```text
-If theory, code architecture, scaffold, command/artifact model, extension model, or fit table is missing, do not produce a final bridge decision. Route back to B2.
+If theory, code architecture, scaffold, command/artifact model, extension model, tests/release model, or fit table is missing, do not produce a final bridge decision. Route back to B2.
 ```
 
 ---
 
-## 6. What changed because of Spec Kit
+## 7. What changed because of Spec Kit
 
 Spec Kit changed the Method Wheel in two ways.
 
@@ -265,14 +316,15 @@ constitution
 Mapped into the Method Wheel:
 
 ```text
-constitution      → F/A governance
-specify/clarify   → A WHAT stabilization
-defensive checklist → A/E ambiguity and quality gate
-plan/research/contracts → C HOW package
-tasks             → D bounded maker queue
-analyze           → E read-only consistency checker
-implement         → D execution only after gates
-converge          → E→D repair loop candidate
+constitution               → F/A governance
+specify/clarify            → A WHAT stabilization
+defensive checklist        → A/E ambiguity and quality gate
+plan/research/contracts    → C HOW package
+tasks                      → D bounded maker queue
+analyze                    → E read-only consistency checker
+implement                  → D execution only after gates
+converge                   → E→D repair loop candidate
+taskstoissues              → D/F GitHub issue handoff candidate
 ```
 
 ### Change 2 — it exposed the need for B2
@@ -290,6 +342,7 @@ workflows
 bundles
 catalogs
 scaffold generation
+tests and release packaging
 ```
 
 Therefore Spec Kit becomes both:
@@ -301,37 +354,44 @@ Therefore Spec Kit becomes both:
 
 ---
 
-## 7. New default mental model
+## 8. Spec Kit's own workflow, after full understanding
 
-The Method Wheel now has three different source intake levels:
+Spec Kit itself is not only this linear public summary:
 
-| Level | Source type | Workflow |
-| --- | --- | --- |
-| B1 | article/thread/simple source | B source pack → A decision → C synthesis |
-| B2 | mature repo / finished project | B source pack → B2 absorption pack → E check → A decision → C synthesis |
-| B3 | ecosystem/platform family | multiple B2 packs → comparison frame → architecture decision |
+```text
+constitution → specify → clarify → plan → tasks → implement
+```
 
-Spec Kit is B2.
+A fuller understanding is:
 
-A future example of B3 would be comparing multiple agent workflow platforms or multiple skill ecosystems before changing the Method Wheel baseline.
+```text
+install specify-cli
+→ specify init target project
+→ choose integration and script type
+→ generate .specify/ scaffold
+→ install agent command templates
+→ initialize constitution
+→ create feature branch/spec
+→ clarify unresolved requirements
+→ generate requirement-quality checklists
+→ plan HOW and produce research/data/contracts/quickstart
+→ generate dependency-ordered tasks
+→ analyze consistency read-only
+→ implement tasks
+→ converge implementation gaps back into appended tasks
+→ optionally convert tasks to GitHub issues
+→ extend with presets/extensions/workflows/bundles
+```
+
+This is why the Method Wheel must not absorb Spec Kit as only six commands. Its real structure is:
+
+```text
+methodology + CLI scaffold + artifact lifecycle + agent integration layer + extension ecosystem + workflow engine
+```
 
 ---
 
-## 8. Updated operating rules
-
-1. Do not bridge a mature repo after reading only README and command names.
-2. Do not install external workflow tools globally before B2/E/F review.
-3. Separate project theory from implementation code.
-4. Separate source repo structure from generated target-project scaffold.
-5. Separate user-facing workflow from extension/plugin architecture.
-6. Use classification labels: `ADOPT`, `BRIDGE`, `MERGE`, `PATTERN_ONLY`, `WATCH`, `REJECT`.
-7. Keep baseline changes as reviewable diffs, not hidden prompt drift.
-8. Add validation markers when a new method component becomes baseline.
-9. Treat chat as working context; repo files remain the durable source of truth.
-
----
-
-## 9. Practical result for future work
+## 9. New default mental model
 
 When the owner drops a serious GitHub project and asks whether it can improve the AI workflow, the correct response is no longer:
 
@@ -348,8 +408,24 @@ I will build a Finished Project Absorption Pack first:
 - scaffold/generated project structure
 - command/artifact model
 - extension/ecosystem model
+- tests/release/operational model
 - fit/non-fit table
 Then we decide how it changes A/B/C/D/E/F.
 ```
 
 That is the new workflow cognition.
+
+---
+
+## 10. Updated operating rules
+
+1. Do not bridge a mature repo after reading only README and command names.
+2. Do not install external workflow tools globally before B2/E/F review.
+3. Separate project theory from implementation code.
+4. Separate source repo structure from generated target-project scaffold.
+5. Separate user-facing workflow from extension/plugin architecture.
+6. Separate public workflow from hidden operational architecture.
+7. Use classification labels: `ADOPT`, `BRIDGE`, `MERGE`, `PATTERN_ONLY`, `WATCH`, `REJECT`.
+8. Keep baseline changes as reviewable diffs, not hidden prompt drift.
+9. Add validation markers when a new method component becomes baseline.
+10. Treat chat as working context; repo files remain the durable source of truth.

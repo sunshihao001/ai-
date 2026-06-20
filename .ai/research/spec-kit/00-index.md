@@ -19,6 +19,7 @@ code and CLI architecture
 project structure and scaffold
 command and artifact model
 extension / preset / workflow ecosystem
+tests / packaging / release / operational safety
 fit to AI Method Wheel
 ```
 

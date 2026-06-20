@@ -177,7 +177,34 @@ Bundles aggregate extensions, presets, workflow steps, and workflows. This can i
 
 ---
 
-## 10. Code-level implication for integration
+## 10. Tests, safety, and release model
+
+The source repo has broad tests around:
+
+```text
+integration registration and per-agent rendering
+Hermes/Codex/Claude/Gemini/etc. integration behavior
+init scaffolding
+extension installation/update hardening
+preset installation and resolution
+workflow execution and resume
+bundle catalog and manifest schema
+path traversal / registrar hardening
+self-upgrade detection and guidance
+script behavior for bash and PowerShell
+```
+
+This matters because Spec Kit is not only a methodology document. It is a productized CLI with safety expectations around install, upgrade, uninstall, registries, manifests, and cross-agent command generation.
+
+AI Method Wheel implication:
+
+```text
+A finished-project absorption pack must inspect tests and hardening signals, not only docs and command lists.
+```
+
+---
+
+## 11. Code-level implication for integration
 
 Do not think of Spec Kit as only a prompt set. Its code implements:
 
