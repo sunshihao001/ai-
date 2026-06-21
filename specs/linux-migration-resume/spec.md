@@ -112,15 +112,34 @@ Need more questions before implementation.
 
 ## Candidate Restore Contract
 
-If approved, the one-command flow could be:
+The current restore boundary is:
+
+- **Git-tracked repo content**: restored by clone/fetch/pull
+- **Approved local-only project artifacts**: restored from a backup directory or archive
+- **Sensitive data**: never restored by this script
+- **Build caches / dependency caches**: intentionally excluded
+
+The one-command flow is:
 
 ```text
-restore-linux-state.sh <backup-source> <workspace-root>
+restore-linux-state.sh [--dry-run] <backup-source> <workspace-root>
 ```
 
-Where the script would:
+Behavior:
 - clone or update the two repos
-- restore approved local-only artifacts from backup
-- report any missing optional components
+- restore approved local-only artifacts from a directory or tar archive
+- exclude `.git`, `.env*`, credentials, caches, virtualenvs, build outputs, and package directories
+- support a non-destructive dry-run mode
 - run validation checks and exit non-zero on mismatch
+
+Expected input shapes:
+- `backup-source` may be a directory
+- `backup-source` may be a tar/tar.gz/tgz/tar.bz2/tar.xz archive
+- `workspace-root` is the parent directory where repos should exist after restore
+
+Verification evidence:
+- script usage path exits `2`
+- dry-run path prints actions without writing files
+- successful restore prints repo branch/status summaries
+- missing backup source exits non-zero
 ```
