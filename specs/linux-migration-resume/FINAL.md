@@ -73,6 +73,12 @@ Directory example:
 bash scripts/restore-linux-state.sh /mnt/backup ~/workspaces
 ```
 
+For the data-heavy `meme` project, provide a separate state pack source as the third argument:
+
+```bash
+bash scripts/restore-linux-state.sh /mnt/backup ~/workspaces /mnt/meme-state-pack
+```
+
 ## Dry-run command
 
 Use this first.

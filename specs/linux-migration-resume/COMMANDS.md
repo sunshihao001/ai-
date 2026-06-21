@@ -5,9 +5,11 @@
 ```bash
 export BACKUP_SOURCE='/mnt/backup/linux-migration-backup.tar.gz'
 export WORKSPACE_ROOT='~/workspaces'
+export STATE_PACK_SOURCE='/mnt/meme-state-pack'
 ```
 
 If your backup is a directory, point `BACKUP_SOURCE` to that directory instead.
+For the data-heavy `meme` project, set `STATE_PACK_SOURCE` to the separate state pack.
 
 ---
 
@@ -86,9 +88,10 @@ cat specs/linux-migration-resume/spec.md
 ```bash
 export BACKUP_SOURCE='/mnt/backup/linux-migration-backup.tar.gz'
 export WORKSPACE_ROOT='~/workspaces'
+export STATE_PACK_SOURCE='/mnt/meme-state-pack'
 cd ~/ai-work/ai-
 bash scripts/restore-linux-state.sh --dry-run "$BACKUP_SOURCE" "$WORKSPACE_ROOT" "$STATE_PACK_SOURCE"
-bash scripts/restore-linux-state.sh "$BACKUP_SOURCE" "$WORKSPACE_ROOT"
+bash scripts/restore-linux-state.sh "$BACKUP_SOURCE" "$WORKSPACE_ROOT" "$STATE_PACK_SOURCE"
 cd "$WORKSPACE_ROOT/ai-" && git status --short --branch
 cd "$WORKSPACE_ROOT/MQL5_第一控盘区成本中枢回收模型_学习资料" && git status --short --branch
 ```
