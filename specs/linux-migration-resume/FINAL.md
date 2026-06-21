@@ -58,7 +58,7 @@ Restore the current working state of the two project repos after switching from 
 ## Restore command
 
 ```bash
-bash scripts/restore-linux-state.sh <backup_source> <workspace_root>
+bash scripts/restore-linux-state.sh <backup_source> <workspace_root> [state_pack_source]
 ```
 
 Example:

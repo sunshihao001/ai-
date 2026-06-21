@@ -122,7 +122,7 @@ The current restore boundary is:
 The one-command flow is:
 
 ```text
-restore-linux-state.sh [--dry-run] <backup-source> <workspace-root>
+restore-linux-state.sh [--dry-run] <backup-source> <workspace-root> [state-pack-source]
 ```
 
 Behavior:

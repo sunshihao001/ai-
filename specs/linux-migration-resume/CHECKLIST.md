@@ -52,7 +52,7 @@ Expected:
 Run:
 
 ```bash
-bash scripts/restore-linux-state.sh <backup_source> <workspace_root>
+bash scripts/restore-linux-state.sh <backup_source> <workspace_root> [state_pack_source]
 ```
 
 Expected:

@@ -29,7 +29,7 @@ What you want to see:
 
 ```bash
 cd ~/ai-work/ai-
-bash scripts/restore-linux-state.sh --dry-run "$BACKUP_SOURCE" "$WORKSPACE_ROOT"
+bash scripts/restore-linux-state.sh --dry-run "$BACKUP_SOURCE" "$WORKSPACE_ROOT" "$STATE_PACK_SOURCE"
 ```
 
 Expected:
@@ -87,7 +87,7 @@ cat specs/linux-migration-resume/spec.md
 export BACKUP_SOURCE='/mnt/backup/linux-migration-backup.tar.gz'
 export WORKSPACE_ROOT='~/workspaces'
 cd ~/ai-work/ai-
-bash scripts/restore-linux-state.sh --dry-run "$BACKUP_SOURCE" "$WORKSPACE_ROOT"
+bash scripts/restore-linux-state.sh --dry-run "$BACKUP_SOURCE" "$WORKSPACE_ROOT" "$STATE_PACK_SOURCE"
 bash scripts/restore-linux-state.sh "$BACKUP_SOURCE" "$WORKSPACE_ROOT"
 cd "$WORKSPACE_ROOT/ai-" && git status --short --branch
 cd "$WORKSPACE_ROOT/MQL5_第一控盘区成本中枢回收模型_学习资料" && git status --short --branch
