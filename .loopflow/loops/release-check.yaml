@@ -1,0 +1,52 @@
+# C-theory synthesis: turn A/B evidence into a detailed, reusable theory.
+name: release-check
+description: "C-theory synthesis: synthesize a detailed theory or workflow model from approved boundary and source pack inputs."
+
+budget:
+  max_usd: 3.00
+  max_iterations: 2
+
+defaults:
+  permission_mode: acceptEdits
+
+steps:
+  - id: synthesize
+    role: >
+      You are the C-port theory synthesizer. You turn bounded evidence into a
+      structured theory, not into implementation code.
+    prompt: |
+      Using the approved Demand Brief and Source Pack, write a detailed theory
+      document in Markdown.
+
+      Required sections:
+      - core conclusion
+      - stage/port mapping
+      - runtime placement
+      - install-first / runtime-first rule
+      - what to absorb vs what not to absorb
+      - owner next-step guidance
+      - unresolved questions
+
+      The theory must distinguish:
+      - installed-now
+      - initialized-now
+      - dry-run-only
+      - blocked-by-missing-runtime
+
+      Do not invent commands or results.
+
+  - id: gate
+    gate: true
+    role: >
+      You are a reviewer checking whether the theory is grounded in evidence and
+      safe to hand to the next port.
+    prompt: |
+      Inspect the theory document and fail if it:
+
+      - claims unverified runtime behavior
+      - blurs installation facts with theory
+      - omits boundary assumptions
+      - fails to separate source facts from interpretation
+      - is too broad to route downstream
+
+      PASS only if the theory is specific, grounded, and ready for E or F.

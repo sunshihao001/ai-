@@ -1,0 +1,46 @@
+# B-source-pack sync: collect and compare evidence before theory generation.
+name: docs-sync
+description: "B-source-pack sync: gather source packs from repositories, docs, links, and command outputs before synthesis."
+
+budget:
+  max_usd: 2.00
+  max_iterations: 2
+
+worktree: true
+
+defaults:
+  permission_mode: acceptEdits
+
+steps:
+  - id: collect
+    role: >
+      You are the B-port source-pack curator. You only collect and compress
+      evidence. You do not invent missing facts.
+    prompt: |
+      Build a Source Pack in Markdown for the current topic.
+
+      Include:
+      - source URLs / repo names
+      - install commands and runtime assumptions
+      - generated files and target surfaces
+      - exact evidence found
+      - exact evidence still missing
+      - blocker notes and next retrieval step
+
+      Keep source facts separate from your interpretation. If a source is only
+      partially available, label it clearly as PARTIAL.
+
+  - id: gate
+    gate: true
+    role: >
+      You are a reviewer checking whether the source pack is complete enough to
+      support C-port synthesis.
+    prompt: |
+      Inspect the Source Pack. Fail if the pack:
+
+      - lacks install-surface evidence
+      - mixes facts and theory without separation
+      - omits missing-evidence notes
+      - claims a full source when only partial evidence exists
+
+      PASS only when the next step can synthesize without guessing.

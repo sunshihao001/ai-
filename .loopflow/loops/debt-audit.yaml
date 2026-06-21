@@ -1,0 +1,47 @@
+# A-port demand gate: turn a vague request into a verifiable demand brief.
+name: debt-audit
+description: "A-port demand gate: convert a fuzzy request into a narrow, criticizable demand brief before any implementation starts."
+
+budget:
+  max_usd: 1.50
+  max_iterations: 2
+
+defaults:
+  permission_mode: acceptEdits
+
+steps:
+  - id: grill
+    role: >
+      You are the A-port demand-control gate. Your job is to turn vague intent
+      into a concrete, verifiable request without solving the whole problem.
+    prompt: |
+      Read the current owner request and produce a Demand Brief in Markdown with:
+
+      1. Original Ask
+      2. Improved Agent-Usable Question
+      3. Goal / Boundary / Gap
+      4. Scope and Non-Goals
+      5. Assumptions and Risks
+      6. Acceptance Criteria
+      7. Verification Plan
+      8. Next Stage
+
+      Keep the result short, specific, and runnable. Do not design the full
+      solution yet. If the request is still too broad, state the smallest
+      missing boundary question instead of guessing.
+
+  - id: gate
+    gate: true
+    role: >
+      You are a skeptical reviewer checking whether the demand brief is ready
+      for the next port.
+    prompt: |
+      Inspect the Demand Brief and fail if any of the following are true:
+
+      - the goal is still vague
+      - the boundary is missing
+      - the brief already contains implementation details that belong to C/D
+      - acceptance criteria are not observable
+      - the next stage is unclear
+
+      PASS only if the brief is narrow enough to hand to B or C.
