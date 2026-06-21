@@ -118,23 +118,26 @@ from pathlib import Path
 source = Path(sys.argv[1])
 target = Path(sys.argv[2])
 
-excludes = [
-    '.git', '.git/**',
-    '.env', '.env.*',
-    '*.pem', '*.key', '*.p12', '*.pfx',
-    'id_rsa', 'id_rsa.*',
-    'credentials*', 'token*',
-    '__pycache__', '__pycache__/**',
-    '*.pyc', '*.pyo',
-    'node_modules', 'node_modules/**',
-    '.venv', '.venv/**', 'venv', 'venv/**',
-    'dist', 'dist/**', 'build', 'build/**',
-]
-
-
 def excluded(rel: str) -> bool:
     rel = rel.replace('\\', '/')
-    return any(fnmatch.fnmatch(rel, pat) for pat in excludes)
+    parts = [p for p in rel.split('/') if p and p != '.']
+    if not parts:
+        return False
+
+    sensitive_names = {
+        '.git', 'node_modules', '.venv', 'venv', 'dist', 'build', '__pycache__',
+    }
+    sensitive_prefixes = ('.env', 'token', 'credentials', 'id_rsa')
+    sensitive_suffixes = ('.pem', '.key', '.p12', '.pfx', '.pyc', '.pyo')
+
+    for part in parts:
+        if part in sensitive_names:
+            return True
+        if part.startswith(sensitive_prefixes):
+            return True
+        if part.endswith(sensitive_suffixes):
+            return True
+    return False
 
 
 def main() -> int:
