@@ -15,6 +15,9 @@ Use this file to preserve shared terms, domain concepts, architectural boundarie
 ## Existing Conventions
 - Long theory generation should use `codex exec` with `--sandbox read-only`, `--output-last-message`, stdin prompt files, and usually a source pack.
 - Repo landing should use a separate Codex run with explicit allowed paths, then Hermes checks diff, validation, commit, push, and PR/CI.
+- For workflow or skill changes, prefer absorbing an existing router/skill pattern over creating a new one; write down the bridge decision before any customization.
+- External skill packs are first treated as reusable capability sources, not as invitations to rebuild the workflow around them.
+- A new idea is not automatically a new framework; if the current method wheel already has a matching port, update the port contract instead of spawning a parallel wheel.
 
 ## Known Risks / Things Agents Often Get Wrong
 - Saying “use Codex” without choosing the command shape, sandbox, output mode, and checker path.

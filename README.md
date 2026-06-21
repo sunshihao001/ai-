@@ -8,6 +8,8 @@ Curated AI software engineering workflow built from the core ideas of:
 
 This repo intentionally extracts the core behaviors instead of installing every upstream skill.
 
+Reuse-first rule: if an existing router, umbrella skill, or repo convention already covers the need, bridge to it first and document that choice before adding any new custom layer.
+
 ## What This Repo Provides
 
 - Project-level AI instructions: `AGENTS.md`
@@ -68,7 +70,8 @@ The repository remains the durable source of truth. Local installs are convenien
 ## Recommended Workflow
 
 ```text
-Loop / orchestration design
+Reuse-first front door
+→ loop / orchestration design
 → brainstorm / grill requirements
 → if the source is a mature external project: B2 finished-project absorption
 → specify / plan / tasks
@@ -83,7 +86,7 @@ Loop / orchestration design
 
 ## GitHub as Project Memory
 
-Do not treat chat history as durable project memory. Put long-lived context into GitHub files:
+Do not treat chat history as durable project memory. Put long-lived context into GitHub files and prefer updating an existing document over creating a parallel duplicate:
 
 - Decisions: `docs/adr/*`
 - Product specs: `specs/*`

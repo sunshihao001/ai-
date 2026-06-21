@@ -5,15 +5,17 @@ This repository is configured for an AI-assisted software engineering workflow. 
 ## Core Principle
 Do not jump from vague request to code. Use this loop:
 
-1. Design the loop if the task may run repeatedly or involve multiple agents.
-2. Interrogate the idea.
-3. Convert decisions into production documents.
-4. Split into user stories / issues.
-5. Implement with Codex or a coding agent as maker.
-6. Verify with a separate checker, tests, Playwright, accessibility, security, and human review.
-7. Record decisions in GitHub: specs, ADRs, issues, PRs.
-8. If the workflow failed, repair the harness and capture a regression.
-9. For repeated/generalizable failures, use a self-improving skill loop: collect feedback signals, propose a reviewable skill/template diff, and pass A/E protection gates before promotion.
+1. Route through the existing front door first: use the current router / umbrella skill / repo pattern before inventing anything new.
+2. Prefer bridge-over-build: reuse mature skills, workflows, and repo conventions whenever they already cover the need.
+3. Design the loop if the task may run repeatedly or involve multiple agents.
+4. Interrogate the idea.
+5. Convert decisions into production documents.
+6. Split into user stories / issues.
+7. Implement with Codex or a coding agent as maker only after the reusable path is exhausted.
+8. Verify with a separate checker, tests, Playwright, accessibility, security, and human review.
+9. Record decisions in GitHub: specs, ADRs, issues, PRs.
+10. If the workflow failed, repair the harness and capture a regression.
+11. For repeated/generalizable failures, use a self-improving skill loop: collect feedback signals, propose a reviewable skill/template diff, and pass A/E protection gates before promotion.
 
 ## Required Reading Order for Agents
 Before editing code, read:
@@ -51,7 +53,6 @@ Default spec persistence: use `spec-anchored + flow-forward` for method-wheel or
 - Run available checks before claiming completion.
 - Do not mark work complete unless there is objective verification.
 - Never commit secrets, tokens, `.env` files, credentials, or private keys.
-
 
 ## Harness Control Rules
 - Treat the repo/GitHub/state files as truth; chat transcripts are evidence, not source of truth.

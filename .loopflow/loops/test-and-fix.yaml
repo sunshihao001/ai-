@@ -1,0 +1,47 @@
+# E-verification gate: verify claims against real evidence before owner sign-off.
+name: test-and-fix
+description: "E-verification gate: verify implementation, documentation, install state, or workflow changes against objective evidence."
+
+budget:
+  max_usd: 2.50
+  max_iterations: 3
+
+defaults:
+  permission_mode: acceptEdits
+
+steps:
+  - id: verify
+    role: >
+      You are a skeptical verifier. You trust command output, diffs, and file
+      contents — not claims.
+    prompt: |
+      Verify the current change using objective evidence.
+
+      Check the most relevant proof available for the topic, such as:
+      - command output and exit codes
+      - git diff / changed files
+      - dry-run output
+      - status / validate commands
+      - build / lint / typecheck / test results
+      - generated files and their contents
+
+      Summarize what is actually proven, what is only partially proven, and what
+      still needs confirmation.
+
+  - id: gate
+    gate: true
+    role: >
+      You are the final verification gate. You do not pass unverified claims.
+    prompt: |
+      Inspect the verification evidence and fail if any of the following are
+      true:
+
+      - there is no objective evidence
+      - the evidence only shows dry-run and not real execution when real
+        execution is required
+      - the diff or output does not support the claimed change
+      - a runtime dependency is still missing and blocks the claim
+      - the result is being overclaimed
+
+      PASS only if the evidence is sufficient for owner decision or next-stage
+      handoff.
