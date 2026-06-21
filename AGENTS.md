@@ -79,6 +79,7 @@ Long-lived project state belongs in:
 - `CONTEXT.md` — shared project language and domain concepts
 - `specs/` — feature specs, plans, tasks, checklists
 - `docs/adr/` — architecture decisions
+- `.ai/knowledge-loop/dbs-content-system/` — single-directory content-structuring module for source packs, content units, topic maps, and assembly drafts
 - GitHub Issues — user stories / vertical slices
 - Pull Requests — implementation record and verification results
 

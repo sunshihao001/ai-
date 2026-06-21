@@ -16,38 +16,16 @@ Reuse-first rule: if an existing router, umbrella skill, or repo convention alre
 - Shared project language: `CONTEXT.md`
 - Curated portable skills: `.agents/skills/*`
 - Codex project skills: `.codex/skills/*`
-- Method wheel: `.ai/methods/ai-method-wheel.md`
-- Maintainer orchestrator mapping: `.ai/methods/maintainer-orchestrator-mapping.md`
-- Hermes → Codex command orchestration: `.ai/methods/hermes-codex-command-orchestration.md`
-- Hermes / Codex role split: `.ai/methods/hermes-codex-role-split.md`
-- Multi-port skill stack method: `.ai/methods/multi-port-skill-stack.md`
-- A-port autonomous logical loop: `.ai/methods/a-port-autonomous-logical-loop.md`
-- Finished project absorption method: `.ai/methods/finished-project-absorption.md`
-- Skill repository intake policy: `.ai/methods/skill-repository-intake-policy.md`
-- Updated workflow after finished-project absorption: `.ai/methods/updated-workflow-after-finished-project-absorption.md`
-- Spec Kit bridge layer: `.ai/methods/spec-kit-bridge-layer.md`
-- Spec Kit runtime integration plan: `.ai/methods/spec-kit-runtime-integration-plan.md`
-- Spec Kit Hermes wrapper/adapter design: `.ai/methods/spec-kit-hermes-wrapper-adapter.md`
-- Spec Kit full absorption pack: `.ai/research/spec-kit/`
-- Fractals theory/practical adoption pack: `.ai/research/fractals/` — includes `09-long-theory.md` and `10-practical-adoption-correction.md`
-- Multi-port contracts: `.ai/methods/multi-port-contracts/`
-- Knowledge loop / learning reserve: `.ai/knowledge-loop/`
-- A-port strong trigger template: `.ai/templates/a-port-strong-trigger.md`
-- A-port clarification loop prompt: `.ai/templates/a-port-clarify-loop.md`
-- A/B/C mutual knowledge loop prompt: `.ai/templates/abc-knowledge-loop.md`
-- A/B/C knowledge loop theory: `.ai/methods/abc-knowledge-loop-theory.md`
-- A/B/C theory-generation Codex handoff: `.ai/templates/abc-knowledge-loop-codex-handoff.md`
-- A-mode regression test template: `.ai/templates/a-mode-regression-test.md`
-- A-mode replay samples: `.ai/research/a-mode-replay-*.md` — includes Fractals boundary regression
-- A-mode evolution log template: `.ai/templates/a-mode-evolution-log.md`
-- Finished project absorption templates: `.ai/templates/finished-project-absorption/`
-- Spec Kit Hermes adapter generator: `scripts/generate-spec-kit-hermes-adapter.py`
-- Spec Kit repo-local wrapper drafts: `.ai/generated/spec-kit-hermes-adapter/`
-- Codex handoff template: `.ai/templates/codex-issue-handoff.md`
-- Codex theory-generation handoff template: `.ai/templates/codex-theory-generation-handoff.md`
-- Project onboarding template: `.ai/templates/project-onboarding.md`
-- Loop run template: `.ai/templates/loop-run.md`
-- Owner decision brief template: `.ai/templates/owner-decision-brief.md`
+- Method Wheel core: `.ai/methods/ai-method-wheel.md`
+- Multi-port governance: `.ai/methods/multi-port-contracts/`, `.ai/methods/multi-port-skill-stack.md`, `.ai/methods/a-port-autonomous-logical-loop.md`
+- External repo intake and finished-project absorption: `.ai/methods/skill-repository-intake-policy.md`, `.ai/methods/finished-project-absorption.md`, `.ai/templates/finished-project-absorption/`
+- Spec spine and bridge layer: `.ai/methods/spec-kit-bridge-layer.md`, `.ai/methods/spec-kit-runtime-integration-plan.md`, `.ai/methods/spec-kit-hermes-wrapper-adapter.md`
+- Fractals / recursive decomposition reserve: `.ai/research/fractals/`
+- Knowledge loop reserve: `.ai/knowledge-loop/`
+- dbs content system: `.ai/knowledge-loop/dbs-content-system/` — single-directory heavy content-structuring module for source → unit → topic → draft workflows
+- A/B/C knowledge loop templates: `.ai/templates/a-port-strong-trigger.md`, `.ai/templates/a-port-clarify-loop.md`, `.ai/templates/abc-knowledge-loop.md`, `.ai/templates/abc-knowledge-loop-codex-handoff.md`
+- Codex handoff and execution templates: `.ai/templates/codex-issue-handoff.md`, `.ai/templates/codex-theory-generation-handoff.md`
+- Project onboarding and loop templates: `.ai/templates/project-onboarding.md`, `.ai/templates/loop-run.md`, `.ai/templates/owner-decision-brief.md`
 - First feature spec template: `specs/_template/*`
 - GitHub issue and PR templates
 - QA gate: `docs/qa/checklist.md`

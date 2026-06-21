@@ -8,9 +8,14 @@ Use this file to preserve shared terms, domain concepts, architectural boundarie
 - **A-Port Strong Trigger**: an owner phrase that forces A-mode demand excavation, autonomous skill routing, and anti-choice-loop behavior.
 - **Hermes-Orchestrated Codex**: Hermes remains the demand/control/checker layer and invokes Codex CLI as a bounded maker worker using explicit command patterns.
 - **Source Pack**: a compact Hermes-built context file used for long Codex theory generation to avoid broad uncontrolled `--add-dir` crawling.
+- **dbs Content System**: a single-directory heavy content-structuring module under `.ai/knowledge-loop/dbs-content-system/` that turns raw sources into source packs, extracted content units, topic maps, and candidate draft assemblies.
 
 ## Core Modules
-- TBD
+- **Method Wheel Core**: `.ai/methods/ai-method-wheel.md` plus multi-port contracts and A/B/C/D/E/F governance docs.
+- **Knowledge Loop Reserve**: `.ai/knowledge-loop/` for source notes, synthesis, frame updates, decisions, and learning state.
+- **dbs Content System**: `.ai/knowledge-loop/dbs-content-system/` for source → unit → topic → draft content structuring.
+- **External Repo Intake**: `.ai/methods/skill-repository-intake-policy.md` and finished-project absorption templates for deciding reference / skill-layer / pattern-only / B2 routes.
+- **Codex Execution Layer**: Hermes/Codex role split, command orchestration, handoff templates, and bounded maker/checker workflow.
 
 ## Existing Conventions
 - Long theory generation should use `codex exec` with `--sandbox read-only`, `--output-last-message`, stdin prompt files, and usually a source pack.
@@ -23,9 +28,6 @@ Use this file to preserve shared terms, domain concepts, architectural boundarie
 - Saying “use Codex” without choosing the command shape, sandbox, output mode, and checker path.
 - Letting Codex crawl huge knowledge bases for long theory tasks instead of giving it a compact source pack.
 - Letting Codex act as both maker and final checker.
-
-## Decisions That Should Not Be Re-litigated
-- TBD
 
 ## Decisions That Should Not Be Re-litigated
 - Multi-port workflows need port skill stacks, not only one long prompt per bot.
